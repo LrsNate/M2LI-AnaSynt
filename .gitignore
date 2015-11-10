@@ -6,6 +6,11 @@
 *.ipr
 *.iws
 
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 # C extensions
 *.so
 
@@ -61,5 +66,3 @@ docs/_build/
 
 # PyBuilder
 target/
-Status API Training Shop Blog About Pricing
-© 2015 GitHub, Inc. Terms Privacy Security Contact Help

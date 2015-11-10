@@ -42,6 +42,26 @@ class Automaton:
 
         return self.end_states[curr_st]
 
+
+def _make_compounds_automaton():
+    """
+    Trains an automaton to recognize compound words.
+    :return: The trained automaton.
+    """
+    a = Automaton()
+    _path = 'resources/lexique_cmpnd_utf8.txt'
+    _file = open(_path, 'r')
+
+    for line in _file:
+        line = line.strip()
+        rule = line.split('\t')
+        a.learn_rule(rule[0].split(' '), (rule[0], rule[1], rule[2]))
+
+    _file.close()
+    return a
+
+compounds_automaton = _make_compounds_automaton()
+
 if __name__ == '__main__':
     import unittest
 
@@ -57,5 +77,10 @@ if __name__ == '__main__':
             a.learn_rule(['a', 'b'], 'r2')
             self.assertEqual(a.recognize(['a', 'a', 'b']), 'r1')
             self.assertEqual(a.recognize(['a', 'b']), 'r2')
+
+    class CompoundsAutomatonTest(unittest.TestCase):
+        def test_recognition(self):
+            res = compounds_automaton.recognize(['en', 'raison', 'du'])
+            self.assertEqual(res, ('en raison du', 'P', 'en raison de+le'))
 
     unittest.main()
