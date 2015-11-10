@@ -12,7 +12,8 @@ class Automaton:
         """
         Makes the automaton learn a new rule.
         :param tokens: A list of tokens describing the rule.
-        :param rule: The rule itself. It will be returned by the recognition method.
+        :param rule: The rule itself. It will be returned by
+            the recognition method.
         """
         curr_st = 0  # current_state
         for w in tokens:
@@ -34,7 +35,8 @@ class Automaton:
         """
         curr_st = 0  # current_state
         for w in tokens:
-            if curr_st not in self.transitions or w not in self.transitions[curr_st]:
+            if (curr_st not in self.transitions or
+                    w not in self.transitions[curr_st]):
                 return None
             curr_st = self.transitions[curr_st][w]
         if curr_st not in self.end_states:
