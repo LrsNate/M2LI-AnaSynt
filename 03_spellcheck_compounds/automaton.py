@@ -61,7 +61,7 @@ def _make_compounds_automaton():
         line = line.strip()
         rule = line.split('\t')
         words = rule[0].split(' ')
-        a.learn_rule(words, ('_'.join(words), words, len(words)))
+        a.learn_rule(words, ('_'.join(words), words, rule[1], len(words)))
 
     _file.close()
     return a
@@ -94,6 +94,6 @@ if __name__ == '__main__':
     class CompoundsAutomatonTest(unittest.TestCase):
         def test_recognition(self):
             res = compounds_automaton.recognize(['en', 'raison', 'du'])
-            self.assertEqual(res, ('en_raison_du', ['en', 'raison', 'du'], 3))
+            self.assertEqual(res, ('en_raison_du', ['en', 'raison', 'du'], 'P', 3))
 
     unittest.main()

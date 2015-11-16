@@ -32,8 +32,8 @@ for line in fileinput.input():
     while i < len(spellchecked):
         res = compounds_automaton.recognize(words[i:])
         if res:
-            comp, clist, clen = res
-            merged.append('{ORIG_SEG=[%s]}%s' % (','.join(clist), comp))
+            comp, clist, tag, clen = res
+            merged.append('{ORIG_SEG=[%s]}%s__%s' % (','.join(clist), comp, tag))
             i += clen
         else:
             merged.append(spellchecked[i])
