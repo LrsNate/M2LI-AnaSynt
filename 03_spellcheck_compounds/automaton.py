@@ -3,10 +3,11 @@
 
 class Automaton:
     """ A generic finite-state machine """
-    def __init__(self):
+    def __init__(self, bounded=True):
         self.transitions = {}
         self.end_states = {}
         self.last_state = 1
+        self.bounded = bounded
 
     def learn_rule(self, tokens, rule):
         """
@@ -35,6 +36,8 @@ class Automaton:
         """
         curr_st = 0  # current_state
         for w in tokens:
+            if not self.bounded and curr_st in self.end_states:
+                return self.end_states[curr_st]
             if (curr_st not in self.transitions or
                     w not in self.transitions[curr_st]):
                 return None
@@ -50,14 +53,15 @@ def _make_compounds_automaton():
     Trains an automaton to recognize compound words.
     :return: The trained automaton.
     """
-    a = Automaton()
+    a = Automaton(bounded=False)
     _path = 'resources/lexique_cmpnd_utf8.txt'
     _file = open(_path, 'r')
 
     for line in _file:
         line = line.strip()
         rule = line.split('\t')
-        a.learn_rule(rule[0].split(' '), (rule[0], rule[1], rule[2]))
+        words = rule[0].split(' ')
+        a.learn_rule(words, ('_'.join(words), words, rule[1], len(words)))
 
     _file.close()
     return a
@@ -80,9 +84,16 @@ if __name__ == '__main__':
             self.assertEqual(a.recognize(['a', 'a', 'b']), 'r1')
             self.assertEqual(a.recognize(['a', 'b']), 'r2')
 
+        def test_unbounded(self):
+            a = Automaton(bounded=False)
+            a.learn_rule(['a', 'a', 'b'], 'r1')
+            a.learn_rule(['a', 'b'], 'r2')
+            self.assertEqual(a.recognize(['a', 'a', 'b', 'b']), 'r1')
+            self.assertEqual(a.recognize(['a', 'b', 'a']), 'r2')
+
     class CompoundsAutomatonTest(unittest.TestCase):
         def test_recognition(self):
             res = compounds_automaton.recognize(['en', 'raison', 'du'])
-            self.assertEqual(res, ('en raison du', 'P', 'en raison de+le'))
+            self.assertEqual(res, ('en_raison_du', ['en', 'raison', 'du'], 'P', 3))
 
     unittest.main()
