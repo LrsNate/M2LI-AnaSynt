@@ -25,13 +25,17 @@ Si vous avez des questions, veuillez prendre rendez-vous auprès de notre secré
 ## OUTPUT GROUPE 2
 
 ## OUTPUT GROUPE 3
-`{ORIG_ORTH=token_with_error} corrected_token`
+`{ORIG_ORTH=token_with_error}corrected_token`
 
-`EX: {ORIG_ORTH="chein"} chien`
+`EX: {ORIG_ORTH="chein"}chien`
 
-`{ORIG_SEG=[(token, {_}), (token, {_})]} compound_word`
+`{ORIG_SEG=[(token, {_}), (token, {_})]}compound_word`
 
-`EX: {ORIG_SEG=[("pomme", {}), ("de", {}), ("terre", {})]} pomme_de_terre`
+`EX: {ORIG_SEG=[("pomme", {}), ("de", {}), ("terre", {})]}pomme_de_terre__N`
+
+`{AML="original_token"}split_token {AML="original_token"}split_token`
+
+`Ex: {AML="du"}de {AML="du"}le`
 
 ## OUTPUT GROUPE 4
 
