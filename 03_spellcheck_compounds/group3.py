@@ -5,7 +5,7 @@ from automaton import compounds_automaton
 import fileinput
 import pickle
 
-wico = pickle.load(open('results_wico.p', 'r'))
+wico = pickle.load(open('ressources/results_wico.p', 'r'))
 
 for line in fileinput.input():
     line = line.strip()
