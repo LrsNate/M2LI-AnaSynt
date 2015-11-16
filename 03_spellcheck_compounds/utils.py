@@ -36,6 +36,17 @@ def levenshtein(w0, w1):
     return v1[n1]
 
 
+def closest_word(candidates, word):
+    res_word = None
+    min_dist = float('inf')
+    for corr in candidates:
+        ld = levenshtein(word, corr)
+        if ld < min_dist:
+            res_word = corr
+            min_dist = ld
+    return res_word
+
+
 if __name__ == '__main__':
     import unittest
 
