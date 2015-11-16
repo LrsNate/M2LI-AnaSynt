@@ -22,8 +22,6 @@ machin@bidule.truc	_EMAIL
 
 Si vous avez des questions, veuillez prendre rendez-vous auprès de notre secrétaire (le prof, quoi).
 
-Le fichier de sortie portera le nom output.etape1.txt
-
 ## OUTPUT GROUPE 2
 
 ## OUTPUT GROUPE 3
