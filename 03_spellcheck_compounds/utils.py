@@ -164,10 +164,10 @@ if __name__ == '__main__':
             self.assertEquals(str(Token.merge([t1, t2], 'q_c')), '{ORIG_SEG=["quatre","cinq"]}q_c')
 
         def test_expand(self):
-            t = Token.from_str('au')
+            t = Token.from_str('{A=a}au')
             l = Token.expand(t, ['a', 'le'])
             self.assertEquals(len(l), 2)
-            self.assertEquals(str(l[0]), '{AML="au"}a')
-            self.assertEquals(str(l[1]), '{AML="au"}le')
+            self.assertEquals(str(l[0]), '{A=a;AML="au"}a')
+            self.assertEquals(str(l[1]), '{A=a;AML="au"}le')
 
     unittest.main()
