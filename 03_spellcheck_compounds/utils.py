@@ -145,4 +145,29 @@ if __name__ == '__main__':
             self.assertEqual(levenshtein('kitten', 'sitting'), 3)
             self.assertEqual(levenshtein('Saturday', 'Sunday'), 3)
 
+    class TokenTests(unittest.TestCase):
+        def test_fromstr_simple(self):
+            t = Token.from_str('bien')
+            self.assertEqual(str(t), 'bien')
+
+        def test_fromstr_withannotations(self):
+            t = Token.from_str('{A=a;B=b}bien_sur')
+            self.assertEqual(str(t), '{A=a;B=b}bien_sur')
+
+        def test_spellupdate(self):
+            t = Token.from_str('{A=a}qautre')
+            self.assertEqual(str(Token.update_spelling(t, 'quatre')), '{A=a;ORIG_ORTH="qautre"}quatre')
+
+        def test_merge(self):
+            t1 = Token.from_str('quatre')
+            t2 = Token.from_str('cinq')
+            self.assertEquals(str(Token.merge([t1, t2], 'q_c')), '{ORIG_SEG=["quatre","cinq"]}q_c')
+
+        def test_expand(self):
+            t = Token.from_str('au')
+            l = Token.expand(t, ['a', 'le'])
+            self.assertEquals(len(l), 2)
+            self.assertEquals(str(l[0]), '{AML="au"}a')
+            self.assertEquals(str(l[1]), '{AML="au"}le')
+
     unittest.main()
