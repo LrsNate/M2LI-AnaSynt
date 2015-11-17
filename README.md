@@ -29,9 +29,9 @@ Si vous avez des questions, veuillez prendre rendez-vous auprès de notre secré
 
 `EX: {ORIG_ORTH="chein"}chien`
 
-`{ORIG_SEG=[(token, {_}), (token, {_})]}compound_word`
+`{ORIG_SEG=[(token,{_}),(token, {_})]}compound_word`
 
-`EX: {ORIG_SEG=[("pomme", {}), ("de", {}), ("terre", {})]}pomme_de_terre__N`
+`EX: {ORIG_SEG=[("pomme",{}),("de",{}),("terre",{})]}pomme_de_terre__N`
 
 `{AML="original_token"}split_token {AML="original_token"}split_token`
 

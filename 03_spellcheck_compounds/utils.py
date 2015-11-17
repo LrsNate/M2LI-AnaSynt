@@ -1,6 +1,66 @@
 #!/usr/bin/env python
 # -*- coding:utf-8 -*-
 
+import re
+
+
+class Token:
+    def __init__(self, annot, form):
+        self.annot = annot
+        self.form = form
+
+    def getannotations(self):
+        return self.annot
+
+    def getform(self):
+        return self.form
+
+    def __str__(self):
+        if not self.annot:
+            return self.form
+        res = '{'
+        annot = map(lambda (k, v): '%s=%s' % (k, v), self.annot.iteritems())
+        res += ';'.join(annot) + '}' + self.form
+        return res
+
+    @classmethod
+    def from_str(cls, word):
+        mo = re.search('^\{(.*)\}(.*)', word)
+        if mo:
+            form = mo.group(2)
+            annot_str = mo.group(1)
+            annot = {}
+            for kv in annot_str.split(';'):
+                k, sep, v = kv.partition('=')
+                if sep != '=':
+                    continue
+                annot[k] = v
+        else:
+            annot = {}
+            form = word
+        return cls(annot, form)
+
+    @classmethod
+    def update_spelling(cls, tk, new_spelling):
+        form = tk.getform()
+        annot = tk.getannotations()
+        annot['ORIG_ORTH'] = '"%s"' % form
+        return cls(annot, new_spelling)
+
+    # TODO merge annotations
+
+    @classmethod
+    def merge(cls, tks, comp):
+        tk_list = map(lambda x: '"%s"' % x, tks)  # map(lambda x: x.getform(), tks)
+        annot = {'ORIG_SEG': '[%s]' % ','.join(tk_list)}
+        return cls(annot, comp)
+
+    @classmethod
+    def expand(cls, tk, aml):
+        annot = tk.getannotations()
+        annot['AML'] = '"%s"' % tk.getform()
+        return map(lambda x: cls(annot, x), aml)
+
 
 def levenshtein(w0, w1):
     """
