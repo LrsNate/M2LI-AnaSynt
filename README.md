@@ -21,6 +21,7 @@ machin@bidule.truc	_EMAIL
 11h30	_HEURE
 
 Si vous avez des questions, veuillez prendre rendez-vous auprès de notre secrétaire (le prof, quoi).
+	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
 
 ## OUTPUT GROUPE 2
 
