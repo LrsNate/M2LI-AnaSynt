@@ -63,28 +63,91 @@ class Token:
         return map(lambda x: cls(annot, x), aml)
 
 
-def levenshtein(w0, w1, len0, len1):
-    if len0 == 0:
-        return len1
-    if len1 == 0:
-        return len0
+# int LevenshteinDistance(string s, string t)
+# {
+#     // degenerate cases
+#     if (s == t) return 0;
+#     if (s.Length == 0) return t.Length;
+#     if (t.Length == 0) return s.Length;
+#
+#     // create two work vectors of integer distances
+#     int[] v0 = new int[t.Length + 1];
+#     int[] v1 = new int[t.Length + 1];
+#
+#     // initialize v0 (the previous row of distances)
+#     // this row is A[0][i]: edit distance for an empty s
+#     // the distance is just the number of characters to delete from t
+#     for (int i = 0; i < v0.Length; i++)
+#         v0[i] = i;
+#
+#     for (int i = 0; i < s.Length; i++)
+#     {
+#         // calculate v1 (current row distances) from the previous row v0
+#
+#         // first element of v1 is A[i+1][0]
+#         //   edit distance is delete (i+1) chars from s to match empty t
+#         v1[0] = i + 1;
+#
+#         // use formula to fill in the rest of the row
+#         for (int j = 0; j < t.Length; j++)
+#         {
+#             var cost = (s[i] == t[j]) ? 0 : 1;
+#             v1[j + 1] = Minimum(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost);
+#         }
+#
+#         // copy v1 (current row) to v0 (previous row) for next iteration
+#         for (int j = 0; j < v0.Length; j++)
+#             v0[j] = v1[j];
+#     }
+#
+#     return v1[t.Length];
+# }
+def levenshtein(s, t):
+    if s == t:
+        return 0
 
-    if w0[len0 - 1] == w1[len1 - 1]:
-        cost = 0
-    else:
-        cost = 1
+    len_s = len(s)
+    len_t = len(t)
 
-    return min(levenshtein(w0, w1, len0 - 1, len1) + 1,
-               levenshtein(w0, w1, len0, len1 - 1) + 1,
-               levenshtein(w0, w1, len0 - 1, len1 - 1) + cost)
+    if len_s == 0:
+        return min(3, len_t)
+    if len_t == 0:
+        return min(3, len_s)
+
+    v0 = [x for x in range(len_t + 1)]
+    v1 = [0] * (len_t + 1)
+
+    for i in range(len_s):
+        v1[0] = i + 1
+        for j in range(len_t):
+            cost = 0 if s[i] == t[j] else 1
+            v1[j + 1] = min(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost)
+            if v1[j + 1] > 2:
+                return 42
+        v0 = list(v1)
+    return v1[len_t]
+
+# def levenshtein(w0, w1, len0, len1):
+#     if len0 == 0:
+#         return len1
+#     if len1 == 0:
+#         return len0
+#
+#     if w0[len0 - 1] == w1[len1 - 1]:
+#         cost = 0
+#     else:
+#         cost = 1
+#
+#     return min(levenshtein(w0, w1, len0 - 1, len1) + 1,
+#                levenshtein(w0, w1, len0, len1 - 1) + 1,
+#                levenshtein(w0, w1, len0 - 1, len1 - 1) + cost)
 
 
 def closest_word(candidates, word):
     res_word = None
     min_dist = float('inf')
     for corr in candidates:
-        print word, corr
-        ld = levenshtein(word, corr, len(word), len(corr))
+        ld = levenshtein(word, corr)
         if ld < min_dist and ld <= 2:
             res_word = corr
             min_dist = ld
@@ -133,20 +196,21 @@ _keyboard_probabilities = {
 }
 
 
+_lefff = pickle.load(open('lefff_pickle.p', 'r'))
+
+
 def get_candidates_from_lefff(word):
     """
     Extracting words with same prefix from lefff
     """
-    lefff = pickle.load(open('lefff_pickle.p', 'r'))
     try:
-        tmp_candidates = lefff[word[0].lower().strip()]
+        tmp_candidates = _lefff[word[0].lower().strip()]
         return refine_candidates(word, tmp_candidates)
     except KeyError:
         return []
 
 
 def refine_candidates(word, candidates):
-    letters = list(word)
     best_candidates = []
     for candidate in candidates:
         if abs(len(candidate) - len(word)) < 2:
@@ -171,10 +235,10 @@ if __name__ == '__main__':
             self.assertEqual(levenshtein('', 'ab'), 2)
 
         def test_empty_w1(self):
-            self.assertEqual(levenshtein('abcd', ''), 4)
+            self.assertEqual(levenshtein('abcd', ''), 3)
 
         def test_wiki(self):
-            """ Uses the examples from the Wikipedia article """
+            """ Uses the examples from the Wikipedia article. Basically, 3 = a lot. """
             self.assertEqual(levenshtein('kitten', 'sitting'), 3)
             self.assertEqual(levenshtein('Saturday', 'Sunday'), 3)
 

@@ -22,7 +22,7 @@ for line in fileinput.input():
         else:
             lefff_cand = get_candidates_from_lefff(w.getform())
             lefff_corr = closest_word(lefff_cand, w.getform())
-            if lefff_corr and lefff_corr != w:
+            if lefff_corr and lefff_corr != w.getform():
                 spellchecked.append(Token.update_spelling(w, lefff_corr))
             else:
                 spellchecked.append(w)
