@@ -19,10 +19,9 @@ for line in fileinput.input():
         if w.getform() in wico:
             spellchecked.append(Token.update_spelling(w, wico[w.getform()]))
         else:
-            #lefff = []  # Haha. I know.
             lefff_cand = get_candidates_from_lefff(w.getform())
             lefff_corr = closest_word(lefff_cand, w.getform())
-            if lefff_corr:
+            if lefff_corr and lefff_corr != w:
                 spellchecked.append(Token.update_spelling(w, lefff_corr))
             else:
                 spellchecked.append(w)
