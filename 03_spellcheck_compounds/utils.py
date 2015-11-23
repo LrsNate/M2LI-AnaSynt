@@ -157,9 +157,19 @@ def get_candidates_from_lefff(word):
     """
     lefff = pickle.load(open('lefff_pickle.p', 'r'))
     try:
-        return lefff[word[0].lower().strip()]
+        tmp_candidates = lefff[word[0].lower().strip()]
+        return refine_candidates(word, tmp_candidates)
     except KeyError:
         return []
+
+
+def refine_candidates(word, candidates):
+    letters = list(word)
+    best_candidates = []
+    for candidate in candidates:
+        if abs(len(candidate) - len(word)) < 2:
+            best_candidates.append(candidate)
+    return best_candidates
 
 
 def expand_amalgam(word):
