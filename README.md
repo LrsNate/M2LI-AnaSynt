@@ -26,6 +26,9 @@ Si vous avez des questions, veuillez prendre rendez-vous auprès de notre secré
 ## OUTPUT GROUPE 2
 
 ## OUTPUT GROUPE 3
+
+Note : s'il y a plusieurs attributs, ils seront separes par un point-virgule (`;`).
+
 `{ORIG_ORTH=token_with_error}corrected_token`
 
 `EX: {ORIG_ORTH="chein"}chien`
