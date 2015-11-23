@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- encoding:utf8 -*-
 
-from utils import closest_word, expand_amalgam, Token
+from utils import *
 from automaton import compounds_automaton
 import fileinput
 import pickle
 
 wico = pickle.load(open('resources/results_wico.p', 'r'))
-
+lefff = pickle.load(open('lefff_pickle.p', 'r'))
 # TODO: Implement annotations (split words into annotations and form)
 for line in fileinput.input():
     line = line.strip()
@@ -19,8 +19,9 @@ for line in fileinput.input():
         if w.getform() in wico:
             spellchecked.append(Token.update_spelling(w, wico[w.getform()]))
         else:
-            lefff = []  # Haha. I know.
-            lefff_corr = closest_word(lefff, w.getform())
+            #lefff = []  # Haha. I know.
+            lefff_cand = get_candidates_from_lefff(w.getform())
+            lefff_corr = closest_word(lefff_cand, w.getform())
             if lefff_corr:
                 spellchecked.append(Token.update_spelling(w, lefff_corr))
             else:

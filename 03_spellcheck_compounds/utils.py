@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import re
-from cPickle import pickle
+import cPickle as pickle
 
 
 class Token:
@@ -157,21 +157,10 @@ def get_candidates_from_lefff(word):
     """
     lefff = pickle.load(open('lefff_pickle.p', 'r'))
     try:
-        potential_candidates = lefff[word[0].lower().strip()]
+        return lefff[word[0].lower().strip()]
     except KeyError:
-        # Plan an 'escape route' here
-        pass
+        return []
 
-    candidates = refine_candidates(word, potential_candidates)
-
-def refine_candidates(word, potential_candidates):
-    """
-    TODO
-    Get candidates with same prefix that only have a max difference of two
-    letters with 'word' (either 1 or 2 extra letters, or 1 or 2 missing
-    letters, or 1 or 2 different letters), to dismiss improbable candidates.
-    """
-    pass
 
 def expand_amalgam(word):
     if word in _amalgams:
