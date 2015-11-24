@@ -59,6 +59,11 @@ for i in range(1,18):
 
 pickle.dump(results, open("results_wico.p", "w"))
 
+"""
+aux / au
+d' / duquel
+"""
+
 
 
 
