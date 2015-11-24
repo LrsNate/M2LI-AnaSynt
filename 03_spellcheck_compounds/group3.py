@@ -17,7 +17,9 @@ for line in fileinput.input():
     spellchecked = []
     # Step 1: spellcheck
     for w in words:
-        # Detect if word is unknown
+        if 'TMP_TAG' not in w.getannotations():
+            spellchecked.append(w)
+            continue
         if w.getform() in wico:
             spellchecked.append(Token.update_spelling(w, wico[w.getform()]))
         else:
@@ -38,7 +40,7 @@ for line in fileinput.input():
             map(lambda x: x.getform(), spellchecked[i:]))
         if res:
             comp, clist, tag, clen = res
-            merged.append(Token.merge(clist, comp))
+            merged.append(Token.merge(spellchecked[i:i + clen], comp))
             i += clen
         else:
             merged.append(spellchecked[i])

@@ -35,9 +35,12 @@ Note : s'il y a plusieurs attributs, ils seront separes par un point-virgule (`;
 
 `EX: {ORIG_ORTH="chein"}chien`
 
-`{ORIG_SEG=[(token,{_}),(token, {_})]}compound_word`
+`{ORIG_SEG=[token,token];ORIG_ATTR_N='...';...}compound_word`
 
-`EX: {ORIG_SEG=[("pomme",{}),("de",{}),("terre",{})]}pomme_de_terre__N`
+```
+EX: {TAG='N'}pomme {TAG='P'}de {TAG='N'}terre
+-> {ORIG_SEG=["pomme","de","terre"];TAG_1='N';TAG_2='P';TAG_3='N'}pomme_de_terre__N
+```
 
 `{AML="original_token"}split_token {AML="original_token"}split_token`
 

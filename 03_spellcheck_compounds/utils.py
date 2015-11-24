@@ -48,12 +48,14 @@ class Token:
         annot['ORIG_ORTH'] = '"%s"' % form
         return cls(annot, new_spelling)
 
-    # TODO merge annotations
-
     @classmethod
     def merge(cls, tks, comp):
-        tk_list = map(lambda x: '"%s"' % x, tks)
+        tk_list = map(lambda x: '"%s"' % x.getform(), tks)
         annot = {'ORIG_SEG': '[%s]' % ','.join(tk_list)}
+        for i in range(len(tks)):
+            tk_annot = tks[i].getannotations()
+            for k in tk_annot:
+                annot['%s_%d' % (k, i)] = tk_annot[k]
         return cls(annot, comp)
 
     @classmethod
