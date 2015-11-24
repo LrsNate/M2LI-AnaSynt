@@ -10,7 +10,6 @@ import pickle
 wico = pickle.load(open('resources/results_wico.p', 'r'))
 lefff = pickle.load(open('lefff_pickle.p', 'r'))
 
-# TODO: Implement annotations (split words into annotations and form)
 for line in fileinput.input():
     line = line.strip()
     words = map(Token.from_str, line.split(' '))

@@ -91,12 +91,8 @@ def levenshtein(s, t):
                 cost = 0
             else:
                 cost = 1
-            #cost = 0 if s[i] == t[j] else 1
             v1[j + 1] = min(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost)
-            if v1[j + 1] > 2:
-                return None
         v0 = list(v1)
-    print "levenshtein", v1[len_t]
     return v1[len_t]
 
 
