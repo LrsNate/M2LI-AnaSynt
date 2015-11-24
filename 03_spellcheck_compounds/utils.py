@@ -52,7 +52,7 @@ class Token:
 
     @classmethod
     def merge(cls, tks, comp):
-        tk_list = map(lambda x: '"%s"' % x, tks)  # map(lambda x: x.getform(), tks)
+        tk_list = map(lambda x: '"%s"' % x, tks)
         annot = {'ORIG_SEG': '[%s]' % ','.join(tk_list)}
         return cls(annot, comp)
 
@@ -63,45 +63,6 @@ class Token:
         return map(lambda x: cls(annot, x), aml)
 
 
-# int LevenshteinDistance(string s, string t)
-# {
-#     // degenerate cases
-#     if (s == t) return 0;
-#     if (s.Length == 0) return t.Length;
-#     if (t.Length == 0) return s.Length;
-#
-#     // create two work vectors of integer distances
-#     int[] v0 = new int[t.Length + 1];
-#     int[] v1 = new int[t.Length + 1];
-#
-#     // initialize v0 (the previous row of distances)
-#     // this row is A[0][i]: edit distance for an empty s
-#     // the distance is just the number of characters to delete from t
-#     for (int i = 0; i < v0.Length; i++)
-#         v0[i] = i;
-#
-#     for (int i = 0; i < s.Length; i++)
-#     {
-#         // calculate v1 (current row distances) from the previous row v0
-#
-#         // first element of v1 is A[i+1][0]
-#         //   edit distance is delete (i+1) chars from s to match empty t
-#         v1[0] = i + 1;
-#
-#         // use formula to fill in the rest of the row
-#         for (int j = 0; j < t.Length; j++)
-#         {
-#             var cost = (s[i] == t[j]) ? 0 : 1;
-#             v1[j + 1] = Minimum(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost);
-#         }
-#
-#         // copy v1 (current row) to v0 (previous row) for next iteration
-#         for (int j = 0; j < v0.Length; j++)
-#             v0[j] = v1[j];
-#     }
-#
-#     return v1[t.Length];
-# }
 def levenshtein(s, t):
     if s == t:
         return 0
@@ -126,21 +87,6 @@ def levenshtein(s, t):
                 return 42
         v0 = list(v1)
     return v1[len_t]
-
-# def levenshtein(w0, w1, len0, len1):
-#     if len0 == 0:
-#         return len1
-#     if len1 == 0:
-#         return len0
-#
-#     if w0[len0 - 1] == w1[len1 - 1]:
-#         cost = 0
-#     else:
-#         cost = 1
-#
-#     return min(levenshtein(w0, w1, len0 - 1, len1) + 1,
-#                levenshtein(w0, w1, len0, len1 - 1) + 1,
-#                levenshtein(w0, w1, len0 - 1, len1 - 1) + cost)
 
 
 def closest_word(candidates, word):
@@ -167,32 +113,40 @@ _amalgams = {
 }
 
 _keyboard_probabilities = {
-    'a': {'z':.5, 'q':.35, 's':.15},
-    'z': {'a':.21, 'e':.28, 'q':.15 , 's':.21, 'd':.15},
-    'e': {'z':.25, 'r':.25, 's':.18, 'd':.22, 'f':.10},
-    'r': {'e':.25, 't':.25, 'd':.18, 'f':.22, 'g':.10},
-    't': {'r':.25, 'y':.25, 'f':.18, 'g':.22, 'h':.10},
-    'y': {'t':.25, 'u':.25, 'g':.18, 'h':.22, 'j':.10},
-    'u': {'y':.25, 'i':.25, 'h':.18, 'j':.22, 'k':.10},
-    'i': {'u':.25, 'o':.25, 'j':.18, 'k':.22, 'l':.10},
-    'o': {'i':.25, 'p':.25, 'k':.18, 'l':.22, 'm':.10},
-    'p': {'o':.30, 'l':.40, 'm':.30},
-    'q': {'s':.30, 'a':.40, 'w':.30},
-    's': {'a':.10, 'z':.15, 'e':.10, 'q':.20, 'd':.20, 'w':.10, 'x':.15},
-    'd': {'z':.10, 'e':.15, 'r':.10, 's':.20, 'f':.20, 'x':.10, 'c':.15},
-    'f': {'e':.10, 'r':.15, 't':.10, 'd':.20, 'g':.20, 'c':.10, 'v':.15},
-    'g': {'r':.10, 't':.15, 'y':.10, 'f':.20, 'h':.20, 'v':.10, 'b':.15},
-    'h': {'t':.10, 'y':.15, 'u':.10, 'g':.20, 'j':.20, 'b':.10, 'n':.15},
-    'j': {'y':.10, 'u':.15, 'i':.10, 'h':.20, 'k':.20, 'n':.10, ',':.15},
-    'k': {'u':.10, 'i':.15, 'o':.10, 'j':.20, 'l':.20, ',':.10, ';':.15},
-    'l': {'i':.10, 'o':.15, 'p':.10, 'k':.20, 'm':.20, ';':.10, ':':.15},
-    'm': {'o':.05, 'p':.10, 'l':.25, 'ù':.25, ':':.15, '!':.20},
-    'w': {'q':.05, 's':.20, 'x':.40, '<':.35},
-    'x': {'w':.35, 's':.20, 'd':.10, 'c':.35},
-    'c': {'x':.35, 'd':.20, 'f':.10, 'v':.35},
-    'v': {'c':.35, 'f':.20, 'g':.10, 'b':.35},
-    'b': {'v':.35, 'g':.20, 'h':.10, 'n':.35},
-    'n': {'b':.35, 'h':.20, 'j':.10, ',':.35}
+    'a': {'z': .5, 'q': .35, 's': .15},
+    'z': {'a': .21, 'e': .28, 'q': .15, 's': .21, 'd': .15},
+    'e': {'z': .25, 'r': .25, 's': .18, 'd': .22, 'f': .10},
+    'r': {'e': .25, 't': .25, 'd': .18, 'f': .22, 'g': .10},
+    't': {'r': .25, 'y': .25, 'f': .18, 'g': .22, 'h': .10},
+    'y': {'t': .25, 'u': .25, 'g': .18, 'h': .22, 'j': .10},
+    'u': {'y': .25, 'i': .25, 'h': .18, 'j': .22, 'k': .10},
+    'i': {'u': .25, 'o': .25, 'j': .18, 'k': .22, 'l': .10},
+    'o': {'i': .25, 'p': .25, 'k': .18, 'l': .22, 'm': .10},
+    'p': {'o': .30, 'l': .40, 'm': .30},
+    'q': {'s': .30, 'a': .40, 'w': .30},
+    's': {'a': .10, 'z': .15, 'e': .10, 'q': .20, 'd': .20, 'w': .10,
+          'x': .15},
+    'd': {'z': .10, 'e': .15, 'r': .10, 's': .20, 'f': .20, 'x': .10,
+          'c': .15},
+    'f': {'e': .10, 'r': .15, 't': .10, 'd': .20, 'g': .20, 'c': .10,
+          'v': .15},
+    'g': {'r': .10, 't': .15, 'y': .10, 'f': .20, 'h': .20, 'v': .10,
+          'b': .15},
+    'h': {'t': .10, 'y': .15, 'u': .10, 'g': .20, 'j': .20, 'b': .10,
+          'n': .15},
+    'j': {'y': .10, 'u': .15, 'i': .10, 'h': .20, 'k': .20, 'n': .10,
+          ',': .15},
+    'k': {'u': .10, 'i': .15, 'o': .10, 'j': .20, 'l': .20, ',': .10,
+          ';': .15},
+    'l': {'i': .10, 'o': .15, 'p': .10, 'k': .20, 'm': .20, ';': .10,
+          ':': .15},
+    'm': {'o': .05, 'p': .10, 'l': .25, 'ù': .25, ':': .15, '!': .20},
+    'w': {'q': .05, 's': .20, 'x': .40, '<': .35},
+    'x': {'w': .35, 's': .20, 'd': .10, 'c': .35},
+    'c': {'x': .35, 'd': .20, 'f': .10, 'v': .35},
+    'v': {'c': .35, 'f': .20, 'g': .10, 'b': .35},
+    'b': {'v': .35, 'g': .20, 'h': .10, 'n': .35},
+    'n': {'b': .35, 'h': .20, 'j': .10, ',': .35}
 }
 
 
@@ -238,7 +192,8 @@ if __name__ == '__main__':
             self.assertEqual(levenshtein('abcd', ''), 3)
 
         def test_wiki(self):
-            """ Uses the examples from the Wikipedia article. Basically, 3 = a lot. """
+            """ Uses the examples from the Wikipedia article.
+            Basically, 3 = a lot. """
             self.assertEqual(levenshtein('kitten', 'sitting'), 3)
             self.assertEqual(levenshtein('Saturday', 'Sunday'), 3)
 
@@ -253,12 +208,14 @@ if __name__ == '__main__':
 
         def test_spellupdate(self):
             t = Token.from_str('{A=a}qautre')
-            self.assertEqual(str(Token.update_spelling(t, 'quatre')), '{A=a;ORIG_ORTH="qautre"}quatre')
+            self.assertEqual(str(Token.update_spelling(t, 'quatre')),
+                             '{A=a;ORIG_ORTH="qautre"}quatre')
 
         def test_merge(self):
             t1 = Token.from_str('quatre')
             t2 = Token.from_str('cinq')
-            self.assertEquals(str(Token.merge([t1, t2], 'q_c')), '{ORIG_SEG=["quatre","cinq"]}q_c')
+            self.assertEquals(str(Token.merge([t1, t2], 'q_c')),
+                              '{ORIG_SEG=["quatre","cinq"]}q_c')
 
         def test_expand(self):
             t = Token.from_str('{A=a}au')

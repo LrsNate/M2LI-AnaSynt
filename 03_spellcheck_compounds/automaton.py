@@ -94,6 +94,7 @@ if __name__ == '__main__':
     class CompoundsAutomatonTest(unittest.TestCase):
         def test_recognition(self):
             res = compounds_automaton.recognize(['en', 'raison', 'du'])
-            self.assertEqual(res, ('en_raison_du', ['en', 'raison', 'du'], 'P', 3))
+            self.assertEqual(res,
+                             ('en_raison_du', ['en', 'raison', 'du'], 'P', 3))
 
     unittest.main()
