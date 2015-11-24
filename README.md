@@ -25,6 +25,8 @@ Si vous avez des questions, veuillez prendre rendez-vous auprès de notre secré
 
 ## OUTPUT GROUPE 2
 
+`{TMP_TAG='N,V'}word`
+
 ## OUTPUT GROUPE 3
 
 Note : s'il y a plusieurs attributs, ils seront separes par un point-virgule (`;`).
