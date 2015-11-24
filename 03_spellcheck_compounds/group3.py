@@ -1,7 +1,8 @@
 #!/usr/bin/env python
 # -*- encoding:utf8 -*-
 
-from utils import *
+from utils import Token, get_candidates_from_lefff
+from utils import closest_word, expand_amalgam
 from automaton import compounds_automaton
 import fileinput
 import pickle
@@ -22,7 +23,7 @@ for line in fileinput.input():
         else:
             lefff_cand = get_candidates_from_lefff(w.getform())
             lefff_corr = closest_word(lefff_cand, w.getform())
-            if lefff_corr and lefff_corr != w:
+            if lefff_corr and lefff_corr != w.getform():
                 spellchecked.append(Token.update_spelling(w, lefff_corr))
             else:
                 spellchecked.append(w)
@@ -33,7 +34,8 @@ for line in fileinput.input():
     i = 0
     while i < len(spellchecked):
         # TODO include annotations in merge
-        res = compounds_automaton.recognize(map(lambda x: x.getform(), spellchecked[i:]))
+        res = compounds_automaton.recognize(
+            map(lambda x: x.getform(), spellchecked[i:]))
         if res:
             comp, clist, tag, clen = res
             merged.append(Token.merge(clist, comp))
