@@ -69,6 +69,8 @@ def levenshtein(s, t):
 
     len_s = len(s)
     len_t = len(t)
+    s = s.lower()
+    t = t.lower()
 
     if len_s == 0:
         return min(3, len_t)
@@ -81,11 +83,18 @@ def levenshtein(s, t):
     for i in range(len_s):
         v1[0] = i + 1
         for j in range(len_t):
-            cost = 0 if s[i] == t[j] else 1
+            if t[j] in _keyboard_probabilities[s[i]]:
+                cost = _keyboard_probabilities[s[i]][t[j]]
+            elif s[i] == t[j]:
+                cost = 0
+            else:
+                cost = 1
+            #cost = 0 if s[i] == t[j] else 1
             v1[j + 1] = min(v1[j] + 1, v0[j + 1] + 1, v0[j] + cost)
             if v1[j + 1] > 2:
-                return 42
+                return None
         v0 = list(v1)
+    print "levenshtein", v1[len_t]
     return v1[len_t]
 
 
@@ -111,6 +120,7 @@ _amalgams = {
     'auxquels': ['à', 'lesquels'],
     'auxquelles': ['à', 'lesquelles']
 }
+
 
 _keyboard_probabilities = {
     'a': {'z': .5, 'q': .35, 's': .15},
@@ -194,8 +204,10 @@ if __name__ == '__main__':
         def test_wiki(self):
             """ Uses the examples from the Wikipedia article.
             Basically, 3 = a lot. """
-            self.assertEqual(levenshtein('kitten', 'sitting'), 3)
-            self.assertEqual(levenshtein('Saturday', 'Sunday'), 3)
+            self.assertEqual(levenshtein('kitten', 'sitting'), None)
+            self.assertEqual(levenshtein('Saturday', 'Sunday'), None)
+
+            self.assertEqual(levenshtein('chat', 'chzt'), None)
 
     class TokenTests(unittest.TestCase):
         def test_fromstr_simple(self):
