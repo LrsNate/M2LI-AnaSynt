@@ -79,6 +79,17 @@ def levenshtein(s, t):
     if len_t == 0:
         return min(3, len_s)
 
+    threshold = max(len_s, len_t) - min(len_s, len_t)
+    threshold2 = len(set(s[1:]) & set(t[1:]))
+
+    # when too much difference between the two strings
+    if  threshold > 3:
+        return 10
+    if threshold2 == 0:
+        return 10
+    if threshold - len(set(s[1:]) & set(t[1:])) > 3:
+        return 10
+
     v0 = [x for x in range(len_t + 1)]
     v1 = [0] * (len_t + 1)
 
@@ -86,7 +97,7 @@ def levenshtein(s, t):
         v1[0] = i + 1
         for j in range(len_t):
             if t[j] in _keyboard_probabilities[s[i]]:
-                cost = _keyboard_probabilities[s[i]][t[j]]
+                cost = 1 - _keyboard_probabilities[s[i]][t[j]]
             elif s[i] == t[j]:
                 cost = 0
             else:
