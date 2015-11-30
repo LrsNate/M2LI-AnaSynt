@@ -17,19 +17,24 @@ if __name__ == "__main__":
 
 	p.add_option("-c", "--confusion",
 		              action="store_true", dest="matrice", default=False,
-		              help=u"")
+		              help=u"Afficher les matrices de confusion")
+	
+	p.add_option("-t","--test", action="store_true",dest="testit", default=False,
+	help=u"Option pour créer un corpus de test séparé pour tester le perceptron")
+
 
 	(op,args)=p.parse_args()
 	#Variables globales
 
 	ITER=int(op.iteration)
 	MATRICE=op.matrice
+	TESTIT=op.testit
 	TEST=9
 	LATEX=False
 	PERCENT=True
 
 CAPITALES=u'ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÇÀÔÖÎÂÏÛÊË'
-CLASSESFERMEES= [u'ADJWH',u'ADVWH',u'CC',u'CLO',u'CLR',u'CLS',u'CS',u'DET',u'DETWH',u'P',u'PRO',u'PROREL',u'PROWH']
+CLASSESFERMEES= []#[u'ADJWH',u'ADVWH',u'CC',u'CLO',u'CLR',u'CLS',u'CS',u'DET',u'DETWH',u'P',u'PRO',u'PROREL',u'PROWH']
 
 #Décorateur pour la mise en cache dans un dictionnaire de résultats de l'appel à une fonction
 #Permet de limiter les appels à des fonctions couteuses en temps de calcul
@@ -307,6 +312,13 @@ def meilleurstraits(weight):
 		
 #Fonction pour sauver le vecteur de poids dans un fichier
 def saveweights(weight):
+	m=weight.keys()
+	for k in m:
+		l=weight[k].keys()
+		for z in l:
+			if weight[k][z] == 0.0:
+				del weight[k][z]
+	
 	with open("weights.pickle",'w') as toto:
 		pickle.dump(weight,toto)
 
@@ -330,6 +342,13 @@ if __name__ == "__main__":
 		test += x
 		train += y
 		cats.update(z)
+	
+	if not TESTIT:
+		train+=test
+		test=train
+		known=set([e for e,x in test])
+		with open("known.pickle","w") as k:
+			pickle.dump(known,k)
 
 	print len(cats),"catégories : ",sorted(cats)
 	print "taille du corpus d'entraînement : ",len(train)," et du corpus de test : ",len(test)
