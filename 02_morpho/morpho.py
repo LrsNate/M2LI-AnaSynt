@@ -71,7 +71,7 @@ def readlexicon(fichier):
 			else:
 				forme,cat=ligne
 			
-			cat=cat.strip()
+			cat=cat.strip(" \"'\t")
 			
 			if cat not in CLASSESFERMEES:
 				#Mise en forme des valeurs récupérées :

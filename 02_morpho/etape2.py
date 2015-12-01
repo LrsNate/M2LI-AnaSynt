@@ -6,12 +6,25 @@ from morpho import defloat
 import fileinput as fi
 from functools import partial
 import re
+from optparse import OptionParser
+
+#TODO : meilleurs commentaires
+usage="Script pour le pipeline"
+p = OptionParser(usage=usage)
+p.add_option("-p","--poids",action="store",dest="poids",default="weights.pickle",help="Chemin vers le fichier de poids")
+p.add_option("-l","--lexique",action="store",dest="lexique",default="known.pickle",help="Chemin vers le fichier de lexique")
+
+(op,args)=p.parse_args()
+
+FICHIERPOIDS=op.poids
+FICHIERLEXIQUE=op.lexique
+
 
 #Vecteurs de poids du perceptron
-w=m.importweights("weights.pickle")
+w=m.importweights(FICHIERPOIDS)
 
 #Liste de mots connus à ignorer
-k=m.importweights("known.pickle")
+k=m.importweights(FICHIERLEXIQUE)
 k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE"])
 
 #Fonction pour récupérer les tags
@@ -19,7 +32,7 @@ taggit=m.memoize(lambda x: partial(m.classify,w)(m.getfeatures(x)))
 
 space=re.compile(r" ")
 
-for line in fi.input():
+for line in fi.input(args):
 	concat=str()
 	line=line.decode("utf-8")
 	line=line.strip()
