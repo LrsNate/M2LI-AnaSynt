@@ -39,18 +39,18 @@ Note : s'il y a plusieurs attributs, ils seront separes par un point-virgule (`;
 
 `{ORIG_ORTH=token_with_error}corrected_token`
 
-`EX: {ORIG_ORTH="chein"}chien`
+`EX: {ORIG_ORTH='chein'}chien`
 
 `{ORIG_SEG=[token,token];ORIG_ATTR_N='...';...}compound_word`
 
 ```
 EX: {TAG='N'}pomme {TAG='P'}de {TAG='N'}terre
--> {ORIG_SEG=["pomme","de","terre"];TAG_1='N';TAG_2='P';TAG_3='N'}pomme_de_terre__N
+-> {ORIG_SEG=['pomme','de','terre'];TAG_1='N';TAG_2='P';TAG_3='N'}pomme_de_terre__N
 ```
 
-`{AML="original_token"}split_token {AML="original_token"}split_token`
+`{AML='original_token'}split_token {AML='original_token'}split_token`
 
-`Ex: {AML="du"}de {AML="du"}le`
+`Ex: {AML='du'}de {AML='du'}le`
 
 Exemple complet:
 
