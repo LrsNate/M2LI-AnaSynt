@@ -24,6 +24,8 @@ quoi    koi
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
 
+Est-ce que le fichier `01_etiq_token_debruit/regexetiquettes.txt` convient ?
+
 ## OUTPUT GROUPE 2
 
 `{TMP_TAG='N,V'}word`
