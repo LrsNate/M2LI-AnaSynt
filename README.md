@@ -1,26 +1,27 @@
 # M2 LI Syntactic Analysis Project
 
 ## OUTPUT GROUPE 1
-Nous renvoyons à la condition de recevoir quarante millions d'euros de la part du groupe 2 un fichier texte composé de deux colonnes séparées par une tabulation :
+`ORIG_ORTH      CORR_ORTH`
 
-La première colonne contient le mot original lorsque celui-ci a subi une modification.
-La seconde colonne contient le mot original, le mot corrigé ou l'étiquette lorsque le mot a été modifié.
+Notes :
+- Il y a une ligne vide entre chaque phrase.
+- Si un mot n'a pas été corrigé, il se trouve dans la colonne de droite.
+- Les étiquettes se trouvent dans la colonne de droite.
 
 Exemples :
-slt	salut
-	il
-	sait
-	que
-	ça
-	ne
-	va
-	pas
-	le
-	faire
-machin@bidule.truc	_EMAIL
-11h30	_HEURE
+```
+slt    salut
+        il
+        est
+11h30   _HEURE
+        .
 
-Si vous avez des questions, veuillez prendre rendez-vous auprès de notre secrétaire (le prof, quoi).
+        tu
+fais    fé
+quoi    koi
+        ?
+```
+
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
 
 ## OUTPUT GROUPE 2
