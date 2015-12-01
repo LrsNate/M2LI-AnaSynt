@@ -21,7 +21,7 @@ def lireCorpus(corpus):
 	sys.stdout = codecs.getwriter("utf-8")(sys.stdout)
 		
 	# Reconnaissance de la ponctuation forte		
-	ponctForte = re.compile(u"([\.?!])\W")
+	ponctForte = re.compile(u"([\.?!])\s")
 	# Découpage en lignes
 	lignes = ponctForte.sub(ur"\1\n", f)
 	
@@ -62,7 +62,7 @@ def ponctuation(ligne):
 	ligne = ponctForte.sub(ur"\n\1\n", ligne)
 	
 	# Ajout d'un saut de ligne avant et après chaque ponctuation faible hors apostrophe
-	ponctFaible = re.compile(u"([,;\(\)\[\]\{\}«»—])")
+	ponctFaible = re.compile(u"([,;\(\)\[\]\{\}«»—])\D")
 	ligne = ponctFaible.sub(ur"\n\1\n", ligne)
 	
 	# Ajout d'un saut de ligne après l'apostrophe
@@ -90,15 +90,13 @@ def etiquettage(ligne):
 	"""
 	Repérage et étiquettage des URL, emails, nombres, dates, heures, hastags, etc.
 	"""
-	# REVOIR TOUTES LES EXPRESSIONS REGULIERES !!!!!!!!!
 	# Expressions régulières pour le repérage des étiquettes
 	email = re.compile(ur"\b([\w\-_\.]+@[\w\-_\.]+\.[\w\-_\.]+)\b", re.I)
 	url = re.compile(ur"(\s|\A)(((ht|f)tp(s)?://)?(www\.)?([\w\-\.]+)\.\w+([\w\-\./\?#]+)?\b)", re.I)
-	hashtag = re.compile(u"\b(#\S+)")
+	hashtag = re.compile(u"(\s|\A)(#\S+)")
 	nombre = re.compile(u"(\s|\A)(\d+(\s\d{3})*(,\d+)?)(\s|\Z)")
-	dateEU = re.compile(u"(\s|\A)(([12]\d|3[01]|0?[1-9])(([\.\-/])?(1[0-2]|0?[1-9])([\.\-/]?))(\d{0,4})?)(\s|\Z)")
-	dateUS = re.compile(u"\b((\d{0,4})(([\.\-/])?(1[0-2]|0?[1-9])([\.\-/])?)([12]\d|3[01]|0?[1-9])?)\b")
-	dateLettres = re.compile(u"(\b(((lun|mar|mercre|jeu|vendre|same)di\s+)|dimanche\s+)?((([12]\d)|(3[01])|(0?[2-9])|(1er))\s+)(janvier|février|mars|avril|mail|juin|juillet|août|(septem|octo|novem|décem)bre)(\s+\d{1,4})?\b)", re.I)
+	dateEU = re.compile(u"(\s|\A)(((0?[1-9])|([12]\d)|(3[01]))?(([/\.\-])?((0?[1-9])|(1[12]))([\./\-])?)(\d{2}|\d{4})?)(\s|\Z)")
+	dateLettres = re.compile(u"(\s|\A)((((lun|mar|mercre|jeu|vendre|same)di\s+)|dimanche\s+)?((([12]\d)|(3[01])|(0?[2-9])|(1er))\s+)(janvier|février|mars|avril|mail|juin|juillet|août|(septem|octo|novem|décem)bre)(\s+\d{1,4})?)(\s|\Z)", re.I)
 	heure = re.compile(ur"\b(((0?\d)|(1\d)|(2[0-3]))( *)(:|heure(s)?|h)( *)((0?\d)|([1-5]\d))?)\b", re.I)
 	
 	# Remplacer les espaces par un tilde pour ce qui se trouve entre {}
@@ -109,18 +107,16 @@ def etiquettage(ligne):
 		ligne = email.sub(ur"{\1}__EMAIL", ligne)
 	if url.search(ligne):
 		ligne = url.sub(ur"\1{\2}__URL", ligne)
-	if dateLettres.search(ligne):
-		ligne = dateLettres.sub(ur"{\2}__DATE", ligne)
+	if hashtag.search(ligne):
+		ligne = hashtag.sub(ur"\1{\2}__HASHTAG", ligne)
 	if heure.search(ligne):
 		ligne = heure.sub(ur"{\1}__HEURE", ligne)
-	#~ if dateEU.search(ligne):
-		#~ ligne = dateEU.sub(ur"\1{\2}__DATE\9", ligne)
-	if dateUS.search(ligne):		# On a-t-on vraiment besoin ?
-		ligne = dateUS.sub(ur"{\1}__DATE", ligne)
-	if hashtag.search(ligne):
-		ligne = hashtag.sub(ur"{\1}__HASHTAG", ligne)
+	if dateLettres.search(ligne):
+		ligne = dateLettres.sub(ur"\1{\2}__DATE\15", ligne)
 	if nombre.search(ligne):
 		ligne = nombre.sub(ur"\1{\2}__NOMBRE\5", ligne)
+	if dateEU.search(ligne):
+		ligne = dateEU.sub(ur"\1{\2}__DATE\14", ligne)
 
 	while reperage.search(ligne):
 		ligne = reperage.sub(ur"\1~\2",ligne)
