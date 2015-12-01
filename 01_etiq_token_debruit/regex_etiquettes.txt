@@ -1,0 +1,7 @@
+[\w\-_\.]+@[\w\-_\.]+\.[\w\-_\.]+	_EMAIL
+((ht|f)tp(s)?://)?(www\.)?([\w\-\.]+)\.\w+([\w\-\./\?#]+)?	_URL
+#\S+	_HASHTAG
+\d+(\s\d{3})*(,\d+)?	_NOMBRE
+((0?[1-9])|([12]\d)|(3[01]))?(([/\.\-])?((0?[1-9])|(1[12]))([\./\-])?)(\d{2}|\d{4})?	_DATE
+(((lun|mar|mercre|jeu|vendre|same)di\s+)|dimanche\s+)?((([12]\d)|(3[01])|(0?[2-9])|(1er))\s+)(janvier|février|mars|avril|mail|juin|juillet|août|(septem|octo|novem|décem)bre)(\s+\d{1,4})?	_DATE
+((0?\d)|(1\d)|(2[0-3]))( *)(:|heure(s)?|h)( *)((0?\d)|([1-5]\d))?	_HEURE
