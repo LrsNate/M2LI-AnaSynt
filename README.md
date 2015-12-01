@@ -9,7 +9,8 @@ Notes :
 - Les étiquettes se trouvent dans la colonne de droite.
 
 Exemples :
-`slt    salut
+```
+slt    salut
         il
         est
 11h30   _HEURE
@@ -18,7 +19,8 @@ Exemples :
         tu
 fais    fé
 quoi    koi
-        ?`
+        ?
+```
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
 
