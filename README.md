@@ -26,6 +26,8 @@ quoi    koi
 
 Est-ce que le fichier `01_etiq_token_debruit/regexetiquettes.txt` convient ?
 
+Le groupe 3 (enfin, un des binomes) a une petite remarque de formatage : c'est pas plus cohérent de suivre l'input/output du prof sur toute la chaîne ? En l'occurrence une phrase par ligne et chaque token formaté en `{annotations}forme`. En l'occurrence ça pourrait ressembler à quelque chose comme `{SMS='koi'}quoi` ou `{NE_NAME='toto@github.com'}_EMAIL`. Tu en penses quoi ?
+
 ## OUTPUT GROUPE 2
 
 `{TMP_TAG='N,V'}word`
