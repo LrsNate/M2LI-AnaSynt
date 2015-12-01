@@ -1,7 +1,7 @@
 # M2 LI Syntactic Analysis Project
 
 ## OUTPUT GROUPE 1
-`ORIG_ORTH      COOR_ORTH`
+`ORIG_ORTH      CORR_ORTH`
 
 Notes :
 - Il y a une ligne vide entre chaque phrase.
