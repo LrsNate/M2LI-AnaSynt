@@ -31,7 +31,7 @@ Le groupe 3 (enfin, un des binomes) a une petite remarque de formatage : c'est p
 ## OUTPUT GROUPE 2
 
 Les mots étiquetés prendrons typiquement cette forme : `{TMP_TAG='TAG1,TAG2';}word`
-Si un mot étiqueté était déjà précédé par des accolades, "TMP_TAG='TAG1,TAG2';" sera concaténé au contenu de ces accolades, sans espace. On part du principe que ce contenu se finit déjà par un point-virgule. 
+Si un mot étiqueté était déjà précédé par des accolades, `"TMP_TAG='TAG1,TAG2';"` sera concaténé au contenu de ces accolades, sans espace. On part du principe que ce contenu se finit déjà par un point-virgule. 
 
 ## OUTPUT GROUPE 3
 
