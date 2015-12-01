@@ -9,7 +9,11 @@ import re
 from optparse import OptionParser
 
 #TODO : meilleurs commentaires
-usage="Script pour le pipeline"
+usage=u"""%prog lignes [-p poids] [-l lexique] 
+	Script pour le pipeline. Utilise un fichier de vecteur de poids et un fichier de lexique.
+	Étiquette les mots inconnus sur une ligne. Prend en entrée un fichier ou stdin.
+	"cat fichier" | %prog et "%prog fichier" sont équivalents."""
+
 p = OptionParser(usage=usage)
 p.add_option("-p","--poids",action="store",dest="poids",default="weights.pickle",help="Chemin vers le fichier de poids")
 p.add_option("-l","--lexique",action="store",dest="lexique",default="known.pickle",help="Chemin vers le fichier de lexique")
