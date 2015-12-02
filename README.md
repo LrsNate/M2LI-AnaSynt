@@ -23,12 +23,15 @@ quoi    koi
 ```
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
+> Est-ce que le fichier `01_etiq_token_debruit/regexetiquettes.txt` convient ?
 
-Est-ce que le fichier `01_etiq_token_debruit/regexetiquettes.txt` convient ?
+Le groupe 3 (enfin, un des binomes) a une petite remarque de formatage : c'est pas plus cohérent de suivre l'input/output du prof sur toute la chaîne ? En l'occurrence une phrase par ligne et chaque token formaté en `{annotations}forme`. En l'occurrence ça pourrait ressembler à quelque chose comme `{SMS='koi'}quoi` ou `{NE_NAME='toto@github.com'}_EMAIL`. Tu en penses quoi ?
+> Cela dépend de ce que le groupe 2 veut avoir en entrée. À la suite du premier TP, ils nous avaient demandé ce format, ce qu'ils ont reconfirmé la semaine dernière.
 
 ## OUTPUT GROUPE 2
 
-`{TMP_TAG='N,V'}word`
+Les mots étiquetés prendrons typiquement cette forme : `{TMP_TAG='TAG1,TAG2';}word`
+Si un mot étiqueté était déjà précédé par des accolades, `TMP_TAG='TAG1,TAG2';` sera concaténé au contenu de ces accolades, sans espace. On part du principe que ce contenu se finit déjà par un point-virgule. 
 
 ## OUTPUT GROUPE 3
 
@@ -36,18 +39,18 @@ Note : s'il y a plusieurs attributs, ils seront separes par un point-virgule (`;
 
 `{ORIG_ORTH=token_with_error}corrected_token`
 
-`EX: {ORIG_ORTH="chein"}chien`
+`EX: {ORIG_ORTH='chein'}chien`
 
 `{ORIG_SEG=[token,token];ORIG_ATTR_N='...';...}compound_word`
 
 ```
 EX: {TAG='N'}pomme {TAG='P'}de {TAG='N'}terre
--> {ORIG_SEG=["pomme","de","terre"];TAG_1='N';TAG_2='P';TAG_3='N'}pomme_de_terre__N
+-> {ORIG_SEG=['pomme','de','terre'];TAG_1='N';TAG_2='P';TAG_3='N'}pomme_de_terre__N
 ```
 
-`{AML="original_token"}split_token {AML="original_token"}split_token`
+`{AML='original_token'}split_token {AML='original_token'}split_token`
 
-`Ex: {AML="du"}de {AML="du"}le`
+`Ex: {AML='du'}de {AML='du'}le`
 
 Exemple complet:
 
