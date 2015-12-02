@@ -55,3 +55,7 @@ echo "{TAG='A'}bien {TAG='A'}sûr duquel {TMP_TAG='a'}entropie visuellemnt {TMP_
 ## OUTPUT GROUPE 4
 
 ## OUTPUT GROUPE 5
+Alors, si j'ai bien tout compris (oui, je sais, avec des si pareils, on mettrait Paris en bouteille...). Je dois envoyer au parser un truc de ce format là :
+	Le _unknown_N part de le principe que _PERS_ est à le _PLACE_ . 
+Tout en gardant en mémoire :
+	Le shtroumpf paart du principe que Chomsky esst au Paradis.
