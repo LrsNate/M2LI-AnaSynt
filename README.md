@@ -16,6 +16,7 @@ Pi égale {3,14;}_NOMBRE
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
 > Est-ce que le fichier `01_etiq_token_debruit/regex_etiquettes.txt` convient ?
+OUI :) (439 remplacements sur mon TRAINCORP)
 
 Le groupe 3 (enfin, un des binomes) a une petite remarque de formatage : c'est pas plus cohérent de suivre l'input/output du prof sur toute la chaîne ? En l'occurrence une phrase par ligne et chaque token formaté en `{annotations}forme`. En l'occurrence ça pourrait ressembler à quelque chose comme `{SMS='koi'}quoi` ou `{NE_NAME='toto@github.com'}_EMAIL`. Tu en penses quoi ?
 > C'est fait.
