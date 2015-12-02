@@ -9,8 +9,10 @@ Notes :
 - S'il n'y a pas de point final, il y aura une espace après le dernier mot de la dernière ligne.
 
 Exemples :
-`{c;}c'est {ke;}que {c;}c'est rigolo a {fair;}faire {jv;}j'y {jv;}vais .
-Pi égale {3,14;}_NOMBRE`
+```
+{c;}c'est {ke;}que {c;}c'est rigolo a {fair;}faire {jv;}j'y {jv;}vais .
+Pi égale {3,14;}_NOMBRE
+```
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
 > Est-ce que le fichier `01_etiq_token_debruit/regex_etiquettes.txt` convient ?
