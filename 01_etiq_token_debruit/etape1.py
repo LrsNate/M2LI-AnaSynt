@@ -69,6 +69,10 @@ def ponctuation(ligne):
 	virgule = re.compile(u"(,)\D")
 	ligne = virgule.sub(ur" \1 ", ligne)
 	
+	# Attention aux points de suspension s'il ne sont pas suivis d'une espace
+	suspension = re.compile(u"(\.{3})(\w+)")
+	ligne = suspension.sub(ur"\1 \2", ligne)
+	
 	# Ajout d'un saut de ligne après l'apostrophe
 	apostrophe = re.compile(u"(['’])")
 	ligne = apostrophe.sub(ur"\1 ", ligne)
