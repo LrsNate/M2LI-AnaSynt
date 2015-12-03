@@ -25,10 +25,10 @@ FICHIERLEXIQUE=op.lexique
 
 
 #Vecteurs de poids du perceptron
-w=m.importweights(FICHIERPOIDS)
+w=m.importpickle(FICHIERPOIDS)
 
 #Liste de mots connus à ignorer
-k=m.importweights(FICHIERLEXIQUE)
+k=m.importpickle(FICHIERLEXIQUE)
 k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE"])
 
 #Fonction pour récupérer les tags
