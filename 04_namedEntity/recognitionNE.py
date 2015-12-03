@@ -18,7 +18,7 @@ class Texte():
     phrase.identifyWords(string)
     phrase.detectCandidatesEN()
     self.phrases.append(phrase)
-    print self.phrases
+    #print self.phrases
     #for ph in self.phrases:
       #ph.printP()
   
@@ -28,7 +28,7 @@ class Texte():
     for phrase in self.phrases:
       #if phrase.words[0].token=="":
 	#return self.stringOrig
-      phrase.printP()
+      #phrase.printP()
       phrase.searchEN()
       output+=phrase.outputString()
     return output
@@ -48,7 +48,7 @@ class Phrase():
   
   def identifyWords(self, string):
     string=string.split()
-    print string
+    #print string
     i=0
     for w in string:
       #print 
@@ -62,7 +62,7 @@ class Phrase():
   def detectCandidatesEN(self):#cherche les candidat potentiel pour les EN
     for word in self.words:
       if word.token[0].isupper():
-	print word.token
+	#print word.token
 	self.candidatesEN.append(word)
   
   def searchEN(self):
@@ -72,21 +72,21 @@ class Phrase():
       if word.token[0].isupper():
 	if word.token in self.entities.names:
 	  if word.attribut=="":
-	    word.attribut='{ORIG="'+word.token+'";LIEN="'+self.entities.names[word.token]+'"}'
+	    word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.names[word.token]+'\'}'
 	  else:
-	    word.attribut=word.attribut[:-1]+';ORIG="'+word.token+'";LIEN="'+self.entities.names[word.token]+'"}'
+	    word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.names[word.token]+'\'}'
 	  word.token='_PERS'
 	if word.token in self.entities.places:
 	  if word.attribut=="":
-	    word.attribut='{ORIG="'+word.token+'";LIEN="'+self.entities.places[word.token]+'"}'
+	    word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\'}'
 	  else:
-	    word.attribut=word.attribut[:-1]+';ORIG="'+word.token+'";LIEN="'+self.entities.places[word.token]+'"}'
+	    word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\'}'
 	  word.token='_LOC'
   
   def outputString(self):
     string=""
     for word in self.words:
-      print word.token
+      #print word.token
       string+=word.attribut+word.token+" "
     return string
   
@@ -107,7 +107,7 @@ class Word():
     if "{" in string:
       match=re.search(r'(\{.*\})(.*)', string)
       self.token=match.group(2)
-      print match.group(1)
+      #print match.group(1)
       self.attribut=match.group(1)
     else:
       self.token=string
