@@ -2,9 +2,13 @@
 # -*- coding: utf-8 -*-
 
 import math
-from morpho import *
 from optparse import OptionParser
 import cPickle as pickle
+
+#Nécessite le fichier morpho.py
+from morpho import *
+
+#Script de créations et de test du perceptron. - Arthur Lapraye - 2015
 
 #Fonction pour tester un classifieur
 def testit(test,perceptron,matrice=True,LATEX=False):
@@ -172,4 +176,6 @@ if __name__ == "__main__":
 
 	testit(test,perceptron,matrice=MATRICE)
 	saveweights(weight)
+
+#Kilroy was here
 

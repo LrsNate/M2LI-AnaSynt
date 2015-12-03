@@ -7,6 +7,8 @@ from functools import partial
 from collections import defaultdict
 import cPickle as pickle
 
+#Perceptron et fonctions associées - Arthur Lapraye - 2015
+
 #Variables globales
 CAPITALES=u'ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÙÇÀÔÖÎÂÏÛÊËØ'
 CLASSESFERMEES= [u'ADJWH']
@@ -227,4 +229,6 @@ def saveweights(weight,nom="weights.pickle"):
 def importpickle(filename):
 	with open(filename) as toto:
 		return pickle.load(toto)
+
+#MUSIC HAS THE RIGHT TO CHILDREN
 
