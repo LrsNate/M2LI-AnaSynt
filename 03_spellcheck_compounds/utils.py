@@ -120,16 +120,16 @@ def closest_word(candidates, word):
     return res_word
 
 _amalgams = {
-    'du': ['de', 'le'],
-    'des': ['de', 'les'],
-    'au': ['à', 'le'],
-    'aux': ['à', 'les'],
-    'duquel': ['de', 'lequel'],
-    'desquels': ['de', 'lesquels'],
-    'desquelles': ['de', 'lesquelles'],
-    'auquel': ['à', 'lequel'],
-    'auxquels': ['à', 'lesquels'],
-    'auxquelles': ['à', 'lesquelles']
+    'du': [u'de', u'le'],
+    'des': [u'de', u'les'],
+    'au': [u'à', u'le'],
+    'aux': [u'à', u'les'],
+    'duquel': [u'de', u'lequel'],
+    'desquels': [u'de', u'lesquels'],
+    'desquelles': [u'de', u'lesquelles'],
+    'auquel': [u'à', u'lequel'],
+    'auxquels': [u'à', u'lesquels'],
+    'auxquelles': [u'à', u'lesquelles']
 }
 
 
