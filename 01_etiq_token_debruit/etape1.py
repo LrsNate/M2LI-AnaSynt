@@ -34,15 +34,15 @@ def lireCorpus(corpus):
 					
 		# On renvoie le résultat vers la sortie standard
 		ponctForte = re.compile(u"([\.?!])\Z")
-		for cle, val in dico.items():
+		for val in dico.values():
 			if val[1] and val[2]:
 				# Si le mot possède une étiquette :
 				# {original}étiquette
-				sys.stdout.write("{ORIG='" + val[1] + "';}" + val[2] + " ")
+				sys.stdout.write("{ORIG_ORTH='" + val[1] + "';}" + val[2] + " ")
 			elif val[1]:
 				# Si le mot a été modifié :
 				# {original}modifié
-				sys.stdout.write("{ORIG='" + val[1] + "';}" + val[0] + " ")
+				sys.stdout.write("{ORIG_ORTH='" + val[1] + "';}" + val[0] + " ")
 			else:
 				# Si le mot n'a pas été modifié et qu'il ne porte pas d'étiquette :
 				# original
