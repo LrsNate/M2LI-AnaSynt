@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import re
+import os
 import cPickle as pickle
 
 
@@ -168,8 +169,8 @@ _keyboard_probabilities = {
     'n': {'b': .35, 'h': .20, 'j': .10, ',': .35}
 }
 
-
-_lefff = pickle.load(open('lefff_pickle.p', 'r'))
+_dir = os.path.dirname(__file__)
+_lefff = pickle.load(open(os.path.join(_dir, 'lefff_pickle.p'), 'r'))
 
 
 def get_candidates_from_lefff(word):

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 
 class Automaton:
     """ A generic finite-state machine """
@@ -54,7 +55,8 @@ def _make_compounds_automaton():
     :return: The trained automaton.
     """
     a = Automaton(bounded=False)
-    _path = 'resources/lexique_cmpnd_utf8.txt'
+    _dir = os.path.dirname(__file__)
+    _path = os.path.join(_dir, 'resources/lexique_cmpnd_utf8.txt')
     _file = open(_path, 'r')
 
     for line in _file:

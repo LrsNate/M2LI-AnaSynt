@@ -3,12 +3,13 @@
 
 from utils import Token, get_candidates_from_lefff
 from utils import closest_word, expand_amalgam
+import os
 from automaton import compounds_automaton
 import fileinput
 import pickle
 
-wico = pickle.load(open('resources/results_wico.p', 'r'))
-lefff = pickle.load(open('lefff_pickle.p', 'r'))
+dir = os.path.dirname(__file__)
+wico = pickle.load(open(os.path.join(dir, 'resources/results_wico.p'), 'r'))
 
 for line in fileinput.input():
     line = line.strip()
