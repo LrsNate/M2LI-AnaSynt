@@ -70,5 +70,3 @@ target/
 #Unix backup text files 
 *~
 
-#Python pickle file
-*.pickle

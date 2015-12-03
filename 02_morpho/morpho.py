@@ -64,19 +64,19 @@ def readlexicon(fichier):
 	
 	with open(fichier) as f:
 		for line in f:
-			
 			ligne=tabz.split(line.decode("utf-8"))
+			
 			if len(ligne) > 2:
 				forme,cat,_=ligne
 			else:
 				forme,cat=ligne
 			
-			cat=cat.strip(" \"'\t")
+			cat=cat.strip(" \"'\t\n")
 			
 			if cat not in CLASSESFERMEES:
 				#Mise en forme des valeurs récupérées :
 				#Suppression des espaces
-				forme=forme.strip()
+				forme=forme.strip(" \"'\t\n")
 				forme=re.sub(r"[ ]+","_",forme,0,re.UNICODE)
 				#Suppression des blancs en fin de lignes 
 				
