@@ -76,7 +76,7 @@ def readlexicon(fichier):
 			if cat not in CLASSESFERMEES:
 				#Mise en forme des valeurs récupérées :
 				#Suppression des espaces
-				forme=forme.strip(" \"'\t\n")
+				forme=forme.strip("\"'\t\n")
 				forme=re.sub(r"[ ]+","_",forme,0,re.UNICODE)
 				#Suppression des blancs en fin de lignes 
 				

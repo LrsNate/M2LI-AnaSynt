@@ -48,9 +48,12 @@ for line in fi.input(args):
 	for e in lines:
 		a=" "
 		if e[0]=="{":
-			z=e.index("}")+1
-			a,b=e[:z],e[z:]
-			word=b
+			try:
+				z=e.index("}")+1
+				a,b=e[:z],e[z:]
+				word=b
+			except ValueError:
+				word = e
 		else:
 			word=e
 			
