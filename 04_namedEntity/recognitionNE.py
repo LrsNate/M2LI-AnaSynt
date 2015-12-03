@@ -66,7 +66,7 @@ class Phrase():
 	self.candidatesEN.append(word)
   
   def searchEN(self):
-    self.entities.loadDB("personne_linking.txt","place_linking.txt")
+    self.entities.loadDB("04_namedEntity/personne_linking.txt","04_namedEntity/place_linking.txt")
     for word in self.words:
       #print "Londres" in self.entities.places
       if word.token[0].isupper():
