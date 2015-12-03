@@ -11,13 +11,26 @@ import pickle
 dir = os.path.dirname(__file__)
 wico = pickle.load(open(os.path.join(dir, 'resources/results_wico.p'), 'r'))
 
+aml = [
+    'du',
+    'des',
+    'au',
+    'aux',
+    'duquel',
+    'desquels',
+    'desquelles',
+    'auquel',
+    'auxquels',
+    'auxquelles']
+
+
 for line in fileinput.input():
     line = line.strip().decode('utf-8')
     words = map(Token.from_str, line.split(' '))
     spellchecked = []
     # Step 1: spellcheck
     for w in words:
-        if u'TMP_TAG' not in w.getannotations():
+        if u'TMP_TAG' not in w.getannotations() or w.getform() in aml:
             spellchecked.append(w)
             continue
         if w.getform() in wico:
