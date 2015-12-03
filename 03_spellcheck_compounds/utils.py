@@ -2,6 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import re
+import os
 import cPickle as pickle
 
 
@@ -16,17 +17,17 @@ class Token:
     def getform(self):
         return self.form
 
-    def __str__(self):
+    def __unicode__(self):
         if not self.annot:
-            return self.form
-        res = '{'
-        annot = map(lambda (k, v): '%s=%s' % (k, v), self.annot.iteritems())
-        res += ';'.join(annot) + '}' + self.form
+            return unicode(self.form)
+        res = u'{'
+        annot = map(lambda (k, v): u'%s=%s' % (k, v), self.annot.iteritems())
+        res += u';'.join(annot) + u'}' + unicode(self.form)
         return res
 
     @classmethod
     def from_str(cls, word):
-        mo = re.search('^\{(.*)\}(.*)', word)
+        mo = re.search(u'^\{(.*)\}(.*)', word)
         if mo:
             form = mo.group(2)
             annot_str = mo.group(1)
@@ -35,23 +36,23 @@ class Token:
                 k, sep, v = kv.partition('=')
                 if sep != '=':
                     continue
-                annot[k] = v
+                annot[k] = unicode(v)
         else:
             annot = {}
-            form = word
+            form = unicode(word)
         return cls(annot, form)
 
     @classmethod
     def update_spelling(cls, tk, new_spelling):
         form = tk.getform()
         annot = tk.getannotations()
-        annot['ORIG_ORTH'] = '"%s"' % form
-        return cls(annot, new_spelling)
+        annot['ORIG_ORTH'] = u'\'%s\'' % form
+        return cls(annot, unicode(new_spelling))
 
     @classmethod
     def merge(cls, tks, comp):
-        tk_list = map(lambda x: '"%s"' % x.getform(), tks)
-        annot = {'ORIG_SEG': '[%s]' % ','.join(tk_list)}
+        tk_list = map(lambda x: u'\'%s\'' % x.getform(), tks)
+        annot = {'ORIG_SEG': u'[%s]' % u','.join(tk_list)}
         for i in range(len(tks)):
             tk_annot = tks[i].getannotations()
             for k in tk_annot:
@@ -61,7 +62,7 @@ class Token:
     @classmethod
     def expand(cls, tk, aml):
         annot = tk.getannotations()
-        annot['AML'] = '"%s"' % tk.getform()
+        annot['AML'] = u'\'%s\'' % tk.getform()
         return map(lambda x: cls(annot, x), aml)
 
 
@@ -83,7 +84,7 @@ def levenshtein(s, t):
     threshold2 = len(set(s[1:]) & set(t[1:]))
 
     # when too much difference between the two strings
-    if  threshold > 3:
+    if threshold > 3:
         return 10
     if threshold2 == 0:
         return 10
@@ -96,7 +97,8 @@ def levenshtein(s, t):
     for i in range(len_s):
         v1[0] = i + 1
         for j in range(len_t):
-            if t[j] in _keyboard_probabilities[s[i]]:
+            if s[i] in _keyboard_probabilities and \
+               t[j] in _keyboard_probabilities[s[i]]:
                 cost = 1 - _keyboard_probabilities[s[i]][t[j]]
             elif s[i] == t[j]:
                 cost = 0
@@ -111,9 +113,9 @@ def closest_word(candidates, word):
     res_word = None
     min_dist = float('inf')
     for corr in candidates:
-        ld = levenshtein(word, corr)
+        ld = levenshtein(word, corr.decode('utf-8'))
         if ld < min_dist and ld <= 2:
-            res_word = corr
+            res_word = corr.decode('utf-8')
             min_dist = ld
     return res_word
 
@@ -168,8 +170,8 @@ _keyboard_probabilities = {
     'n': {'b': .35, 'h': .20, 'j': .10, ',': .35}
 }
 
-
-_lefff = pickle.load(open('lefff_pickle.p', 'r'))
+_dir = os.path.dirname(__file__)
+_lefff = pickle.load(open(os.path.join(_dir, 'lefff_pickle.p'), 'r'))
 
 
 def get_candidates_from_lefff(word):
@@ -213,10 +215,10 @@ if __name__ == '__main__':
         def test_wiki(self):
             """ Uses the examples from the Wikipedia article.
             Basically, 3 = a lot. """
-            self.assertEqual(levenshtein('kitten', 'sitting'), None)
-            self.assertEqual(levenshtein('Saturday', 'Sunday'), None)
+            self.assertEqual(levenshtein('kitten', 'sitting'), 3)
+            self.assertEqual(levenshtein('Saturday', 'Sunday'), 3)
 
-            self.assertEqual(levenshtein('chat', 'chzt'), None)
+            self.assertEqual(levenshtein('chat', 'chzt'), 0.5)
 
     class TokenTests(unittest.TestCase):
         def test_fromstr_simple(self):
@@ -226,23 +228,25 @@ if __name__ == '__main__':
         def test_fromstr_withannotations(self):
             t = Token.from_str('{A=a;B=b}bien_sur')
             self.assertEqual(str(t), '{A=a;B=b}bien_sur')
+            t = Token.from_str('{A=a;}bien_sur')
+            self.assertEqual(str(t), '{A=a}bien_sur')
 
         def test_spellupdate(self):
             t = Token.from_str('{A=a}qautre')
             self.assertEqual(str(Token.update_spelling(t, 'quatre')),
-                             '{A=a;ORIG_ORTH="qautre"}quatre')
+                             '{A=a;ORIG_ORTH=\'qautre\'}quatre')
 
         def test_merge(self):
             t1 = Token.from_str('quatre')
             t2 = Token.from_str('cinq')
             self.assertEquals(str(Token.merge([t1, t2], 'q_c')),
-                              '{ORIG_SEG=["quatre","cinq"]}q_c')
+                              '{ORIG_SEG=[\'quatre\',\'cinq\']}q_c')
 
         def test_expand(self):
             t = Token.from_str('{A=a}au')
             l = Token.expand(t, ['a', 'le'])
             self.assertEquals(len(l), 2)
-            self.assertEquals(str(l[0]), '{A=a;AML="au"}a')
-            self.assertEquals(str(l[1]), '{A=a;AML="au"}le')
+            self.assertEquals(str(l[0]), '{A=a;AML=\'au\'}a')
+            self.assertEquals(str(l[1]), '{A=a;AML=\'au\'}le')
 
     unittest.main()
