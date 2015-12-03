@@ -96,7 +96,7 @@ def etiquettage(ligne):
 	"""
 	# Expressions régulières pour le repérage des étiquettes
 	email = re.compile(ur"\b([\w\-_\.]+@[\w\-_\.]+\.[\w\-_\.]+)\b", re.I)
-	url = re.compile(ur"(\s|\A)(((ht|f)tp(s)?://)?(www\.)?([\w\-\.]+)\.\w+([\w\-\./\?#]+)?\b)", re.I)
+	url = re.compile(ur"(\s|\A)(((ht|f)tp(s)?://)?(www\.)?([\w\-\.]+)\.\w+([\w\-\./\?#]+)?)(\s|\Z)", re.I)
 	hashtag = re.compile(u"(\s|\A)(#\S+)")
 	nombre = re.compile(u"(\s|\A)(\d+(\s\d{3})*(,\d+)?)(\s|\Z)")
 	dateEU = re.compile(u"(\s|\A)(((0?[1-9])|([12]\d)|(3[01]))?(([/\.\-])?((0?[1-9])|(1[12]))([\./\-])?)(\d{2}|\d{4})?)(\s|\Z)")
@@ -113,7 +113,7 @@ def etiquettage(ligne):
 	if email.search(ligne):
 		ligne = email.sub(ur"{\1}__EMAIL", ligne)
 	if url.search(ligne):
-		ligne = url.sub(ur"\1{\2}__URL", ligne)
+		ligne = url.sub(ur"\1{\2}__URL\9", ligne)
 	if hashtag.search(ligne):
 		ligne = hashtag.sub(ur"\1{\2}__HASHTAG", ligne)
 	if heure.search(ligne):
