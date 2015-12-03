@@ -37,7 +37,7 @@ taggit=m.memoize(lambda x: partial(m.classify,w)(m.getfeatures(x)))
 space=re.compile(r" ")
 
 for line in fi.input(args):
-	concat=str()
+	concat=u""
 	line=line.decode("utf-8")
 	line=line.strip()
 	lines=space.split(line)
@@ -46,11 +46,14 @@ for line in fi.input(args):
 		lines.remove("")
 	
 	for e in lines:
-		a=" "
+		a=u" "
 		if e[0]=="{":
-			z=e.index("}")+1
-			a,b=e[:z],e[z:]
-			word=b
+			try:
+				z=e.index("}")+1
+				a,b=e[:z],e[z:]
+				word=b
+			except ValueError:
+				word = e
 		else:
 			word=e
 			
@@ -74,8 +77,7 @@ for line in fi.input(args):
 			else:
 				concat += word + " "
 	
-	print concat
-			
+	print concat.encode("utf-8")
 		
  			
 		

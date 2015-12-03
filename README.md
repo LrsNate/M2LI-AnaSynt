@@ -16,6 +16,7 @@ Pi égale {3,14;}_NOMBRE
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
 > Est-ce que le fichier `01_etiq_token_debruit/regex_etiquettes.txt` convient ?
+OUI :) (439 remplacements sur mon TRAINCORP)
 
 Le groupe 3 (enfin, un des binomes) a une petite remarque de formatage : c'est pas plus cohérent de suivre l'input/output du prof sur toute la chaîne ? En l'occurrence une phrase par ligne et chaque token formaté en `{annotations}forme`. En l'occurrence ça pourrait ressembler à quelque chose comme `{SMS='koi'}quoi` ou `{NE_NAME='toto@github.com'}_EMAIL`. Tu en penses quoi ?
 > C'est fait.
@@ -48,9 +49,13 @@ Exemple complet:
 
 ```
 echo "{TAG='A'}bien {TAG='A'}sûr duquel {TMP_TAG='a'}entropie visuellemnt {TMP_TAG='xsa'}carbonne {TMP_TAG='N'}quztre cinq" | ./group3.py
-{TAG_0='A';TAG_1='A';ORIG_SEG=["bien","sûr"]}bien_sûr {AML="duquel"}de {AML="duquel"}lequel {ORIG_ORTH="entropie";TMP_TAG='a'}entrions visuellemnt {ORIG_ORTH="carbonne";TMP_TAG='xsa'}carbone {ORIG_ORTH="quztre";TMP_TAG='N'}quatre cinq
+{TAG_0='A';TAG_1='A';ORIG_SEG=['bien','sûr']}bien_sûr {AML='duquel'}de {AML='duquel'}lequel {ORIG_ORTH='entropie';TMP_TAG='a'}entrions visuellemnt {ORIG_ORTH='carbonne';TMP_TAG='xsa'}carbone {ORIG_ORTH='quztre';TMP_TAG='N'}quatre cinq
 ```
 
 ## OUTPUT GROUPE 4
 
 ## OUTPUT GROUPE 5
+Alors, si j'ai bien tout compris (oui, je sais, avec des si pareils, on mettrait Paris en bouteille...). Je dois envoyer au parser un truc de ce format là :
+	Le _unknown_N part de le principe que _PERS_ est à le _PLACE_ . 
+Tout en gardant en mémoire :
+	Le shtroumpf paart du principe que Chomsky esst au Paradis.

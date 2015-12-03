@@ -1,26 +1,28 @@
 #!/usr/bin/env python
-# -*- encoding:utf8 -*-
+# -*- coding:utf8 -*-
 
 from utils import Token, get_candidates_from_lefff
 from utils import closest_word, expand_amalgam
+import os
 from automaton import compounds_automaton
 import fileinput
 import pickle
 
-wico = pickle.load(open('resources/results_wico.p', 'r'))
-lefff = pickle.load(open('lefff_pickle.p', 'r'))
+dir = os.path.dirname(__file__)
+wico = pickle.load(open(os.path.join(dir, 'resources/results_wico.p'), 'r'))
 
 for line in fileinput.input():
-    line = line.strip()
+    line = line.strip().decode('utf-8')
     words = map(Token.from_str, line.split(' '))
     spellchecked = []
     # Step 1: spellcheck
     for w in words:
-        if 'TMP_TAG' not in w.getannotations():
+        if u'TMP_TAG' not in w.getannotations():
             spellchecked.append(w)
             continue
         if w.getform() in wico:
-            spellchecked.append(Token.update_spelling(w, wico[w.getform()]))
+            wico_w = unicode(wico[w.getform()])
+            spellchecked.append(Token.update_spelling(w, wico_w))
         else:
             lefff_cand = get_candidates_from_lefff(w.getform())
             lefff_corr = closest_word(lefff_cand, w.getform())
@@ -54,4 +56,4 @@ for line in fileinput.input():
         else:
             expanded.append(w)
 
-    print(' '.join(map(lambda x: str(x), expanded)))
+    print(' '.join(map(lambda x: unicode(x), expanded)).encode('utf-8'))
