@@ -80,15 +80,10 @@ def levenshtein(s, t):
     if len_t == 0:
         return min(3, len_s)
 
-    threshold = max(len_s, len_t) - min(len_s, len_t)
-    threshold2 = len(set(s[1:]) & set(t[1:]))
+    # checking common char number between two candidates
+    threshold = len(set(s[1:]) & set(t[1:]))
 
-    # when too much difference between the two strings
-    if threshold > 3:
-        return 10
-    if threshold2 == 0:
-        return 10
-    if threshold - len(set(s[1:]) & set(t[1:])) > 3:
+    if threshold == 0:
         return 10
 
     v0 = [x for x in range(len_t + 1)]
@@ -119,6 +114,8 @@ def closest_word(candidates, word):
             min_dist = ld
     return res_word
 
+
+
 _amalgams = {
     'du': [u'de', u'le'],
     'des': [u'de', u'les'],
@@ -132,6 +129,7 @@ _amalgams = {
     'auxquelles': [u'à', u'lesquelles']
 }
 
+# Associating typo probability with regard to keybaord keys position
 
 _keyboard_probabilities = {
     'a': {'z': .5, 'q': .35, 's': .15},
@@ -176,7 +174,8 @@ _lefff = pickle.load(open(os.path.join(_dir, 'lefff_pickle.p'), 'r'))
 
 def get_candidates_from_lefff(word):
     """
-    Extracting words with same prefix from lefff
+    Extracting words with same first letter from Lefff
+    Hypothesis: typo on first letter too unlikely
     """
     try:
         tmp_candidates = _lefff[word[0].lower().strip()]
@@ -186,13 +185,13 @@ def get_candidates_from_lefff(word):
 
 
 def refine_candidates(word, candidates):
+    """
+    Eliminating candidates with +2 letters difference (considered unlikely)
+    """
     best_candidates = []
     for candidate in candidates:
-        if candidate in _amalgams:
-            pass
-        else:
-            if abs(len(candidate) - len(word)) < 2:
-                best_candidates.append(candidate)
+        if abs(len(candidate) - len(word)) < 3:
+            best_candidates.append(candidate)
     return best_candidates
 
 
