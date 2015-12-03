@@ -34,7 +34,8 @@ if __name__ == "__main__":
 	PERCENT=True
 
 CAPITALES=u'ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÇÀÔÖÎÂÏÛÊË'
-CLASSESFERMEES= []#[u'ADJWH',u'ADVWH',u'CC',u'CLO',u'CLR',u'CLS',u'CS',u'DET',u'DETWH',u'P',u'PRO',u'PROREL',u'PROWH']
+CLASSESFERMEES= []
+#[u'P+D',u'P+PRO',u'ADJWH',u'ADVWH',u'CC',u'CLO',u'CLR',u'CLS',u'CS',u'DET',u'DETWH',u'P',u'PRO',u'PROREL',u'PROWH'] 
 
 #Décorateur pour la mise en cache dans un dictionnaire de résultats de l'appel à une fonction
 #Permet de limiter les appels à des fonctions couteuses en temps de calcul
@@ -128,7 +129,8 @@ def enumsuffixe(xs):
 @memoize
 def getfeatures(xs):
 	traits=dict()
-	#traits['_biais_']=1.0
+	traits['_biais_']=1.0
+	
 	if xs[0] in CAPITALES:
 		traits['_capitale1_']=1.0
 	if xs[-1] in CAPITALES:
@@ -145,11 +147,10 @@ def getfeatures(xs):
 	#	traits['_tiret_']=1
 	#if "_" in xs:
 	#	traits['_underscore_']=1
-		
+	#traits['_LEN_']=float(len(xs))
+	
 	xs="#"+xs+"#"
-	toto=enumsubstrings(xs)
-	#traits.update(toto)
-	for e in toto:
+	for e in enumsubstrings(xs):
 		traits[e]=1.0
 	
 	return traits			
@@ -159,12 +160,26 @@ def score(w,traits):
 	return sum([ w[t]*traits[t] for t in traits])
 
 #Fonction de classification du perceptron
+import random 
 def classify(poids,traits):
 	toto=poids.keys()
-	a=max(toto,key=lambda x: score(poids[x], traits))
-	toto.remove(a)
-	b=max(toto,key=lambda x: score(poids[x], traits))
-	return [a,b]
+	#a=max(toto,key=lambda x: score(poids[x], traits))
+	#toto.remove(a)
+	#b=max(toto,key=lambda x: score(poids[x], traits))
+	a=(random.choice(toto),0.0)
+	b=(random.choice(toto),0.0)
+	for clef in toto:
+		z=score(poids[clef],traits)
+		if z > a[1]:
+			b=a
+			a=(clef,z)
+		elif z > b[1]:
+			b=(clef,z)
+		
+	#if a[1] == 0.0:
+	#	print traits
+	
+	return [a[0],b[0]]
 	
 	#return sorted(poids.keys(),key=lambda x: score(poids[x], traits),reverse=True)
 
@@ -219,6 +234,7 @@ def perceptronmaker(cats,corpus,itermoi=10,averaged=True,shuffled=True,poids=def
 			i+= 1
 					
 		print iterations+1
+		#testit(test,partial(classify,poids),matrice=False)
 	
 	print "Moyennage..."
 	if averaged:
@@ -260,11 +276,11 @@ def testit(test,perceptron,matrice=True):
 		#y=perceptron(getfeatures(e))
 		y,z=perceptron(getfeatures(e))[:2]
 		matcon[truecat,y] += 1
-		matcon[truecat,z] += 0.5#1
+		#matcon[truecat,z] += 1
 			
 		#Nice = total des éléments bien catégorisés
-		#if y == truecat:
-		if truecat in [y,z]:
+		if y == truecat:
+		#if truecat in [y,z]:
 			nice += 1.0
 		#elif z == truecat:
 		#	nice += 0.5
