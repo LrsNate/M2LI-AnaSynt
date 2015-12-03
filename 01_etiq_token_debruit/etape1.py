@@ -38,11 +38,11 @@ def lireCorpus(corpus):
 			if val[1] and val[2]:
 				# Si le mot possède une étiquette :
 				# {original}étiquette
-				sys.stdout.write("{" + val[1] + ";}" + val[2] + " ")
+				sys.stdout.write("{ORIG" + val[1] + ";}" + val[2] + " ")
 			elif val[1]:
 				# Si le mot a été modifié :
 				# {original}modifié
-				sys.stdout.write("{" + val[1] + ";}" + val[0] + " ")
+				sys.stdout.write("{ORIG" + val[1] + ";}" + val[0] + " ")
 			else:
 				# Si le mot n'a pas été modifié et qu'il ne porte pas d'étiquette :
 				# original
@@ -50,7 +50,8 @@ def lireCorpus(corpus):
 					# On va à la ligne après une ponctuation forte
 					sys.stdout.write(val[0] + "\n")
 				else:
-					sys.stdout.write(val[0] + " ")			
+					sys.stdout.write(val[0] + " ")
+			
 
 def ponctuation(ligne):
 	"""
@@ -60,9 +61,13 @@ def ponctuation(ligne):
 	ponctForte = re.compile(u"([\.?!])\Z")
 	ligne = ponctForte.sub(ur" \1\n", ligne)
 	
-	# Ajout d'un saut de ligne avant et après chaque ponctuation faible hors apostrophe
-	ponctFaible = re.compile(u"([,;\(\)\[\]\{\}«»—])\D")
+	# Ajout d'une espace avant et après chaque ponctuation faible hors apostrophe
+	ponctFaible = re.compile(u"([;\(\)\[\]\{\}«»—])")
 	ligne = ponctFaible.sub(ur" \1 ", ligne)
+	
+	# Attention à la virgule : il faut vérifier qu'elle ne se trouve pas dans un nombre à virgule
+	virgule = re.compile(u"(,)\D")
+	ligne = virgule.sub(ur" \1 ", ligne)
 	
 	# Ajout d'un saut de ligne après l'apostrophe
 	apostrophe = re.compile(u"(['’])")
@@ -100,9 +105,9 @@ def etiquettage(ligne):
 	
 	# Remplacer les espaces par un tilde pour ce qui se trouve entre {}
 	reperage = re.compile(ur"(\{[^\}]+)\s+([^\{]+\})")
-	
+
 	# Pour éviter de retrouver les nombres dans d'autres éléments repérés
-	underscores = re.compile(ur"__")
+	underscores = re.compile(ur"(\{.[^\}]+)\{(.+)\}__NOMBRE(.[^\{]+\})")
 	
 	# Application des expressions régulières et ajout du "commentaire" qui indique leur repérage
 	if email.search(ligne):
@@ -116,15 +121,15 @@ def etiquettage(ligne):
 	if dateLettres.search(ligne):
 		ligne = dateLettres.sub(ur"\1{\2}__DATE\15", ligne)	
 	if nombre.search(ligne):
-		if not(reperage.search(ligne)) and not(underscores.search(ligne)):
-			ligne = nombre.sub(ur"\1{\2}__NOMBRE\5", ligne)
+		ligne = nombre.sub(ur"\1{\2}__NOMBRE\5", ligne)
 	if dateEU.search(ligne):
-		if not(reperage.search(ligne)) and not(underscores.search(ligne)):
-			ligne = dateEU.sub(ur"\1{\2}__DATE\14", ligne)
-
+		ligne = dateEU.sub(ur"\1{\2}__DATE\14", ligne)
+			
+	ligne = underscores.sub(ur"\1\2\3",ligne)
+	
 	while reperage.search(ligne):
 		ligne = reperage.sub(ur"\1~\2",ligne)
-
+	
 	return ligne
 
 def tokenisation(ligne):
