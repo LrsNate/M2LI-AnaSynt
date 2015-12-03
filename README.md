@@ -49,7 +49,7 @@ Exemple complet:
 
 ```
 echo "{TAG='A'}bien {TAG='A'}sûr duquel {TMP_TAG='a'}entropie visuellemnt {TMP_TAG='xsa'}carbonne {TMP_TAG='N'}quztre cinq" | ./group3.py
-{TAG_0='A';TAG_1='A';ORIG_SEG=["bien","sûr"]}bien_sûr {AML="duquel"}de {AML="duquel"}lequel {ORIG_ORTH="entropie";TMP_TAG='a'}entrions visuellemnt {ORIG_ORTH="carbonne";TMP_TAG='xsa'}carbone {ORIG_ORTH="quztre";TMP_TAG='N'}quatre cinq
+{TAG_0='A';TAG_1='A';ORIG_SEG=['bien','sûr']}bien_sûr {AML='duquel'}de {AML='duquel'}lequel {ORIG_ORTH='entropie';TMP_TAG='a'}entrions visuellemnt {ORIG_ORTH='carbonne';TMP_TAG='xsa'}carbone {ORIG_ORTH='quztre';TMP_TAG='N'}quatre cinq
 ```
 
 ## OUTPUT GROUPE 4
