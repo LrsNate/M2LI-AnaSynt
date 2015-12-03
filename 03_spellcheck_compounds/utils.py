@@ -188,8 +188,11 @@ def get_candidates_from_lefff(word):
 def refine_candidates(word, candidates):
     best_candidates = []
     for candidate in candidates:
-        if abs(len(candidate) - len(word)) < 2:
-            best_candidates.append(candidate)
+        if candidate in _amalgams:
+            pass
+        else:
+            if abs(len(candidate) - len(word)) < 2:
+                best_candidates.append(candidate)
     return best_candidates
 
 
