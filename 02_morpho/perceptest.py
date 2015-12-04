@@ -1,15 +1,15 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+#Script de créations et de test du perceptron. - Arthur Lapraye - 2015
+
 import math
 from optparse import OptionParser
 import cPickle as pickle
-from cProfile import run
+#from cProfile import run
 
 #Nécessite le fichier morpho.py
 from morpho import *
-
-#Script de créations et de test du perceptron. - Arthur Lapraye - 2015
 
 #Fonction pour tester un classifieur
 def testit(test,perceptron,matrice=True,LATEX=False):
@@ -180,7 +180,8 @@ if __name__ == "__main__":
 	print len(cats),"catégories : ",sorted(cats)
 	print "taille du corpus d'entraînement : ",len(train)," et du corpus de test : ",len(test)
 	print "Entraînement du perceptron :",ITER
-	run("weight=perceptronmaker(cats,train,itermoi=ITER,verbose=False)")
+	#run("weight=perceptronmaker(cats,train,itermoi=ITER,verbose=False)")
+	weight=perceptronmaker(cats,train,itermoi=ITER,verbose=False)
 
 	perceptron=partial(classify,weight)
 

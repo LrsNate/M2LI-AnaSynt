@@ -1,16 +1,17 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+#Perceptron et fonctions associées - Arthur Lapraye - 2015
+
 import re
 import random
 from functools import partial
 from collections import defaultdict
 import cPickle as pickle
 
-#Perceptron et fonctions associées - Arthur Lapraye - 2015
 
 #Variables globales
-CAPITALES=u'ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÙÇÀÔÖÎÂÏÛÊËØ'
+CAPITALES=set(u'ABCDEFGHIJKLMNOPQRSTUVWXYZÉÈÙÇÀÔÖÎÂÏÛÊËØ')
 CLASSESFERMEES= [u'ADJWH']
 #CLASSESFERMEES est une liste de catégories qu'on souhaite ignorer. 
 #On peut vouloir ignorer la plupart des catégories suivantes :
@@ -117,23 +118,29 @@ def enumsuffixe(xs):
 #Fonction renvoyant un vecteur de traits pour une chaîne donnée
 @memoize
 def getfeatures(xs):
-	traits=dict()
+	traits=enumsubstrings("#"+xs+"#")
+	#set()
 	#traits['_biais_']=1.0
 	
 	if xs[0] in CAPITALES:
-		traits['_capitale1_']=1.0
+		#traits['_capitale1_']=1.0
+		traits.add("_Capitale1_")
 	if xs[-1] in CAPITALES:
-		traits['_capitale-1_']=1.0
+		#traits['_capitale-1_']=1.0
+		traits.add("_capitalE-1_")
 	if xs == xs.upper():
-		traits['_ALLCAPS_']=1.0
+		#traits['_ALLCAPS_']=1.0
+		traits.add('_ALLCAPS_')
 	elif xs == xs.lower():
-		traits['_downcase_']=1.0
+		#traits['_downcase_']=1.0
+		traits.add('_downcase_')
 	else:
-		traits['_mIxEdCasE_']=1.0
+		#traits['_mIxEdCasE_']=1.0
+		traits.add('_mIxEdCasE_')
 	
-	xs="#"+xs+"#"
-	for e in enumsubstrings(xs):
-		traits[e]=1.0
+	#xs="#"+xs+"#"
+	#for e in enumsubstrings(xs):
+	#	traits[e]=1.0
 	
 	return traits			
 
@@ -141,7 +148,7 @@ def getfeatures(xs):
 def score(w,traits):
 	Z=0.0
 	for t in traits:
-		Z+=w[t]*traits[t]
+		Z+=w[t] #*traits[t]
 	return Z
 
 #Fonction de classification du perceptron
@@ -154,7 +161,7 @@ def classify(poids,traits):
 		z=0.0
 		localpoids=poids[clef]
 		for t in traits:
-			z+=localpoids[t]*traits[t]
+			z+=localpoids[t] #*traits[t]
 		
 		if z > a[1]:
 			b=a
@@ -200,17 +207,26 @@ def perceptronmaker(cats,corpus,itermoi=10,averaged=True,shuffled=True,poids=def
 			truecat=c
 			exemple=getfeatures(e)
 			cat,zcat=classify(poids, exemple) #[:2]
+			
+			truepoids=poids[truecat]
+			gpoids=poids[cat]
+			truacum=accum[truecat]
+			guescum=accum[cat]
+			
 			if cat != truecat:
 				allright=False
 				for trait in exemple:
-					poids[truecat][trait] = poids[truecat][trait] + exemple[trait]
-					poids[cat][trait] = poids[cat][trait] - exemple[trait]
+					truepoids[trait] += 1#poids[truecat][trait] + 1 #exemple[trait]
+					gpoids[trait] -= 1 #poids[cat][trait] - 1 #exemple[trait]
 					
 					#Accumulateur, utilisé pour le moyennage du perceptron 
-					accum[truecat][trait] = accum[truecat][trait] + (exemple[trait]*i)
-					accum[cat][trait] = accum[cat][trait] - (exemple[trait]*i)
+					truacum[trait] += i #accum[truecat][trait] + i #(exemple[trait]*i)
+					guescum[trait] -= i #accum[cat][trait] - i #(exemple[trait]*i)
 				
+			#prevcat=cat
+			#prevtraits=getprevtraits(exemple)	
 			i+= 1
+			
 		if verbose:			
 			print iterations+1
 	
