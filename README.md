@@ -1,5 +1,9 @@
 # M2 LI Syntactic Analysis Project
 
+Le script `run.sh` a maintenant un mode debug qui sort les outputs de chaque étape dans un fichier séparé.
+
+Exécuter `./run.sh -d` sortira les fichiers `out_01.txt`, `out_02.txt`, `out_03.txt` et `out_04.txt`.
+
 ## OUTPUT GROUPE 1
 `{ORIG_ORTH;}_CORR_ORTH`
 
