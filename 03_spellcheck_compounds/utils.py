@@ -27,7 +27,7 @@ class Token:
 
     @classmethod
     def from_str(cls, word):
-        mo = re.search(u'^\{(.*)\}(.*)', word)
+        mo = re.search(u'^\{(.*?)\}(.*)', word)
         if mo:
             form = mo.group(2)
             annot_str = mo.group(1)
@@ -177,10 +177,10 @@ def get_candidates_from_lefff(word):
     Extracting words with same first letter from Lefff
     Hypothesis: typo on first letter too unlikely
     """
-    try:
-        tmp_candidates = _lefff[word[0].lower().strip()]
-        return refine_candidates(word, tmp_candidates)
-    except KeyError:
+    letter = word[0].lower().strip()
+    if letter in _lefff:
+        return refine_candidates(word, _lefff[letter])
+    else:
         return []
 
 
