@@ -24,9 +24,12 @@ CLASSESFERMEES= [u'ADJWH']
 def memoize(f):
 	memo = {}
 	def helper(x):
-		if x not in memo:			
-			memo[x] = f(x)
-		return memo[x]
+		if x not in memo:
+			z=f(x)		
+			memo[x] = z
+			return z
+		else:
+			return memo[x]
 	return helper
 
 
@@ -68,7 +71,11 @@ def readlexicon(fichier,TEST=9):
 				#Mise en forme des valeurs récupérées :
 				#Suppression des espaces
 				if len(forme) > 1:
-					forme=forme.strip("\"'\t\n")
+					forme=forme.strip("\"")
+					#forme=re.sub(r"'([^']*)'","\1",forme,0,re.UNICODE)
+				#if forme[ == "l'":
+				#	print "ok"
+				
 				forme=re.sub(r"[ ]+","_",forme,0,re.UNICODE)
 				
 				#Suppression des blancs en fin de lignes 
@@ -91,10 +98,11 @@ def readlexicon(fichier,TEST=9):
 def enumsubstrings(xs):
 	subs=set()
 	minlength=1
+	subadd=subs.add
 	for a in range(0,len(xs)-minlength):
 		for b in range(a+minlength,len(xs)+1):
-			subs.add(xs[a:b])
-			subs.add(xs[a:b].lower())
+			subadd(xs[a:b])
+			subadd(xs[a:b].lower())
 	
 	return subs			
 
@@ -110,7 +118,7 @@ def enumsuffixe(xs):
 @memoize
 def getfeatures(xs):
 	traits=dict()
-	traits['_biais_']=1.0
+	#traits['_biais_']=1.0
 	
 	if xs[0] in CAPITALES:
 		traits['_capitale1_']=1.0
@@ -131,24 +139,30 @@ def getfeatures(xs):
 
 #Fonction renvoyant le score d'un vecteur de traits multiplié par un vecteur de poids
 def score(w,traits):
-	return sum([ w[t]*traits[t] for t in traits])
+	Z=0.0
+	for t in traits:
+		Z+=w[t]*traits[t]
+	return Z
 
 #Fonction de classification du perceptron
 #Fait un argmax en conservant la deuxième meilleure étiquette pour la renvoyer aussi.
 def classify(poids,traits):
-	toto=poids.keys()
-	defcat=random.choice(toto)
-	a=(defcat,0.0)
-	b=(defcat,0.0)
-	for clef in toto:
-		z=score(poids[clef],traits)
+	
+	a=('NC',0.0)
+	b=('NC',0.0)
+	for clef in poids:
+		z=0.0
+		localpoids=poids[clef]
+		for t in traits:
+			z+=localpoids[t]*traits[t]
+		
 		if z > a[1]:
 			b=a
 			a=(clef,z)
 		elif z > b[1]:
 			b=(clef,z)
 	
-	return [a[0],b[0]]
+	return (a[0],b[0])
 	
 	#return max(poids.keys(),key=lambda x : score(poids[x], traits))
 	#return sorted(poids.keys(),key=lambda x: score(poids[x], traits),reverse=True)
@@ -161,7 +175,7 @@ def defloat():
 #Fonction d'entraînement du perceptron
 #Entraîne un perceptron sur un corpus pour un nombre maximal d'itérations fixées à l'avance
 #Le perceptron est par défaut moyenné
-def perceptronmaker(cats,corpus,itermoi=10,averaged=True,shuffled=True,poids=defaultdict(defloat) ):
+def perceptronmaker(cats,corpus,itermoi=10,averaged=True,shuffled=True,poids=defaultdict(defloat),verbose=True):
 
 	for c in cats:
 		poids[c]
@@ -185,7 +199,7 @@ def perceptronmaker(cats,corpus,itermoi=10,averaged=True,shuffled=True,poids=def
 		for (e,c) in corpus:
 			truecat=c
 			exemple=getfeatures(e)
-			cat,zcat=classify(poids, exemple)[:2]
+			cat,zcat=classify(poids, exemple) #[:2]
 			if cat != truecat:
 				allright=False
 				for trait in exemple:
@@ -197,16 +211,18 @@ def perceptronmaker(cats,corpus,itermoi=10,averaged=True,shuffled=True,poids=def
 					accum[cat][trait] = accum[cat][trait] - (exemple[trait]*i)
 				
 			i+= 1
-					
-		print iterations+1
+		if verbose:			
+			print iterations+1
 	
-	print "Moyennage..."
+			print "Moyennage..."
+	
 	if averaged:
 		for w in poids:
 			for feat in poids[w]:
 				poids[w][feat] = poids[w][feat] - (accum[w][feat]/(i+1))
 	
-	print "...fait"
+	if verbose:
+		print "...fait"
 			
 	return poids
 

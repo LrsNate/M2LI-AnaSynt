@@ -4,6 +4,7 @@
 import math
 from optparse import OptionParser
 import cPickle as pickle
+from cProfile import run
 
 #Nécessite le fichier morpho.py
 from morpho import *
@@ -102,7 +103,16 @@ def distinfini(w1,w2):
 	return max([ abs(w1[k]-w2[k]) for k in w1])
 
 #Fonction qui calcule la distance entre les vecteurs de poids associés à différentes catégories
-def distweights(weight,MATRICE=True):
+def distweights(weight,MATRICE=True,LATEX=False):
+	if LATEX:
+		sep=" & "
+		endline="\\\\"
+		percentsign="\%"
+	else:
+		percentsign="%"
+		sep="\t"
+		endline=" "
+	
 	for (funcname,func) in [("Manhattan",manhattan),("Euclide",euclide),(u"«Infini»",distinfini)]:
 		print u"Distance utilisée :",funcname
 		if MATRICE:
@@ -169,13 +179,15 @@ if __name__ == "__main__":
 
 	print len(cats),"catégories : ",sorted(cats)
 	print "taille du corpus d'entraînement : ",len(train)," et du corpus de test : ",len(test)
-	print "Entraînement du perceptron :"
-	weight=perceptronmaker(cats,train,itermoi=ITER)
+	print "Entraînement du perceptron :",ITER
+	run("weight=perceptronmaker(cats,train,itermoi=ITER,verbose=False)")
 
 	perceptron=partial(classify,weight)
 
 	testit(test,perceptron,matrice=MATRICE)
-	saveweights(weight)
+	
+	if not TESTIT:
+		saveweights(weight)
 
 #Kilroy was here
 
