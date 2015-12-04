@@ -1,0 +1,806 @@
+name	linking_url
+Advanced Micro Devices	https://fr.wikipedia.org/wiki/Advanced_Micro_Devices
+Apple	https://fr.wikipedia.org/wiki/Apple
+Association francophone des utilisateurs de logiciels libres	https://fr.wikipedia.org/wiki/Association_francophone_des_utilisateurs_de_logiciels_libres
+Aston Martin	https://fr.wikipedia.org/wiki/Aston_Martin
+Amstrad	https://fr.wikipedia.org/wiki/Amstrad
+America Online	https://fr.wikipedia.org/wiki/America_Online
+Alcatel	https://fr.wikipedia.org/wiki/Alcatel
+Banque du Japon	https://fr.wikipedia.org/wiki/Banque_du_Japon
+Conseil de sécurité des Nations unies	https://fr.wikipedia.org/wiki/Conseil_de_sécurité_des_Nations_unies
+Catholicisme	https://fr.wikipedia.org/wiki/Catholicisme
+Central Intelligence Agency	https://fr.wikipedia.org/wiki/Central_Intelligence_Agency
+Conseil national de la protection de la nature	https://fr.wikipedia.org/wiki/Conseil_national_de_la_protection_de_la_nature
+Cable News Network	https://fr.wikipedia.org/wiki/Cable_News_Network
+D'Ieteren	https://fr.wikipedia.org/wiki/D'Ieteren
+Direction régionale de l'Environnement	https://fr.wikipedia.org/wiki/Direction_régionale_de_l'Environnement
+Enron	https://fr.wikipedia.org/wiki/Enron
+Federal Bureau of Investigation	https://fr.wikipedia.org/wiki/Federal_Bureau_of_Investigation
+Ford	https://fr.wikipedia.org/wiki/Ford
+Fonds monétaire international	https://fr.wikipedia.org/wiki/Fonds_monétaire_international
+France Télécom	https://fr.wikipedia.org/wiki/France_Télécom
+Google	https://fr.wikipedia.org/wiki/Google
+Greenpeace	https://fr.wikipedia.org/wiki/Greenpeace
+Hewlett-Packard	https://fr.wikipedia.org/wiki/Hewlett-Packard
+Hitachi	https://fr.wikipedia.org/wiki/Hitachi
+Intel	https://fr.wikipedia.org/wiki/Intel
+Infogrames Entertainment	https://fr.wikipedia.org/wiki/Infogrames_Entertainment
+Inuits	https://fr.wikipedia.org/wiki/Inuits
+Land Rover	https://fr.wikipedia.org/wiki/Land_Rover
+Microsoft	https://fr.wikipedia.org/wiki/Microsoft
+Mitsubishi	https://fr.wikipedia.org/wiki/Mitsubishi
+Maxtor	https://fr.wikipedia.org/wiki/Maxtor
+Maserati	https://fr.wikipedia.org/wiki/Maserati
+Massachusetts Institute of Technology	https://fr.wikipedia.org/wiki/Massachusetts_Institute_of_Technology
+Marché commun du Sud	https://fr.wikipedia.org/wiki/Marché_commun_du_Sud
+Nintendo	https://fr.wikipedia.org/wiki/Nintendo
+Organisation du traité de l'Atlantique nord	https://fr.wikipedia.org/wiki/Organisation_du_traité_de_l'Atlantique_nord
+Organisation des pays exportateurs de pétrole	https://fr.wikipedia.org/wiki/Organisation_des_pays_exportateurs_de_pétrole
+Organisation des Nations unies	https://fr.wikipedia.org/wiki/Organisation_des_Nations_unies
+Organisation de coopération et de développement économiques	https://fr.wikipedia.org/wiki/Organisation_de_coopération_et_de_développement_économiques
+Protestantisme	https://fr.wikipedia.org/wiki/Protestantisme
+Programme des Nations unies pour l'environnement	https://fr.wikipedia.org/wiki/Programme_des_Nations_unies_pour_l'environnement
+Sony	https://fr.wikipedia.org/wiki/Sony
+Suzuki	https://fr.wikipedia.org/wiki/Suzuki
+Sun Microsystems	https://fr.wikipedia.org/wiki/Sun_Microsystems
+Evenks	https://fr.wikipedia.org/wiki/Evenks
+Volvo	https://fr.wikipedia.org/wiki/Volvo
+WorldCom	https://fr.wikipedia.org/wiki/WorldCom
+World Wide Web Consortium	https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium
+Xerox	https://fr.wikipedia.org/wiki/Xerox
+École pratique des hautes études	https://fr.wikipedia.org/wiki/École_pratique_des_hautes_études
+Free Software Foundation	https://fr.wikipedia.org/wiki/Free_Software_Foundation
+Gouvernement de la République française	https://fr.wikipedia.org/wiki/Gouvernement_de_la_République_française
+Toshiba	https://fr.wikipedia.org/wiki/Toshiba
+Université de technologie de Compiègne	https://fr.wikipedia.org/wiki/Université_de_technologie_de_Compiègne
+Groupe Proximus	https://fr.wikipedia.org/wiki/Groupe_Proximus
+Réserve fédérale des États-Unis	https://fr.wikipedia.org/wiki/Réserve_fédérale_des_États-Unis
+Pemex	https://fr.wikipedia.org/wiki/Pemex
+Fujitsu	https://fr.wikipedia.org/wiki/Fujitsu
+Cisco Systems	https://fr.wikipedia.org/wiki/Cisco_Systems
+Université de Californie à Berkeley	https://fr.wikipedia.org/wiki/Université_de_Californie_à_Berkeley
+Sinar	https://fr.wikipedia.org/wiki/Sinar
+Université libre de Bruxelles	https://fr.wikipedia.org/wiki/Université_libre_de_Bruxelles
+UCL Mons	https://fr.wikipedia.org/wiki/UCL_Mons
+Université Saint-Louis - Bruxelles	https://fr.wikipedia.org/wiki/Université_Saint-Louis_-_Bruxelles
+Université de Namur	https://fr.wikipedia.org/wiki/Université_de_Namur
+Union internationale pour la conservation de la nature	https://fr.wikipedia.org/wiki/Union_internationale_pour_la_conservation_de_la_nature
+Accord de libre-échange nord-américain	https://fr.wikipedia.org/wiki/Accord_de_libre-échange_nord-américain
+L'Humanité	https://fr.wikipedia.org/wiki/L'Humanité
+Centre national d'études spatiales	https://fr.wikipedia.org/wiki/Centre_national_d'études_spatiales
+Agence spatiale européenne	https://fr.wikipedia.org/wiki/Agence_spatiale_européenne
+Arc System Works	https://fr.wikipedia.org/wiki/Arc_System_Works
+Voie lactée	https://fr.wikipedia.org/wiki/Voie_lactée
+Maxis	https://fr.wikipedia.org/wiki/Maxis
+Systran	https://fr.wikipedia.org/wiki/Systran
+Open Source Initiative	https://fr.wikipedia.org/wiki/Open_Source_Initiative
+Organisation internationale de normalisation	https://fr.wikipedia.org/wiki/Organisation_internationale_de_normalisation
+Borland	https://fr.wikipedia.org/wiki/Borland
+École normale supérieure de Rennes	https://fr.wikipedia.org/wiki/École_normale_supérieure_de_Rennes
+Telmex	https://fr.wikipedia.org/wiki/Telmex
+Communauté andine des Nations	https://fr.wikipedia.org/wiki/Communauté_andine_des_Nations
+Tonkam	https://fr.wikipedia.org/wiki/Tonkam
+Glénat	https://fr.wikipedia.org/wiki/Glénat
+Organisation européenne pour la recherche nucléaire	https://fr.wikipedia.org/wiki/Organisation_européenne_pour_la_recherche_nucléaire
+Maison capétienne de Bourbon	https://fr.wikipedia.org/wiki/Maison_capétienne_de_Bourbon
+Brigades de paix internationales	https://fr.wikipedia.org/wiki/Brigades_de_paix_internationales
+April	https://fr.wikipedia.org/wiki/April_(association)
+Diolas	https://fr.wikipedia.org/wiki/Diolas
+Commonwealth of Nations	https://fr.wikipedia.org/wiki/Commonwealth_of_Nations
+Pilote	https://fr.wikipedia.org/wiki/Pilote_(périodique)
+Vivendi	https://fr.wikipedia.org/wiki/Vivendi
+Office de protection contre les rayonnements ionisants	https://fr.wikipedia.org/wiki/Office_de_protection_contre_les_rayonnements_ionisants
+Time Warner	https://fr.wikipedia.org/wiki/Time_Warner
+TF1	https://fr.wikipedia.org/wiki/TF1
+Nokia	https://fr.wikipedia.org/wiki/Nokia
+Organisation des Nations unies pour l'éducation, la science et la culture	https://fr.wikipedia.org/wiki/Organisation_des_Nations_unies_pour_l'éducation,_la_science_et_la_culture
+Fiat	https://fr.wikipedia.org/wiki/Fiat
+Renault	https://fr.wikipedia.org/wiki/Renault
+Peugeot	https://fr.wikipedia.org/wiki/Peugeot
+National Aeronautics and Space Administration	https://fr.wikipedia.org/wiki/National_Aeronautics_and_Space_Administration
+Atari	https://fr.wikipedia.org/wiki/Atari
+Banco Nacional de México	https://fr.wikipedia.org/wiki/Banco_Nacional_de_México
+Mongols	https://fr.wikipedia.org/wiki/Mongols
+Organisation mondiale du commerce	https://fr.wikipedia.org/wiki/Organisation_mondiale_du_commerce
+Centre national de la recherche scientifique	https://fr.wikipedia.org/wiki/Centre_national_de_la_recherche_scientifique
+Televisa	https://fr.wikipedia.org/wiki/Televisa
+Le Canard enchaîné	https://fr.wikipedia.org/wiki/Le_Canard_enchaîné
+Cemex	https://fr.wikipedia.org/wiki/Cemex
+Studio Ghibli	https://fr.wikipedia.org/wiki/Studio_Ghibli
+Touareg	https://fr.wikipedia.org/wiki/Touareg
+AccorHotels	https://fr.wikipedia.org/wiki/AccorHotels
+Association pour la taxation des transactions financières et pour l'action citoyenne	https://fr.wikipedia.org/wiki/Association_pour_la_taxation_des_transactions_financières_et_pour_l'action_citoyenne
+British Broadcasting Corporation	https://fr.wikipedia.org/wiki/British_Broadcasting_Corporation
+General Motors	https://fr.wikipedia.org/wiki/General_Motors
+Association des nations de l'Asie du Sud-Est	https://fr.wikipedia.org/wiki/Association_des_nations_de_l'Asie_du_Sud-Est
+Collège de France	https://fr.wikipedia.org/wiki/Collège_de_France
+Alcoa	https://fr.wikipedia.org/wiki/Alcoa
+Régie autonome des transports parisiens	https://fr.wikipedia.org/wiki/Régie_autonome_des_transports_parisiens
+TV Azteca	https://fr.wikipedia.org/wiki/TV_Azteca
+Québécois libre	https://fr.wikipedia.org/wiki/Québécois_libre
+América Móvil	https://fr.wikipedia.org/wiki/América_Móvil
+Radio-télévision belge de la Communauté française	https://fr.wikipedia.org/wiki/Radio-télévision_belge_de_la_Communauté_française
+Confédération générale du travail	https://fr.wikipedia.org/wiki/Confédération_générale_du_travail
+Confédération française démocratique du travail	https://fr.wikipedia.org/wiki/Confédération_française_démocratique_du_travail
+Radio France	https://fr.wikipedia.org/wiki/Radio_France
+École nationale supérieure des sciences appliquées et de technologie	https://fr.wikipedia.org/wiki/École_nationale_supérieure_des_sciences_appliquées_et_de_technologie
+Institut des techniques d'ingénieur de l'industrie	https://fr.wikipedia.org/wiki/Institut_des_techniques_d'ingénieur_de_l'industrie
+Institut des techniques d'ingénieur de l'industrie Provence-Alpes-Côte d'Azur	https://fr.wikipedia.org/wiki/Institut_des_techniques_d'ingénieur_de_l'industrie_Provence-Alpes-Côte_d'Azur
+Le Monde diplomatique	https://fr.wikipedia.org/wiki/Le_Monde_diplomatique
+École nationale supérieure d'informatique pour l'industrie et l'entreprise	https://fr.wikipedia.org/wiki/École_nationale_supérieure_d'informatique_pour_l'industrie_et_l'entreprise
+Communauté économique européenne	https://fr.wikipedia.org/wiki/Communauté_économique_européenne
+Conservatoire national des arts et métiers	https://fr.wikipedia.org/wiki/Conservatoire_national_des_arts_et_métiers
+École nationale supérieure des mines d'Alès	https://fr.wikipedia.org/wiki/École_nationale_supérieure_des_mines_d'Alès
+Congrès de Tours	https://fr.wikipedia.org/wiki/Congrès_de_Tours_(SFIO)
+Berbères	https://fr.wikipedia.org/wiki/Berbères
+Thalys	https://fr.wikipedia.org/wiki/Thalys
+Sega	https://fr.wikipedia.org/wiki/Sega
+Red Hat	https://fr.wikipedia.org/wiki/Red_Hat
+Wikimedia Foundation	https://fr.wikipedia.org/wiki/Wikimedia_Foundation
+Mouvement international de la Croix-Rouge et du Croissant-Rouge	https://fr.wikipedia.org/wiki/Mouvement_international_de_la_Croix-Rouge_et_du_Croissant-Rouge
+Fédération internationale des Sociétés de la Croix-Rouge et du Croissant-Rouge	https://fr.wikipedia.org/wiki/Fédération_internationale_des_Sociétés_de_la_Croix-Rouge_et_du_Croissant-Rouge
+Comité international de la Croix-Rouge	https://fr.wikipedia.org/wiki/Comité_international_de_la_Croix-Rouge
+Cour suprême des États-Unis	https://fr.wikipedia.org/wiki/Cour_suprême_des_États-Unis
+École normale supérieure de Lyon	https://fr.wikipedia.org/wiki/École_normale_supérieure_de_Lyon
+École spéciale militaire de Saint-Cyr	https://fr.wikipedia.org/wiki/École_spéciale_militaire_de_Saint-Cyr
+Compagnie britannique des Indes orientales	https://fr.wikipedia.org/wiki/Compagnie_britannique_des_Indes_orientales
+Hanna-Barbera Productions	https://fr.wikipedia.org/wiki/Hanna-Barbera_Productions
+Institut de génie informatique et industriel	https://fr.wikipedia.org/wiki/Institut_de_génie_informatique_et_industriel
+Université de technologie de Belfort-Montbéliard	https://fr.wikipedia.org/wiki/Université_de_technologie_de_Belfort-Montbéliard
+Compagnie française des Indes orientales	https://fr.wikipedia.org/wiki/Compagnie_française_des_Indes_orientales
+Apaches	https://fr.wikipedia.org/wiki/Apaches
+Institut national de recherche en informatique et en automatique	https://fr.wikipedia.org/wiki/Institut_national_de_recherche_en_informatique_et_en_automatique
+École nationale des travaux publics de l'État	https://fr.wikipedia.org/wiki/École_nationale_des_travaux_publics_de_l'État
+École supérieure d'ingénieurs de Luminy	https://fr.wikipedia.org/wiki/École_supérieure_d'ingénieurs_de_Luminy
+Opus Dei	https://fr.wikipedia.org/wiki/Opus_Dei
+Compagnies républicaines de sécurité en France	https://fr.wikipedia.org/wiki/Compagnies_républicaines_de_sécurité_en_France
+Gendarmerie nationale française	https://fr.wikipedia.org/wiki/Gendarmerie_nationale_française
+Police nationale	https://fr.wikipedia.org/wiki/Police_nationale_(France)
+Confédération nationale du travail	https://fr.wikipedia.org/wiki/Confédération_nationale_du_travail_(France)
+Aïnous	https://fr.wikipedia.org/wiki/Aïnous_(ethnie_du_Japon_et_de_Russie)
+Acorn Computers	https://fr.wikipedia.org/wiki/Acorn_Computers
+École normale supérieure	https://fr.wikipedia.org/wiki/École_normale_supérieure_(Paris)
+Institut national de la statistique et des études économiques	https://fr.wikipedia.org/wiki/Institut_national_de_la_statistique_et_des_études_économiques
+Conseil supérieur de l'audiovisuel	https://fr.wikipedia.org/wiki/Conseil_supérieur_de_l'audiovisuel_(France)
+Institut Le Rosey	https://fr.wikipedia.org/wiki/Institut_Le_Rosey
+Tribunal pénal international pour le Rwanda	https://fr.wikipedia.org/wiki/Tribunal_pénal_international_pour_le_Rwanda
+Cour pénale internationale	https://fr.wikipedia.org/wiki/Cour_pénale_internationale
+Agence internationale de l'énergie atomique	https://fr.wikipedia.org/wiki/Agence_internationale_de_l'énergie_atomique
+Yahoo!	https://fr.wikipedia.org/wiki/Yahoo!
+Conseil constitutionnel	https://fr.wikipedia.org/wiki/Conseil_constitutionnel_(France)
+Internet Society France	https://fr.wikipedia.org/wiki/Internet_Society_France
+PeopleSoft	https://fr.wikipedia.org/wiki/PeopleSoft
+Commodore International	https://fr.wikipedia.org/wiki/Commodore_International
+Kanak	https://fr.wikipedia.org/wiki/Kanak
+École nationale supérieure des mines de Paris	https://fr.wikipedia.org/wiki/École_nationale_supérieure_des_mines_de_Paris
+Defense Advanced Research Projects Agency	https://fr.wikipedia.org/wiki/Defense_Advanced_Research_Projects_Agency
+Banque de France	https://fr.wikipedia.org/wiki/Banque_de_France
+Corps européen	https://fr.wikipedia.org/wiki/Corps_européen
+Communauté des États indépendants	https://fr.wikipedia.org/wiki/Communauté_des_États_indépendants
+Ericsson	https://fr.wikipedia.org/wiki/Ericsson
+Arte	https://fr.wikipedia.org/wiki/Arte
+Arawaks	https://fr.wikipedia.org/wiki/Arawaks
+PSA Peugeot Citroën	https://fr.wikipedia.org/wiki/PSA_Peugeot_Citroën
+Verisign	https://fr.wikipedia.org/wiki/Verisign
+Faculté polytechnique de Mons	https://fr.wikipedia.org/wiki/Faculté_polytechnique_de_Mons
+National Endowment for Democracy	https://fr.wikipedia.org/wiki/National_Endowment_for_Democracy
+Mouvement des entreprises de France	https://fr.wikipedia.org/wiki/Mouvement_des_entreprises_de_France
+Centre de coopération internationale en recherche agronomique pour le développement	https://fr.wikipedia.org/wiki/Centre_de_coopération_internationale_en_recherche_agronomique_pour_le_développement
+Union professionnelle artisanale	https://fr.wikipedia.org/wiki/Union_professionnelle_artisanale
+Hebdogiciel	https://fr.wikipedia.org/wiki/Hebdogiciel
+Office européen des brevets	https://fr.wikipedia.org/wiki/Office_européen_des_brevets
+Adobe Systems	https://fr.wikipedia.org/wiki/Adobe_Systems
+Organisation mondiale de la propriété intellectuelle	https://fr.wikipedia.org/wiki/Organisation_mondiale_de_la_propriété_intellectuelle
+Groupe AFNOR	https://fr.wikipedia.org/wiki/Groupe_AFNOR
+Météo-France	https://fr.wikipedia.org/wiki/Météo-France
+École nationale supérieure d'informatique et de mathématiques appliquées	https://fr.wikipedia.org/wiki/École_nationale_supérieure_d'informatique_et_de_mathématiques_appliquées
+École normale supérieure de Cachan	https://fr.wikipedia.org/wiki/École_normale_supérieure_de_Cachan
+Fonds mondial pour la nature	https://fr.wikipedia.org/wiki/Fonds_mondial_pour_la_nature
+Eurostar	https://fr.wikipedia.org/wiki/Eurostar
+Cycle préparatoire polytechnique	https://fr.wikipedia.org/wiki/Cycle_préparatoire_polytechnique
+Laboratoire national Lawrence-Berkeley	https://fr.wikipedia.org/wiki/Laboratoire_national_Lawrence-Berkeley
+Université de Cambridge	https://fr.wikipedia.org/wiki/Université_de_Cambridge
+Bethesda Softworks	https://fr.wikipedia.org/wiki/Bethesda_Softworks
+Banque mondiale	https://fr.wikipedia.org/wiki/Banque_mondiale
+Forum économique mondial	https://fr.wikipedia.org/wiki/Forum_économique_mondial
+Al Jazeera	https://fr.wikipedia.org/wiki/Al_Jazeera
+Confédération paysanne	https://fr.wikipedia.org/wiki/Confédération_paysanne
+École Diwan	https://fr.wikipedia.org/wiki/École_Diwan
+École nationale supérieure de l'électronique et de ses applications	https://fr.wikipedia.org/wiki/École_nationale_supérieure_de_l'électronique_et_de_ses_applications
+Enix	https://fr.wikipedia.org/wiki/Enix_(entreprise)
+Atos	https://fr.wikipedia.org/wiki/Atos
+Norois	https://fr.wikipedia.org/wiki/Norois
+Union astronomique internationale	https://fr.wikipedia.org/wiki/Union_astronomique_internationale
+Square Enix	https://fr.wikipedia.org/wiki/Square_Enix
+Conseil de l'Europe	https://fr.wikipedia.org/wiki/Conseil_de_l'Europe
+Gainax	https://fr.wikipedia.org/wiki/Gainax_(studio)
+Internet Corporation for Assigned Names and Numbers	https://fr.wikipedia.org/wiki/Internet_Corporation_for_Assigned_Names_and_Numbers
+Association française pour le nommage Internet en coopération	https://fr.wikipedia.org/wiki/Association_française_pour_le_nommage_Internet_en_coopération
+Groupe local	https://fr.wikipedia.org/wiki/Groupe_local
+Pixar Animation Studios	https://fr.wikipedia.org/wiki/Pixar_Animation_Studios
+L'Association	https://fr.wikipedia.org/wiki/L'Association
+Dupuis	https://fr.wikipedia.org/wiki/Dupuis
+Human Rights Watch	https://fr.wikipedia.org/wiki/Human_Rights_Watch
+Amnesty International	https://fr.wikipedia.org/wiki/Amnesty_International
+Ligue française pour la défense des droits de l'homme et du citoyen	https://fr.wikipedia.org/wiki/Ligue_française_pour_la_défense_des_droits_de_l'homme_et_du_citoyen
+Transparency International	https://fr.wikipedia.org/wiki/Transparency_International
+Cour internationale de justice	https://fr.wikipedia.org/wiki/Cour_internationale_de_justice
+Tribunal pénal international pour l'ex-Yougoslavie	https://fr.wikipedia.org/wiki/Tribunal_pénal_international_pour_l'ex-Yougoslavie
+Maison de Savoie	https://fr.wikipedia.org/wiki/Maison_de_Savoie
+France Inter	https://fr.wikipedia.org/wiki/France_Inter
+France Culture	https://fr.wikipedia.org/wiki/France_Culture
+France Musique	https://fr.wikipedia.org/wiki/France_Musique
+Mouv'	https://fr.wikipedia.org/wiki/Mouv'
+Radio France internationale	https://fr.wikipedia.org/wiki/Radio_France_internationale
+National Security Agency	https://fr.wikipedia.org/wiki/National_Security_Agency
+Europe 2	https://fr.wikipedia.org/wiki/Europe_2
+Europe 1	https://fr.wikipedia.org/wiki/Europe_1
+RFM	https://fr.wikipedia.org/wiki/RFM
+Radio Classique	https://fr.wikipedia.org/wiki/Radio_Classique
+RTL2	https://fr.wikipedia.org/wiki/RTL2
+Journal officiel de la République française	https://fr.wikipedia.org/wiki/Journal_officiel_de_la_République_française
+Endemol	https://fr.wikipedia.org/wiki/Endemol
+Institut supérieur d'informatique, de modélisation et de leurs applications	https://fr.wikipedia.org/wiki/Institut_supérieur_d'informatique,_de_modélisation_et_de_leurs_applications
+Brasseries Kronenbourg	https://fr.wikipedia.org/wiki/Brasseries_Kronenbourg
+Secours populaire français	https://fr.wikipedia.org/wiki/Secours_populaire_français
+École normale supérieure de Fontenay-Saint-Cloud	https://fr.wikipedia.org/wiki/École_normale_supérieure_de_Fontenay-Saint-Cloud
+Subaru	https://fr.wikipedia.org/wiki/Subaru
+Les Plus Beaux Villages de France	https://fr.wikipedia.org/wiki/Les_Plus_Beaux_Villages_de_France
+Benelux	https://fr.wikipedia.org/wiki/Benelux
+France 2	https://fr.wikipedia.org/wiki/France_2
+France 3	https://fr.wikipedia.org/wiki/France_3
+France 5	https://fr.wikipedia.org/wiki/France_5
+Office de radiodiffusion-télévision française	https://fr.wikipedia.org/wiki/Office_de_radiodiffusion-télévision_française
+Jimmy	https://fr.wikipedia.org/wiki/Jimmy_(chaîne_de_télévision)
+Comité international olympique	https://fr.wikipedia.org/wiki/Comité_international_olympique
+Société des auteurs, compositeurs et éditeurs de musique	https://fr.wikipedia.org/wiki/Société_des_auteurs,_compositeurs_et_éditeurs_de_musique
+Id Software	https://fr.wikipedia.org/wiki/Id_Software
+École pour l'informatique et les techniques avancées	https://fr.wikipedia.org/wiki/École_pour_l'informatique_et_les_techniques_avancées
+DuPont	https://fr.wikipedia.org/wiki/DuPont
+Institut national de l'information géographique et forestière	https://fr.wikipedia.org/wiki/Institut_national_de_l'information_géographique_et_forestière
+Direction générale de la Sécurité extérieure	https://fr.wikipedia.org/wiki/Direction_générale_de_la_Sécurité_extérieure
+Organisation de l'unité africaine	https://fr.wikipedia.org/wiki/Organisation_de_l'unité_africaine
+Union africaine	https://fr.wikipedia.org/wiki/Union_africaine
+Creative Commons	https://fr.wikipedia.org/wiki/Creative_Commons
+Folimage	https://fr.wikipedia.org/wiki/Folimage
+BiC	https://fr.wikipedia.org/wiki/BiC
+Baka	https://fr.wikipedia.org/wiki/Baka_(peuple_du_Cameroun_et_du_Gabon)
+Politique américaine	https://fr.wikipedia.org/wiki/Politique_américaine_(revue)
+Association européenne de libre-échange	https://fr.wikipedia.org/wiki/Association_européenne_de_libre-échange
+Airbus	https://fr.wikipedia.org/wiki/Airbus
+Grand Orient de France	https://fr.wikipedia.org/wiki/Grand_Orient_de_France
+NeXT	https://fr.wikipedia.org/wiki/NeXT
+Palo Alto Research Center	https://fr.wikipedia.org/wiki/Palo_Alto_Research_Center
+Confédération générale du travail - Force ouvrière	https://fr.wikipedia.org/wiki/Confédération_générale_du_travail_-_Force_ouvrière
+Institut national polytechnique de Toulouse	https://fr.wikipedia.org/wiki/Institut_national_polytechnique_de_Toulouse
+Unisys	https://fr.wikipedia.org/wiki/Unisys
+Sperry Corporation	https://fr.wikipedia.org/wiki/Sperry_Corporation
+Université de Montréal	https://fr.wikipedia.org/wiki/Université_de_Montréal
+École des hautes études en sciences sociales	https://fr.wikipedia.org/wiki/École_des_hautes_études_en_sciences_sociales
+Université York	https://fr.wikipedia.org/wiki/Université_York
+Fédération syndicale unitaire	https://fr.wikipedia.org/wiki/Fédération_syndicale_unitaire
+Félibrige	https://fr.wikipedia.org/wiki/Félibrige
+Motor Development International	https://fr.wikipedia.org/wiki/Motor_Development_International
+Nestlé	https://fr.wikipedia.org/wiki/Nestlé
+ITER	https://fr.wikipedia.org/wiki/ITER
+Mouvement européen international	https://fr.wikipedia.org/wiki/Mouvement_européen_international
+École du Louvre	https://fr.wikipedia.org/wiki/École_du_Louvre
+Observatoire européen austral	https://fr.wikipedia.org/wiki/Observatoire_européen_austral
+Miramax Films	https://fr.wikipedia.org/wiki/Miramax_Films
+Industrial Light & Magic	https://fr.wikipedia.org/wiki/Industrial_Light_&_Magic
+DreamWorks SKG	https://fr.wikipedia.org/wiki/DreamWorks_SKG
+RKO Pictures	https://fr.wikipedia.org/wiki/RKO_Pictures
+New Line Cinema	https://fr.wikipedia.org/wiki/New_Line_Cinema
+20th Century Fox	https://fr.wikipedia.org/wiki/20th_Century_Fox
+American Zoetrope	https://fr.wikipedia.org/wiki/American_Zoetrope
+United Artists	https://fr.wikipedia.org/wiki/United_Artists
+The Samuel Goldwyn Company	https://fr.wikipedia.org/wiki/The_Samuel_Goldwyn_Company
+Morgan Creek Productions	https://fr.wikipedia.org/wiki/Morgan_Creek_Productions
+MultiThématiques	https://fr.wikipedia.org/wiki/MultiThématiques
+AB Groupe	https://fr.wikipedia.org/wiki/AB_Groupe
+Groupe Canal+	https://fr.wikipedia.org/wiki/Groupe_Canal+
+Fox Entertainment Group	https://fr.wikipedia.org/wiki/Fox_Entertainment_Group
+Lagardère Active	https://fr.wikipedia.org/wiki/Lagardère_Active
+Groupe MCM	https://fr.wikipedia.org/wiki/Groupe_MCM
+Pathé	https://fr.wikipedia.org/wiki/Pathé
+Warner Bros.	https://fr.wikipedia.org/wiki/Warner_Bros.
+Conseil œcuménique des Églises	https://fr.wikipedia.org/wiki/Conseil_œcuménique_des_Églises
+EuropaCorp	https://fr.wikipedia.org/wiki/EuropaCorp
+Lucasfilm	https://fr.wikipedia.org/wiki/Lucasfilm
+THX	https://fr.wikipedia.org/wiki/THX_(entreprise)
+Home Box Office	https://fr.wikipedia.org/wiki/Home_Box_Office
+Warner Music Group	https://fr.wikipedia.org/wiki/Warner_Music_Group
+20th Century Fox Animation	https://fr.wikipedia.org/wiki/20th_Century_Fox_Animation
+Amblin Entertainment	https://fr.wikipedia.org/wiki/Amblin_Entertainment
+Unifrance	https://fr.wikipedia.org/wiki/Unifrance
+Island Def Jam Music Group	https://fr.wikipedia.org/wiki/Island_Def_Jam_Music_Group
+Sony Pictures Entertainment	https://fr.wikipedia.org/wiki/Sony_Pictures_Entertainment
+Blue Sky Studios	https://fr.wikipedia.org/wiki/Blue_Sky_Studios
+Imagine Entertainment	https://fr.wikipedia.org/wiki/Imagine_Entertainment
+20th Century Fox Television	https://fr.wikipedia.org/wiki/20th_Century_Fox_Television
+Focus Features	https://fr.wikipedia.org/wiki/Focus_Features
+Centre national du cinéma et de l'image animée	https://fr.wikipedia.org/wiki/Centre_national_du_cinéma_et_de_l'image_animée
+Cinémathèque française	https://fr.wikipedia.org/wiki/Cinémathèque_française
+DePatie-Freleng Enterprises	https://fr.wikipedia.org/wiki/DePatie-Freleng_Enterprises
+Fleischer Studios	https://fr.wikipedia.org/wiki/Fleischer_Studios
+Boeing	https://fr.wikipedia.org/wiki/Boeing
+Diffusion information communication	https://fr.wikipedia.org/wiki/Diffusion_information_communication
+Office national d'études et de recherches aérospatiales	https://fr.wikipedia.org/wiki/Office_national_d'études_et_de_recherches_aérospatiales
+Metro-Goldwyn-Mayer	https://fr.wikipedia.org/wiki/Metro-Goldwyn-Mayer
+Paramount Pictures	https://fr.wikipedia.org/wiki/Paramount_Pictures
+Pacte de Varsovie	https://fr.wikipedia.org/wiki/Pacte_de_Varsovie
+Hara-Kiri	https://fr.wikipedia.org/wiki/Hara-Kiri_(journal)
+Charlie Hebdo	https://fr.wikipedia.org/wiki/Charlie_Hebdo
+SUSE	https://fr.wikipedia.org/wiki/SUSE
+Direction générale de l'Aviation civile	https://fr.wikipedia.org/wiki/Direction_générale_de_l'Aviation_civile
+Association internationale des travailleurs	https://fr.wikipedia.org/wiki/Association_internationale_des_travailleurs
+Confédération nationale du travail	https://fr.wikipedia.org/wiki/Confédération_nationale_du_travail_(Espagne)
+Jeunesses communistes révolutionnaires	https://fr.wikipedia.org/wiki/Jeunesses_communistes_révolutionnaires
+Série Club	https://fr.wikipedia.org/wiki/Série_Club
+Groupe M6	https://fr.wikipedia.org/wiki/Groupe_M6
+Groupe TF1	https://fr.wikipedia.org/wiki/Groupe_TF1
+RTL9	https://fr.wikipedia.org/wiki/RTL9
+Paris Première	https://fr.wikipedia.org/wiki/Paris_Première
+Hachette Filipacchi Médias	https://fr.wikipedia.org/wiki/Hachette_Filipacchi_Médias
+Institut Pasteur	https://fr.wikipedia.org/wiki/Institut_Pasteur
+Société nationale de sauvetage en mer	https://fr.wikipedia.org/wiki/Société_nationale_de_sauvetage_en_mer
+Embraer	https://fr.wikipedia.org/wiki/Embraer
+NRJ Group	https://fr.wikipedia.org/wiki/NRJ_Group
+Viacom	https://fr.wikipedia.org/wiki/Viacom_(1971-2005)
+The WB Television Network	https://fr.wikipedia.org/wiki/The_WB_Television_Network
+United Paramount Network	https://fr.wikipedia.org/wiki/United_Paramount_Network
+Fonds des Nations unies pour l'enfance	https://fr.wikipedia.org/wiki/Fonds_des_Nations_unies_pour_l'enfance
+Alfa Romeo	https://fr.wikipedia.org/wiki/Alfa_Romeo
+Université du Québec à Montréal	https://fr.wikipedia.org/wiki/Université_du_Québec_à_Montréal
+La Cinq	https://fr.wikipedia.org/wiki/La_Cinq
+Haute Autorité de la communication audiovisuelle	https://fr.wikipedia.org/wiki/Haute_Autorité_de_la_communication_audiovisuelle_(France)
+Commission nationale de la communication et des libertés	https://fr.wikipedia.org/wiki/Commission_nationale_de_la_communication_et_des_libertés
+Groupe Altice Media	https://fr.wikipedia.org/wiki/Groupe_Altice_Media
+Socpresse	https://fr.wikipedia.org/wiki/Socpresse
+Groupe Amaury	https://fr.wikipedia.org/wiki/Groupe_Amaury
+Groupe Marie Claire	https://fr.wikipedia.org/wiki/Groupe_Marie_Claire
+Groupe Carrefour	https://fr.wikipedia.org/wiki/Groupe_Carrefour
+Mars	https://fr.wikipedia.org/wiki/Mars_(entreprise)
+Association française du cinéma d'animation	https://fr.wikipedia.org/wiki/Association_française_du_cinéma_d'animation
+Airbus Group	https://fr.wikipedia.org/wiki/Airbus_Group
+Sanofi-Synthélabo	https://fr.wikipedia.org/wiki/Sanofi-Synthélabo
+Aventis	https://fr.wikipedia.org/wiki/Aventis
+Médiamétrie	https://fr.wikipedia.org/wiki/Médiamétrie
+Institut national de l'audiovisuel	https://fr.wikipedia.org/wiki/Institut_national_de_l'audiovisuel
+OJD	https://fr.wikipedia.org/wiki/OJD
+Vodafone	https://fr.wikipedia.org/wiki/Vodafone
+Société française du radiotéléphone	https://fr.wikipedia.org/wiki/Société_française_du_radiotéléphone
+L'Oréal	https://fr.wikipedia.org/wiki/L'Oréal
+Vinci	https://fr.wikipedia.org/wiki/Vinci_(entreprise)
+France 24	https://fr.wikipedia.org/wiki/France_24
+TV5 Monde	https://fr.wikipedia.org/wiki/TV5_Monde
+La Chaîne parlementaire	https://fr.wikipedia.org/wiki/La_Chaîne_parlementaire
+Public Sénat	https://fr.wikipedia.org/wiki/Public_Sénat
+Guides Catholiques de Belgique	https://fr.wikipedia.org/wiki/Guides_Catholiques_de_Belgique
+Schneider Electric	https://fr.wikipedia.org/wiki/Schneider_Electric
+Eurosport	https://fr.wikipedia.org/wiki/Eurosport
+La Chaîne Info	https://fr.wikipedia.org/wiki/La_Chaîne_Info
+École hôtelière de Lausanne	https://fr.wikipedia.org/wiki/École_hôtelière_de_Lausanne
+Gouvernement de l'Église catholique	https://fr.wikipedia.org/wiki/Gouvernement_de_l'Église_catholique
+Groupe union défense	https://fr.wikipedia.org/wiki/Groupe_union_défense
+Total	https://fr.wikipedia.org/wiki/Total_(entreprise)
+NYSE Euronext	https://fr.wikipedia.org/wiki/NYSE_Euronext
+Télécom Nancy	https://fr.wikipedia.org/wiki/Télécom_Nancy
+NBCUniversal	https://fr.wikipedia.org/wiki/NBCUniversal
+13e rue	https://fr.wikipedia.org/wiki/13e_rue
+KTO	https://fr.wikipedia.org/wiki/KTO
+TF6	https://fr.wikipedia.org/wiki/TF6
+Iliad	https://fr.wikipedia.org/wiki/Iliad
+Volkswagen	https://fr.wikipedia.org/wiki/Volkswagen_(entreprise)
+IDDH	https://fr.wikipedia.org/wiki/IDDH
+BFM Business	https://fr.wikipedia.org/wiki/BFM_Business
+Rire et Chansons	https://fr.wikipedia.org/wiki/Rire_et_Chansons
+Chic FM	https://fr.wikipedia.org/wiki/Chic_FM
+Hit FM	https://fr.wikipedia.org/wiki/Hit_FM
+Chérie FM	https://fr.wikipedia.org/wiki/Chérie_FM
+École nationale supérieure du paysage	https://fr.wikipedia.org/wiki/École_nationale_supérieure_du_paysage
+News Corporation	https://fr.wikipedia.org/wiki/News_Corporation
+Institut supérieur de l'électronique et du numérique	https://fr.wikipedia.org/wiki/Institut_supérieur_de_l'électronique_et_du_numérique
+École nationale supérieure de la nature et du paysage	https://fr.wikipedia.org/wiki/École_nationale_supérieure_de_la_nature_et_du_paysage
+Communauté européenne du charbon et de l'acier	https://fr.wikipedia.org/wiki/Communauté_européenne_du_charbon_et_de_l'acier
+Université d'Ottawa	https://fr.wikipedia.org/wiki/Université_d'Ottawa
+Télécom Physique Strasbourg	https://fr.wikipedia.org/wiki/Télécom_Physique_Strasbourg
+Canalsat	https://fr.wikipedia.org/wiki/Canalsat
+Institut des Sciences de l'Ingénieur de Toulon et du Var	https://fr.wikipedia.org/wiki/Institut_des_Sciences_de_l'Ingénieur_de_Toulon_et_du_Var
+Air Productions	https://fr.wikipedia.org/wiki/Air_Productions
+Réservoir Prod	https://fr.wikipedia.org/wiki/Réservoir_Prod
+Organisation mondiale de la santé	https://fr.wikipedia.org/wiki/Organisation_mondiale_de_la_santé
+IG Farben	https://fr.wikipedia.org/wiki/IG_Farben
+Institut des hautes études scientifiques	https://fr.wikipedia.org/wiki/Institut_des_hautes_études_scientifiques
+Les Inconnus	https://fr.wikipedia.org/wiki/Les_Inconnus
+Canal+	https://fr.wikipedia.org/wiki/Canal+
+Midi libre	https://fr.wikipedia.org/wiki/Midi_libre
+Le Figaro	https://fr.wikipedia.org/wiki/Le_Figaro
+Netscape Communications	https://fr.wikipedia.org/wiki/Netscape_Communications
+SOS Racisme	https://fr.wikipedia.org/wiki/SOS_Racisme
+Samis	https://fr.wikipedia.org/wiki/Samis
+Bomis	https://fr.wikipedia.org/wiki/Bomis
+Postes, télégraphes et téléphones	https://fr.wikipedia.org/wiki/Postes,_télégraphes_et_téléphones_(France)
+Université d'études internationales de Xi'an	https://fr.wikipedia.org/wiki/Université_d'études_internationales_de_Xi'an
+La Bougie du sapeur	https://fr.wikipedia.org/wiki/La_Bougie_du_sapeur
+DC Comics	https://fr.wikipedia.org/wiki/DC_Comics
+Courrier international	https://fr.wikipedia.org/wiki/Courrier_international
+École supérieure d'informatique, électronique, automatique	https://fr.wikipedia.org/wiki/École_supérieure_d'informatique,_électronique,_automatique
+BP	https://fr.wikipedia.org/wiki/BP_(entreprise)
+Radio libertaire	https://fr.wikipedia.org/wiki/Radio_libertaire
+Le Monde libertaire	https://fr.wikipedia.org/wiki/Le_Monde_libertaire
+Réseau Outre-Mer première	https://fr.wikipedia.org/wiki/Réseau_Outre-Mer_première
+Ducati	https://fr.wikipedia.org/wiki/Ducati
+Cour des comptes européenne	https://fr.wikipedia.org/wiki/Cour_des_comptes_européenne
+Europol	https://fr.wikipedia.org/wiki/Europol
+Maison de Bourbon	https://fr.wikipedia.org/wiki/Maison_de_Bourbon
+Vinilkosmo	https://fr.wikipedia.org/wiki/Vinilkosmo
+Pieds-noirs	https://fr.wikipedia.org/wiki/Pieds-noirs
+Confédération mondiale des activités subaquatiques	https://fr.wikipedia.org/wiki/Confédération_mondiale_des_activités_subaquatiques
+Ashkénaze	https://fr.wikipedia.org/wiki/Ashkénaze
+Agence France-Presse	https://fr.wikipedia.org/wiki/Agence_France-Presse
+Union européenne de radio-télévision	https://fr.wikipedia.org/wiki/Union_européenne_de_radio-télévision
+Marvel Comics	https://fr.wikipedia.org/wiki/Marvel_Comics
+Dolby	https://fr.wikipedia.org/wiki/Dolby
+Société de géographie	https://fr.wikipedia.org/wiki/Société_de_géographie
+Blizzard Entertainment	https://fr.wikipedia.org/wiki/Blizzard_Entertainment
+Orange Business Services	https://fr.wikipedia.org/wiki/Orange_Business_Services
+SAT-Amikaro	https://fr.wikipedia.org/wiki/SAT-Amikaro
+Association mondiale anationale	https://fr.wikipedia.org/wiki/Association_mondiale_anationale
+Husseinites	https://fr.wikipedia.org/wiki/Husseinites
+École supérieure des sciences et technologies de l'ingénieur de Nancy	https://fr.wikipedia.org/wiki/École_supérieure_des_sciences_et_technologies_de_l'ingénieur_de_Nancy
+École nationale supérieure des sciences de l'information et des bibliothèques	https://fr.wikipedia.org/wiki/École_nationale_supérieure_des_sciences_de_l'information_et_des_bibliothèques
+Xebec	https://fr.wikipedia.org/wiki/Xebec_(studio)
+Éditions Lug	https://fr.wikipedia.org/wiki/Éditions_Lug
+France Télévisions	https://fr.wikipedia.org/wiki/France_Télévisions
+Association sud-asiatique pour la coopération régionale	https://fr.wikipedia.org/wiki/Association_sud-asiatique_pour_la_coopération_régionale
+Société française de production	https://fr.wikipedia.org/wiki/Société_française_de_production
+Euro Media France	https://fr.wikipedia.org/wiki/Euro_Media_France
+BT Group	https://fr.wikipedia.org/wiki/BT_Group
+Métal hurlant	https://fr.wikipedia.org/wiki/Métal_hurlant
+Université de Mons-Hainaut	https://fr.wikipedia.org/wiki/Université_de_Mons-Hainaut
+Windsor Star	https://fr.wikipedia.org/wiki/Windsor_Star
+BNP Paribas	https://fr.wikipedia.org/wiki/BNP_Paribas
+Thales	https://fr.wikipedia.org/wiki/Thales
+Mandriva	https://fr.wikipedia.org/wiki/Mandriva
+Cahiers du cinéma	https://fr.wikipedia.org/wiki/Cahiers_du_cinéma
+Organisation internationale de la francophonie	https://fr.wikipedia.org/wiki/Organisation_internationale_de_la_francophonie
+Les Humanoïdes Associés	https://fr.wikipedia.org/wiki/Les_Humanoïdes_Associés
+Alternatives économiques	https://fr.wikipedia.org/wiki/Alternatives_économiques
+Ferrari	https://fr.wikipedia.org/wiki/Ferrari_(entreprise)
+Rassemblement démocratique et social européen	https://fr.wikipedia.org/wiki/Rassemblement_démocratique_et_social_européen
+British Academy of Film and Television Arts	https://fr.wikipedia.org/wiki/British_Academy_of_Film_and_Television_Arts
+Fun Radio	https://fr.wikipedia.org/wiki/Fun_Radio
+Orange	https://fr.wikipedia.org/wiki/Orange_(entreprise)
+Première	https://fr.wikipedia.org/wiki/Première_(magazine)
+Studio magazine	https://fr.wikipedia.org/wiki/Studio_magazine
+Mad Movies	https://fr.wikipedia.org/wiki/Mad_Movies
+Silicon Graphics	https://fr.wikipedia.org/wiki/Silicon_Graphics
+Fininvest	https://fr.wikipedia.org/wiki/Fininvest
+Université de Liège	https://fr.wikipedia.org/wiki/Université_de_Liège
+Comité pour l'annulation de la dette du tiers monde	https://fr.wikipedia.org/wiki/Comité_pour_l'annulation_de_la_dette_du_tiers_monde
+Présent	https://fr.wikipedia.org/wiki/Présent_(quotidien)
+Téva	https://fr.wikipedia.org/wiki/Téva
+Fun TV	https://fr.wikipedia.org/wiki/Fun_TV
+Radio Televisión Española	https://fr.wikipedia.org/wiki/Radio_Televisión_Española
+Radio Nacional de España	https://fr.wikipedia.org/wiki/Radio_Nacional_de_España
+Rai	https://fr.wikipedia.org/wiki/Rai_(télévision)
+Mediaset	https://fr.wikipedia.org/wiki/Mediaset
+Danone	https://fr.wikipedia.org/wiki/Danone
+Rinspeed	https://fr.wikipedia.org/wiki/Rinspeed
+Alliance générale contre le racisme et pour le respect de l'identité française et chrétienne	https://fr.wikipedia.org/wiki/Alliance_générale_contre_le_racisme_et_pour_le_respect_de_l'identité_française_et_chrétienne
+Commissariat à l'énergie atomique et aux énergies alternatives	https://fr.wikipedia.org/wiki/Commissariat_à_l'énergie_atomique_et_aux_énergies_alternatives
+Areva	https://fr.wikipedia.org/wiki/Areva
+Antenne 2	https://fr.wikipedia.org/wiki/Antenne_2
+France Régions 3	https://fr.wikipedia.org/wiki/France_Régions_3
+RTL TV	https://fr.wikipedia.org/wiki/RTL_TV
+RTL Télévision	https://fr.wikipedia.org/wiki/RTL_Télévision
+Télé Luxembourg	https://fr.wikipedia.org/wiki/Télé_Luxembourg
+SundanceTV	https://fr.wikipedia.org/wiki/SundanceTV
+Electronic Frontier Foundation	https://fr.wikipedia.org/wiki/Electronic_Frontier_Foundation
+TMC	https://fr.wikipedia.org/wiki/TMC_(chaîne_de_télévision)
+Cavedog Entertainment	https://fr.wikipedia.org/wiki/Cavedog_Entertainment
+Université d'Uppsala	https://fr.wikipedia.org/wiki/Université_d'Uppsala
+Bayerische Motoren Werke	https://fr.wikipedia.org/wiki/Bayerische_Motoren_Werke
+Mazda	https://fr.wikipedia.org/wiki/Mazda_(automobiles)
+Dacia	https://fr.wikipedia.org/wiki/Dacia
+Scouts de France	https://fr.wikipedia.org/wiki/Scouts_de_France
+Audi	https://fr.wikipedia.org/wiki/Audi
+Bentley Motors	https://fr.wikipedia.org/wiki/Bentley_Motors
+Cadillac	https://fr.wikipedia.org/wiki/Cadillac_(entreprise)
+Daewoo	https://fr.wikipedia.org/wiki/Daewoo
+Daihatsu	https://fr.wikipedia.org/wiki/Daihatsu
+Datsun	https://fr.wikipedia.org/wiki/Datsun
+Holden	https://fr.wikipedia.org/wiki/Holden_(constructeur_automobile)
+Isuzu	https://fr.wikipedia.org/wiki/Isuzu
+Infiniti	https://fr.wikipedia.org/wiki/Infiniti
+Jeep	https://fr.wikipedia.org/wiki/Jeep
+Lamborghini	https://fr.wikipedia.org/wiki/Lamborghini
+Lancia	https://fr.wikipedia.org/wiki/Lancia
+Lexus	https://fr.wikipedia.org/wiki/Lexus
+Toyota	https://fr.wikipedia.org/wiki/Toyota
+Lincoln	https://fr.wikipedia.org/wiki/Lincoln_(automobile)
+Mercury	https://fr.wikipedia.org/wiki/Mercury_(automobile)
+Mini	https://fr.wikipedia.org/wiki/Mini_(marque)
+MGM Television	https://fr.wikipedia.org/wiki/MGM_Television
+MGM Resorts International	https://fr.wikipedia.org/wiki/MGM_Resorts_International
+Mandalay Resort Group	https://fr.wikipedia.org/wiki/Mandalay_Resort_Group
+Groupe Partouche	https://fr.wikipedia.org/wiki/Groupe_Partouche
+MK2	https://fr.wikipedia.org/wiki/MK2
+Les cinémas Gaumont Pathé	https://fr.wikipedia.org/wiki/Les_cinémas_Gaumont_Pathé
+Télé Toulouse	https://fr.wikipedia.org/wiki/Télé_Toulouse
+Institut supérieur de mécanique de Paris	https://fr.wikipedia.org/wiki/Institut_supérieur_de_mécanique_de_Paris
+École nationale des chartes	https://fr.wikipedia.org/wiki/École_nationale_des_chartes
+Cirque du Soleil	https://fr.wikipedia.org/wiki/Cirque_du_Soleil
+National Oceanic and Atmospheric Administration	https://fr.wikipedia.org/wiki/National_Oceanic_and_Atmospheric_Administration
+Pontiac	https://fr.wikipedia.org/wiki/Pontiac_(automobile)
+Geeknet	https://fr.wikipedia.org/wiki/Geeknet
+Bédouins	https://fr.wikipedia.org/wiki/Bédouins
+Volkswagen	https://fr.wikipedia.org/wiki/Volkswagen
+Office de l'harmonisation dans le marché intérieur	https://fr.wikipedia.org/wiki/Office_de_l'harmonisation_dans_le_marché_intérieur
+Etrali	https://fr.wikipedia.org/wiki/Etrali
+Union nationale des syndicats autonomes	https://fr.wikipedia.org/wiki/Union_nationale_des_syndicats_autonomes
+Palm	https://fr.wikipedia.org/wiki/Palm_(entreprise)
+La Martinière Groupe	https://fr.wikipedia.org/wiki/La_Martinière_Groupe
+Groupe Dargaud	https://fr.wikipedia.org/wiki/Groupe_Dargaud
+Le Lombard	https://fr.wikipedia.org/wiki/Le_Lombard
+Cour européenne des droits de l'homme	https://fr.wikipedia.org/wiki/Cour_européenne_des_droits_de_l'homme
+Pari mutuel urbain	https://fr.wikipedia.org/wiki/Pari_mutuel_urbain
+Ensemble contre la peine de mort	https://fr.wikipedia.org/wiki/Ensemble_contre_la_peine_de_mort
+Hilton Hotels & Resorts	https://fr.wikipedia.org/wiki/Hilton_Hotels_&_Resorts
+Dark Horse Comics	https://fr.wikipedia.org/wiki/Dark_Horse_Comics
+Free Software Foundation Europe	https://fr.wikipedia.org/wiki/Free_Software_Foundation_Europe
+Eurotunnel	https://fr.wikipedia.org/wiki/Eurotunnel
+Panhard	https://fr.wikipedia.org/wiki/Panhard
+Université du Québec	https://fr.wikipedia.org/wiki/Université_du_Québec
+Honda	https://fr.wikipedia.org/wiki/Honda
+RTL II	https://fr.wikipedia.org/wiki/RTL_II
+Maison d'Ivrée	https://fr.wikipedia.org/wiki/Maison_d'Ivrée
+La Poste	https://fr.wikipedia.org/wiki/La_Poste_(entreprise_française)
+Rashtriya Swayamsevak Sangh	https://fr.wikipedia.org/wiki/Rashtriya_Swayamsevak_Sangh
+Delcourt	https://fr.wikipedia.org/wiki/Delcourt_(maison_d'édition)
+École polytechnique fédérale de Zurich	https://fr.wikipedia.org/wiki/École_polytechnique_fédérale_de_Zurich
+Marché du film de Cannes	https://fr.wikipedia.org/wiki/Marché_du_film_de_Cannes
+Akata	https://fr.wikipedia.org/wiki/Akata
+AnimeLand	https://fr.wikipedia.org/wiki/AnimeLand
+Le Film français	https://fr.wikipedia.org/wiki/Le_Film_français
+Network Rail	https://fr.wikipedia.org/wiki/Network_Rail
+Assyriens	https://fr.wikipedia.org/wiki/Assyriens
+Railtrack	https://fr.wikipedia.org/wiki/Railtrack
+Assemblée générale des Nations unies	https://fr.wikipedia.org/wiki/Assemblée_générale_des_Nations_unies
+Hydro-Québec	https://fr.wikipedia.org/wiki/Hydro-Québec
+Conseil économique et social des Nations unies	https://fr.wikipedia.org/wiki/Conseil_économique_et_social_des_Nations_unies
+Conseil de tutelle des Nations unies	https://fr.wikipedia.org/wiki/Conseil_de_tutelle_des_Nations_unies
+The Atlantic	https://fr.wikipedia.org/wiki/The_Atlantic
+Royal Mail	https://fr.wikipedia.org/wiki/Royal_Mail
+Communauté européenne de l'énergie atomique	https://fr.wikipedia.org/wiki/Communauté_européenne_de_l'énergie_atomique
+Motorola	https://fr.wikipedia.org/wiki/Motorola
+Union nationale des étudiants de France	https://fr.wikipedia.org/wiki/Union_nationale_des_étudiants_de_France
+Fédération des associations générales étudiantes	https://fr.wikipedia.org/wiki/Fédération_des_associations_générales_étudiantes
+Michelin	https://fr.wikipedia.org/wiki/Michelin
+Organisation des États américains	https://fr.wikipedia.org/wiki/Organisation_des_États_américains
+AltaVista	https://fr.wikipedia.org/wiki/AltaVista
+Université Harvard	https://fr.wikipedia.org/wiki/Université_Harvard
+Pika Édition	https://fr.wikipedia.org/wiki/Pika_Édition
+Union des démocrates et indépendants - UC	https://fr.wikipedia.org/wiki/Union_des_démocrates_et_indépendants_-_UC
+Universal Pictures	https://fr.wikipedia.org/wiki/Universal_Pictures
+Bertelsmann	https://fr.wikipedia.org/wiki/Bertelsmann
+Limagrain	https://fr.wikipedia.org/wiki/Limagrain
+Ferrovie Nord Milano	https://fr.wikipedia.org/wiki/Ferrovie_Nord_Milano
+Université Columbia	https://fr.wikipedia.org/wiki/Université_Columbia
+Khantys	https://fr.wikipedia.org/wiki/Khantys
+KGB	https://fr.wikipedia.org/wiki/KGB
+Ministère de l'Intérieur	https://fr.wikipedia.org/wiki/Ministère_de_l'Intérieur_(Russie)
+La Tour de garde	https://fr.wikipedia.org/wiki/La_Tour_de_garde
+Réveillez-vous !	https://fr.wikipedia.org/wiki/Réveillez-vous_!
+General Electric	https://fr.wikipedia.org/wiki/General_Electric
+United States Secret Service	https://fr.wikipedia.org/wiki/United_States_Secret_Service
+International New York Times	https://fr.wikipedia.org/wiki/International_New_York_Times
+Université de Nankin	https://fr.wikipedia.org/wiki/Université_de_Nankin
+Novartis	https://fr.wikipedia.org/wiki/Novartis
+Kuomintang	https://fr.wikipedia.org/wiki/Kuomintang
+Confédération française des travailleurs chrétiens	https://fr.wikipedia.org/wiki/Confédération_française_des_travailleurs_chrétiens
+Union nationale lycéenne	https://fr.wikipedia.org/wiki/Union_nationale_lycéenne
+Rete ferroviaria italiana	https://fr.wikipedia.org/wiki/Rete_ferroviaria_italiana
+Trenitalia	https://fr.wikipedia.org/wiki/Trenitalia
+Projet:Géographie/Palettes de navigation	https://fr.wikipedia.org/wiki/Projet:Géographie/Palettes_de_navigation
+Iroquois	https://fr.wikipedia.org/wiki/Iroquois
+École supérieure chimie physique électronique de Lyon	https://fr.wikipedia.org/wiki/École_supérieure_chimie_physique_électronique_de_Lyon
+Université de Paris	https://fr.wikipedia.org/wiki/Université_de_Paris
+Flip	https://fr.wikipedia.org/wiki/Flip_(entreprise)
+Fleuve noir	https://fr.wikipedia.org/wiki/Fleuve_noir
+Deutsche Welle	https://fr.wikipedia.org/wiki/Deutsche_Welle
+Visa	https://fr.wikipedia.org/wiki/Visa_(entreprise)
+Hearst Corporation	https://fr.wikipedia.org/wiki/Hearst_Corporation
+Lagardère	https://fr.wikipedia.org/wiki/Lagardère_(entreprise)
+Columbia Pictures	https://fr.wikipedia.org/wiki/Columbia_Pictures
+TriStar	https://fr.wikipedia.org/wiki/TriStar
+Centre des études supérieures industrielles	https://fr.wikipedia.org/wiki/Centre_des_études_supérieures_industrielles
+BMG Entertainment	https://fr.wikipedia.org/wiki/BMG_Entertainment
+Union internationale des télécommunications	https://fr.wikipedia.org/wiki/Union_internationale_des_télécommunications
+S!lence	https://fr.wikipedia.org/wiki/S!lence
+Kana	https://fr.wikipedia.org/wiki/Kana_(maison_d'édition)
+École supérieure d'ingénieurs en génie électrique	https://fr.wikipedia.org/wiki/École_supérieure_d'ingénieurs_en_génie_électrique
+J'ai lu	https://fr.wikipedia.org/wiki/J'ai_lu
+Société Thulé	https://fr.wikipedia.org/wiki/Société_Thulé
+Service fédéral de sécurité de la Fédération de Russie	https://fr.wikipedia.org/wiki/Service_fédéral_de_sécurité_de_la_Fédération_de_Russie
+Usine d'électricité de Metz	https://fr.wikipedia.org/wiki/Usine_d'électricité_de_Metz
+Rolls-Royce Limited	https://fr.wikipedia.org/wiki/Rolls-Royce_Limited
+Laboratoire d'informatique pour la mécanique et les sciences de l'ingénieur	https://fr.wikipedia.org/wiki/Laboratoire_d'informatique_pour_la_mécanique_et_les_sciences_de_l'ingénieur
+Planète+	https://fr.wikipedia.org/wiki/Planète+
+Chemins de fer rhétiques	https://fr.wikipedia.org/wiki/Chemins_de_fer_rhétiques
+Amérindiens	https://fr.wikipedia.org/wiki/Amérindiens
+Planète+ Thalassa	https://fr.wikipedia.org/wiki/Planète+_Thalassa
+HBO Films	https://fr.wikipedia.org/wiki/HBO_Films
+Malmtrafik i Kiruna AB	https://fr.wikipedia.org/wiki/Malmtrafik_i_Kiruna_AB
+Editis	https://fr.wikipedia.org/wiki/Editis
+Presses de la Cité	https://fr.wikipedia.org/wiki/Presses_de_la_Cité
+Hachette Livre	https://fr.wikipedia.org/wiki/Hachette_Livre
+Média participations	https://fr.wikipedia.org/wiki/Média_participations
+RCS MediaGroup	https://fr.wikipedia.org/wiki/RCS_MediaGroup
+Association internationale du transport aérien	https://fr.wikipedia.org/wiki/Association_internationale_du_transport_aérien
+Organisation de l'aviation civile internationale	https://fr.wikipedia.org/wiki/Organisation_de_l'aviation_civile_internationale
+Interpol	https://fr.wikipedia.org/wiki/Interpol
+Studiocanal	https://fr.wikipedia.org/wiki/Studiocanal
+Production I.G	https://fr.wikipedia.org/wiki/Production_I.G
+Maison Tudor	https://fr.wikipedia.org/wiki/Maison_Tudor
+Banverket	https://fr.wikipedia.org/wiki/Banverket
+Toei Animation	https://fr.wikipedia.org/wiki/Toei_Animation
+Université Simon Fraser	https://fr.wikipedia.org/wiki/Université_Simon_Fraser
+Établissement national de télévision	https://fr.wikipedia.org/wiki/Établissement_national_de_télévision
+Université d'Oxford	https://fr.wikipedia.org/wiki/Université_d'Oxford
+Linx AB	https://fr.wikipedia.org/wiki/Linx_AB
+Associated Press	https://fr.wikipedia.org/wiki/Associated_Press
+École spéciale des travaux publics, du bâtiment et de l'industrie	https://fr.wikipedia.org/wiki/École_spéciale_des_travaux_publics,_du_bâtiment_et_de_l'industrie
+Statens Järnvägar	https://fr.wikipedia.org/wiki/Statens_Järnvägar
+Groupe industriel Marcel Dassault	https://fr.wikipedia.org/wiki/Groupe_industriel_Marcel_Dassault
+Thiriet	https://fr.wikipedia.org/wiki/Thiriet_(entreprise)
+Fox News Channel	https://fr.wikipedia.org/wiki/Fox_News_Channel
+Euroradio	https://fr.wikipedia.org/wiki/Euroradio
+Universal Parks & Resorts	https://fr.wikipedia.org/wiki/Universal_Parks_&_Resorts
+Paramount Parks	https://fr.wikipedia.org/wiki/Paramount_Parks
+Libération	https://fr.wikipedia.org/wiki/Libération_(journal)
+Haut-Commissariat des Nations unies aux droits de l'homme	https://fr.wikipedia.org/wiki/Haut-Commissariat_des_Nations_unies_aux_droits_de_l'homme
+Haut Commissariat des Nations unies pour les réfugiés	https://fr.wikipedia.org/wiki/Haut_Commissariat_des_Nations_unies_pour_les_réfugiés
+Boers	https://fr.wikipedia.org/wiki/Boers
+Centre national d'entraînement des forces de gendarmerie	https://fr.wikipedia.org/wiki/Centre_national_d'entraînement_des_forces_de_gendarmerie
+Programme alimentaire mondial	https://fr.wikipedia.org/wiki/Programme_alimentaire_mondial
+Secrétariat des Nations unies	https://fr.wikipedia.org/wiki/Secrétariat_des_Nations_unies
+Green Cargo	https://fr.wikipedia.org/wiki/Green_Cargo
+Communauté économique des États de l'Afrique de l'Ouest	https://fr.wikipedia.org/wiki/Communauté_économique_des_États_de_l'Afrique_de_l'Ouest
+JOB	https://fr.wikipedia.org/wiki/JOB
+Harley-Davidson	https://fr.wikipedia.org/wiki/Harley-Davidson
+Académie française	https://fr.wikipedia.org/wiki/Académie_française
+Motion Picture Association of America	https://fr.wikipedia.org/wiki/Motion_Picture_Association_of_America
+Mattel	https://fr.wikipedia.org/wiki/Mattel
+Hasbro	https://fr.wikipedia.org/wiki/Hasbro
+Bouygues	https://fr.wikipedia.org/wiki/Bouygues
+Presstalis	https://fr.wikipedia.org/wiki/Presstalis
+Université Toulouse - Jean Jaurès	https://fr.wikipedia.org/wiki/Université_Toulouse_-_Jean_Jaurès
+Juilliard School	https://fr.wikipedia.org/wiki/Juilliard_School
+Novell	https://fr.wikipedia.org/wiki/Novell
+Pif Gadget	https://fr.wikipedia.org/wiki/Pif_Gadget
+DB Schenker Rail	https://fr.wikipedia.org/wiki/DB_Schenker_Rail
+Université McGill	https://fr.wikipedia.org/wiki/Université_McGill
+Famille Bonaparte	https://fr.wikipedia.org/wiki/Famille_Bonaparte
+Lycée Henri-IV	https://fr.wikipedia.org/wiki/Lycée_Henri-IV
+Alstom	https://fr.wikipedia.org/wiki/Alstom
+Picsou magazine	https://fr.wikipedia.org/wiki/Picsou_magazine
+Université Concordia	https://fr.wikipedia.org/wiki/Université_Concordia
+Veolia Transport	https://fr.wikipedia.org/wiki/Veolia_Transport
+École nationale supérieure des beaux-arts	https://fr.wikipedia.org/wiki/École_nationale_supérieure_des_beaux-arts
+École pour l'informatique et les nouvelles technologies	https://fr.wikipedia.org/wiki/École_pour_l'informatique_et_les_nouvelles_technologies
+Wendel	https://fr.wikipedia.org/wiki/Wendel_(entreprise)
+Université de technologie de Troyes	https://fr.wikipedia.org/wiki/Université_de_technologie_de_Troyes
+Aéroports de Paris	https://fr.wikipedia.org/wiki/Aéroports_de_Paris
+Publicis Groupe	https://fr.wikipedia.org/wiki/Publicis_Groupe
+Lagardère Services	https://fr.wikipedia.org/wiki/Lagardère_Services
+Virgin Group	https://fr.wikipedia.org/wiki/Virgin_Group
+Virgin Megastore	https://fr.wikipedia.org/wiki/Virgin_Megastore
+Kering	https://fr.wikipedia.org/wiki/Kering
+Groupe Casino	https://fr.wikipedia.org/wiki/Groupe_Casino
+École polytechnique de Montréal	https://fr.wikipedia.org/wiki/École_polytechnique_de_Montréal
+Université de Washington	https://fr.wikipedia.org/wiki/Université_de_Washington
+ENI	https://fr.wikipedia.org/wiki/ENI_(entreprise)
+Pirelli	https://fr.wikipedia.org/wiki/Pirelli
+Pour lire pas lu	https://fr.wikipedia.org/wiki/Pour_lire_pas_lu
+École polytechnique de l'université Paris-Sud	https://fr.wikipedia.org/wiki/École_polytechnique_de_l'université_Paris-Sud
+Finmeccanica	https://fr.wikipedia.org/wiki/Finmeccanica
+Société d'économie mixte des voyageurs de l'agglomération toulousaine	https://fr.wikipedia.org/wiki/Société_d'économie_mixte_des_voyageurs_de_l'agglomération_toulousaine
+Actes de la recherche en sciences sociales	https://fr.wikipedia.org/wiki/Actes_de_la_recherche_en_sciences_sociales
+Pink TV	https://fr.wikipedia.org/wiki/Pink_TV
+Magnum Photos	https://fr.wikipedia.org/wiki/Magnum_Photos
+Enel	https://fr.wikipedia.org/wiki/Enel
+Daimler	https://fr.wikipedia.org/wiki/Daimler_(entreprise)
+Académie de France à Rome	https://fr.wikipedia.org/wiki/Académie_de_France_à_Rome
+François-Charles Oberthur Fiduciaire	https://fr.wikipedia.org/wiki/François-Charles_Oberthur_Fiduciaire
+Poste italiane	https://fr.wikipedia.org/wiki/Poste_italiane
+Union postale universelle	https://fr.wikipedia.org/wiki/Union_postale_universelle
+Autorité des marchés financiers	https://fr.wikipedia.org/wiki/Autorité_des_marchés_financiers_(France)
+Association pour la formation professionnelle des adultes	https://fr.wikipedia.org/wiki/Association_pour_la_formation_professionnelle_des_adultes
+Monsanto	https://fr.wikipedia.org/wiki/Monsanto
+Union internationale des chemins de fer	https://fr.wikipedia.org/wiki/Union_internationale_des_chemins_de_fer
+Auverland	https://fr.wikipedia.org/wiki/Auverland
+Buick	https://fr.wikipedia.org/wiki/Buick
+Union pour l'Europe des nations	https://fr.wikipedia.org/wiki/Union_pour_l'Europe_des_nations
+Groupe pour l'Europe des démocraties et des différences	https://fr.wikipedia.org/wiki/Groupe_pour_l'Europe_des_démocraties_et_des_différences
+Dodge	https://fr.wikipedia.org/wiki/Dodge
+Jaguar	https://fr.wikipedia.org/wiki/Jaguar_(automobile)
+Academi	https://fr.wikipedia.org/wiki/Academi
+ITV	https://fr.wikipedia.org/wiki/ITV_(entreprise)
+Épisode	https://fr.wikipedia.org/wiki/Épisode_(magazine)
+Génération Séries	https://fr.wikipedia.org/wiki/Génération_Séries
+Allianz France	https://fr.wikipedia.org/wiki/Allianz_France
+Transdev	https://fr.wikipedia.org/wiki/Transdev
+Association for Computing Machinery	https://fr.wikipedia.org/wiki/Association_for_Computing_Machinery
+Alenia Aeronautica	https://fr.wikipedia.org/wiki/Alenia_Aeronautica
+École de technologie supérieure	https://fr.wikipedia.org/wiki/École_de_technologie_supérieure
+Aries Complex	https://fr.wikipedia.org/wiki/Aries_Complex
+Fédération étudiante collégiale du Québec	https://fr.wikipedia.org/wiki/Fédération_étudiante_collégiale_du_Québec
+Campagnolo	https://fr.wikipedia.org/wiki/Campagnolo
+Netgear	https://fr.wikipedia.org/wiki/Netgear
+OÜI FM	https://fr.wikipedia.org/wiki/OÜI_FM
+France Bleu	https://fr.wikipedia.org/wiki/France_Bleu
+Philips	https://fr.wikipedia.org/wiki/Philips
+Oracle	https://fr.wikipedia.org/wiki/Oracle_(entreprise)
+Fédération nationale de protection civile	https://fr.wikipedia.org/wiki/Fédération_nationale_de_protection_civile
+Texas Instruments	https://fr.wikipedia.org/wiki/Texas_Instruments
+Ministère de la Culture	https://fr.wikipedia.org/wiki/Ministère_de_la_Culture_(France)
+Banque populaire	https://fr.wikipedia.org/wiki/Banque_populaire
+20 minutes	https://fr.wikipedia.org/wiki/20_minutes
+Adecco	https://fr.wikipedia.org/wiki/Adecco
+Conservatoire du littoral	https://fr.wikipedia.org/wiki/Conservatoire_du_littoral
+Comité des régions	https://fr.wikipedia.org/wiki/Comité_des_régions
+Seiko Epson	https://fr.wikipedia.org/wiki/Seiko_Epson
+Société des gens de lettres	https://fr.wikipedia.org/wiki/Société_des_gens_de_lettres
+Télévision suisse romande	https://fr.wikipedia.org/wiki/Télévision_suisse_romande
+National Geographic Society	https://fr.wikipedia.org/wiki/National_Geographic_Society
+LucasArts	https://fr.wikipedia.org/wiki/LucasArts
+Les Nuls	https://fr.wikipedia.org/wiki/Les_Nuls
+Université de Lausanne	https://fr.wikipedia.org/wiki/Université_de_Lausanne
+Agence spatiale italienne	https://fr.wikipedia.org/wiki/Agence_spatiale_italienne
+Chaouanons	https://fr.wikipedia.org/wiki/Chaouanons
+Tupolev	https://fr.wikipedia.org/wiki/Tupolev
+Conservatoire des collections végétales spécialisées	https://fr.wikipedia.org/wiki/Conservatoire_des_collections_végétales_spécialisées
+National Institutes of Health	https://fr.wikipedia.org/wiki/National_Institutes_of_Health
+Gnome et Rhône	https://fr.wikipedia.org/wiki/Gnome_et_Rhône
+Voies navigables de France	https://fr.wikipedia.org/wiki/Voies_navigables_de_France
+Nike	https://fr.wikipedia.org/wiki/Nike
+Agence métropolitaine de transport	https://fr.wikipedia.org/wiki/Agence_métropolitaine_de_transport
+Acrimed	https://fr.wikipedia.org/wiki/Acrimed
+Maison Romanov	https://fr.wikipedia.org/wiki/Maison_Romanov
+Ioukos	https://fr.wikipedia.org/wiki/Ioukos
+Aetna	https://fr.wikipedia.org/wiki/Aetna_(assurances)
+CompuServe	https://fr.wikipedia.org/wiki/CompuServe
+Amazon.com	https://fr.wikipedia.org/wiki/Amazon.com
+Organisation des Nations unies pour l'alimentation et l'agriculture	https://fr.wikipedia.org/wiki/Organisation_des_Nations_unies_pour_l'alimentation_et_l'agriculture
+École nationale supérieure en systèmes avancés et réseaux	https://fr.wikipedia.org/wiki/École_nationale_supérieure_en_systèmes_avancés_et_réseaux
+Direction du Renseignement militaire	https://fr.wikipedia.org/wiki/Direction_du_Renseignement_militaire
+Banque européenne d'investissement	https://fr.wikipedia.org/wiki/Banque_européenne_d'investissement
+Banque des règlements internationaux	https://fr.wikipedia.org/wiki/Banque_des_règlements_internationaux
+Banque européenne pour la reconstruction et le développement	https://fr.wikipedia.org/wiki/Banque_européenne_pour_la_reconstruction_et_le_développement
+SEEBD	https://fr.wikipedia.org/wiki/SEEBD
+Bayer	https://fr.wikipedia.org/wiki/Bayer_(entreprise)
+Mensa	https://fr.wikipedia.org/wiki/Mensa
+Mercedes-Benz	https://fr.wikipedia.org/wiki/Mercedes-Benz
+Tarahumaras	https://fr.wikipedia.org/wiki/Tarahumaras
+Ramnulfides	https://fr.wikipedia.org/wiki/Ramnulfides
+Electrabel	https://fr.wikipedia.org/wiki/Electrabel
+EDF Luminus	https://fr.wikipedia.org/wiki/EDF_Luminus
+Saab	https://fr.wikipedia.org/wiki/Saab
+Fédération syndicale étudiante	https://fr.wikipedia.org/wiki/Fédération_syndicale_étudiante
+Centre régional des œuvres universitaires et scolaires	https://fr.wikipedia.org/wiki/Centre_régional_des_œuvres_universitaires_et_scolaires
+Institut d'études politiques de Lille	https://fr.wikipedia.org/wiki/Institut_d'études_politiques_de_Lille
+Compagnie nationale du Rhône	https://fr.wikipedia.org/wiki/Compagnie_nationale_du_Rhône
+Télérama	https://fr.wikipedia.org/wiki/Télérama
+Gaz de France	https://fr.wikipedia.org/wiki/Gaz_de_France
+Observatoire de Paris	https://fr.wikipedia.org/wiki/Observatoire_de_Paris
+Nord-Aviation	https://fr.wikipedia.org/wiki/Nord-Aviation
+Maison de Guise	https://fr.wikipedia.org/wiki/Maison_de_Guise
+Pahouins	https://fr.wikipedia.org/wiki/Pahouins
+Erasmus	https://fr.wikipedia.org/wiki/Erasmus
+Conseil européen	https://fr.wikipedia.org/wiki/Conseil_européen
+Université de technologie	https://fr.wikipedia.org/wiki/Université_de_technologie_(France)
+SES	https://fr.wikipedia.org/wiki/SES_(entreprise)
+Institut national de l'origine et de la qualité	https://fr.wikipedia.org/wiki/Institut_national_de_l'origine_et_de_la_qualité
+I-Télé	https://fr.wikipedia.org/wiki/I-Télé

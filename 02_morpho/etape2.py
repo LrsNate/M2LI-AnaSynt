@@ -25,10 +25,10 @@ FICHIERLEXIQUE=op.lexique
 
 
 #Vecteurs de poids du perceptron
-w=m.importweights(FICHIERPOIDS)
+w=m.importpickle(FICHIERPOIDS)
 
 #Liste de mots connus à ignorer
-k=m.importweights(FICHIERLEXIQUE)
+k=m.importpickle(FICHIERLEXIQUE)
 k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE"])
 
 #Fonction pour récupérer les tags
@@ -62,7 +62,7 @@ for line in fi.input(args):
 		if word=="":
 			print "'",e,"'"
 		
-		
+		tag=taggit(word)
 		if word not in k:
 			#print line,taggit(line.decode("utf-8"))
 			if a[0] == "{":
@@ -70,7 +70,7 @@ for line in fi.input(args):
 			else:
 				a="{"
 			
-			concat +=  a + "TMP_TAG='" + ",".join(map(str,taggit(word))) + "';}" +word + " "
+			concat +=  a + "TMP_TAG='" + ",".join(map(str,tag)) + "';}" +word + " "
 		else:
 			if a[0] == "{":
 				concat += a + word + " "

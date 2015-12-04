@@ -1,3 +1,7 @@
 slt je suis une phrase de test qui est allee a Londres avc une faute d'orthographe je suis...impressionné
-L'artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de 12 blocs de glace (80 tonnes au total) en provenance d'un fjord du Groenland.
-En savoir plus sur http://www.lemonde.fr/planete/twitter/2015/12/03/des-icebergs-en-plein-paris_4823367_3244.html#EclRcs06mPKTRqRU.99
+L'artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de 12 blocs de glace (80 tonnes au total) en provenance d'un fjord du Groenland. En savoir plus sur http://www.lemonde.fr/planete/twitter/2015/12/03/des-icebergs-en-plein-paris_4823367_3244.html#EclRcs06mPKTRqRU.99
+{ } bonjour je suis une phrase avec une accolade dedans
+
+bonjour je suis précédé d'une ligne vide et je ne contiens aucune ponctuation cest drole non
+bjr je C pa ékrir lol #tmtc #hashtag mn email c email_long_e_tordu@provider.tld é ui
+Hello I am a foreign-language sentence, you frogs !

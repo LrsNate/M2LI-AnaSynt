@@ -1,5 +1,9 @@
 # M2 LI Syntactic Analysis Project
 
+Le script `run.sh` a maintenant un mode debug qui sort les outputs de chaque étape dans un fichier séparé.
+
+Exécuter `./run.sh -d` sortira les fichiers `out_01.txt`, `out_02.txt`, `out_03.txt` et `out_04.txt`.
+
 ## OUTPUT GROUPE 1
 `{ORIG_ORTH;}_CORR_ORTH`
 
@@ -10,8 +14,8 @@ Notes :
 
 Exemples :
 ```
-{c;}c'est {ke;}que {c;}c'est rigolo a {fair;}faire {jv;}j'y {jv;}vais .
-Pi égale {3,14;}_NOMBRE
+{ORIG='c';}c'est {ORIG='ke';}que {ORIG='c';}c'est rigolo a {ORIG='fair';}faire {ORIG='jv';}j'y {ORIG='jv';}vais .
+Pi égale {ORIG='3,14';}_NOMBRE
 ```
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...

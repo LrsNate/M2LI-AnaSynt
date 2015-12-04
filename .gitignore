@@ -70,3 +70,5 @@ target/
 #Unix backup text files 
 *~
 
+# Intermediate output files
+out_*.txt

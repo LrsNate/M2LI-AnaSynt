@@ -66,7 +66,7 @@ class Phrase():
 	self.candidatesEN.append(word)
   
   def searchEN(self):
-    self.entities.loadDB("04_namedEntity/personne_linking.txt","04_namedEntity/place_linking.txt")
+    self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Loc.txt")
     for word in self.words:
       #print "Londres" in self.entities.places
       if word.token[0].isupper():
@@ -141,7 +141,7 @@ class NameEntities():
       
       
 if __name__ == '__main__':
-  data=sys.stdin.readline()
+  data=sys.stdin.readlines()
   txt=Texte()
   #print data
   print txt.detectEN(data)
