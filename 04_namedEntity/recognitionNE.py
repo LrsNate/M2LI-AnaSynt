@@ -13,15 +13,10 @@ class Texte():
         
   
   def readString(self,data):
-    #self.stringOrig=string
     for string in data:
       phrase=Phrase()
       phrase.identifyWords(string)
-      #phrase.detectCandidatesEN()
       self.phrases.append(phrase)
-    #print self.phrases
-    #for ph in self.phrases:
-      #ph.printP()
   
   def detectEN(self,string):
     output=""
@@ -50,7 +45,7 @@ class Phrase():
     
   
   def identifyWords(self, string):
-    string=string.split()
+    string=self.checkSplit(string.split())
     i=0
     for w in string:
       self.lengh+=1
@@ -60,6 +55,29 @@ class Phrase():
       self.words.append(el)
       self.string+=el.token+" "
     #print self.string
+  
+  def checkSplit(self, split2check):#pour eviter le split sur des espaces entre les "{}"
+    for el in split2check:
+      if "{" in el and "}" not in el:
+	index=split2check.index(el)
+	i=index+1
+	toConcaten=split2check[index+1]
+	if "}" not in toConcaten:
+	  while "}" not in toConcaten:
+	    el+=" "+toConcaten
+	    split2check[index]=el
+	    del(split2check[index+1])
+	    toConcaten=split2check[index+1]
+	  el+=" "+toConcaten
+	  split2check[index]=el
+	  del(split2check[index+1])
+	else:
+	  el+=" "+toConcaten
+	  split2check[index]=el
+	  del(split2check[index+1])
+    return split2check
+	
+	  
   
   def detectCandidatesEN(self):#cherche les candidats potentiels pour les EN
     #print "str", self.string
