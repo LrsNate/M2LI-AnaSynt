@@ -21,7 +21,7 @@ class Token:
         if not self.annot:
             return unicode(self.form)
         res = u'{'
-        annot = map(lambda (k, v): u'%s=%s' % (k, v), self.annot.iteritems())
+        annot = map(lambda (k, v): u'%s=%s' % (k, re.sub(r'(\d)_(\d)', r'\1 \2', v)), self.annot.iteritems())
         res += u';'.join(annot) + u'}' + unicode(self.form)
         return res
 

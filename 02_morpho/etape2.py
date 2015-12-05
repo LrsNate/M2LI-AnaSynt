@@ -7,12 +7,15 @@ import fileinput as fi
 from functools import partial
 import re
 from optparse import OptionParser
+import sys
 
 #TODO : meilleurs commentaires
 usage=u"""%prog lignes [-p poids] [-l lexique] 
 	Script pour le pipeline. Utilise un fichier de vecteur de poids et un fichier de lexique.
 	Étiquette les mots inconnus sur une ligne. Prend en entrée un fichier ou stdin.
-	"cat fichier" | %prog et "%prog fichier" sont équivalents."""
+	"cat fichier" | %prog et "%prog fichier" sont équivalents.
+	Par défaut le fichier de poids et le fichier de lexique sont weights.pickle et known.pickle 
+	dans le répertoire d'exécution, sinon ils doivent être spécifiés en option."""
 
 p = OptionParser(usage=usage)
 p.add_option("-p","--poids",action="store",dest="poids",default="weights.pickle",help="Chemin vers le fichier de poids")
@@ -29,55 +32,27 @@ w=m.importpickle(FICHIERPOIDS)
 
 #Liste de mots connus à ignorer
 k=m.importpickle(FICHIERLEXIQUE)
-k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE"])
+k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE","_EMAIL"])
 
 #Fonction pour récupérer les tags
 taggit=m.memoize(lambda x: partial(m.classify,w)(m.getfeatures(x)))
 
-space=re.compile(r" ")
+#space=re.compile(r" ")
+split=re.compile(r"(\{[^\}]+\})?(\S+)(\s+)")
+
+#def gettokens(line):
 
 for line in fi.input(args):
-	concat=u""
 	line=line.decode("utf-8")
-	line=line.strip()
-	lines=space.split(line)
-	
-	if "" in lines:
-		lines.remove("")
-	
-	for e in lines:
-		a=u" "
-		if e[0]=="{":
-			try:
-				z=e.index("}")+1
-				a,b=e[:z],e[z:]
-				word=b
-			except ValueError:
-				word = e
-		else:
-			word=e
-			
-		word=word.strip()
-		
-		if word=="":
-			print "'",e,"'"
-		
-		tag=taggit(word)
-		if word not in k and word.lower() not in k:
-			#print line,taggit(line.decode("utf-8"))
-			if a[0] == "{":
-				a=a[:-1]
+	for x,y,z in split.findall(line):
+		tag=taggit(y)
+		if y not in k and y.lower() not in k:
+			if len(x) != 0:
+				x=x[:-1]+"TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 			else:
-				a="{"
-			
-			concat +=  a + "TMP_TAG='" + ",".join(map(str,tag)) + "';}" +word + " "
-		else:
-			if a[0] == "{":
-				concat += a + word + " "
-			else:
-				concat += word + " "
-	
-	print concat.encode("utf-8")
+				x="{TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 		
- 			
-		
+		out=x+y+z
+		sys.stdout.write(out.encode("utf-8"))
+
+
