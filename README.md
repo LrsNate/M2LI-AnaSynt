@@ -14,8 +14,8 @@ Notes :
 
 Exemples :
 ```
-{ORIG='c';}c'est {ORIG='ke';}que {ORIG='c';}c'est rigolo a {ORIG='fair';}faire {ORIG='jv';}j'y {ORIG='jv';}vais .
-Pi égale {ORIG='3,14';}_NOMBRE
+{ORIG_ORTH='c';}c' {ORIG_ORTH='c';}est {ORIG_ORTH='ke';}que {ORIG_ORTH='c';}c' {ORIG_ORTH='c';}est rigolo a {ORIG_ORTH='fair';}faire {ORIG_ORTH='jv';}j' {ORIG_ORTH='jv';}y {ORIG_ORTH='jv';}vais .
+Pi égale {ORIG_ORTH='3,14';}_NOMBRE
 ```
 
 	=> Le groupe 5 a une requête... Vous identifiez les étiquettes avec des regex, non ? Si oui, est-ce que vous pourriez fournir un .txt avec colonne1_regex "\t" colonne2_étiquette (pour faire les substitutions dans le trainset) ? Ca serait génial ! Merci...
