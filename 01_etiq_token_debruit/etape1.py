@@ -70,8 +70,8 @@ def ponctuation(ligne):
 	ligne = virgule.sub(ur" \1 ", ligne)
 	
 	# Attention aux points de suspension s'il ne sont pas suivis d'une espace
-	suspension = re.compile(u"(\.{3})(\w+)")
-	ligne = suspension.sub(ur"\1 \2", ligne)
+	suspension = re.compile(u"(\.{3})(\S)")
+	ligne = suspension.sub(ur" \1 \2", ligne)
 	
 	# Ajout d'un saut de ligne après l'apostrophe
 	apostrophe = re.compile(u"(['’])")
@@ -589,22 +589,31 @@ def debruitage(dico):
 	
 	# Remplissage du dictionnaire suivant le dictionnaire de correspondance
 	for val in dico.values():
-		if val[0].lower() in traduction.keys():
-			val[1] = val[0]
-			val[0] = traduction[val[0].lower()]
+		for cle in traduction.keys():
+			if val[0].lower() == cle:
+				val[1] = val[0]
+				val[0] = traduction[val[0].lower()]
 			
-	# Retokenisation pour les mots qui possèdent un espace
+	# Retokenisation pour les mots qui possèdent une espace ou une apostrophe
 	i = 1
 	for cle, val in dico.items():
-		# Si un mot possède un espace et que sa forme originale se trouve dans le dictionnaire de traduction
-		if " " in val[0] and val[1] in traduction:
+		# Si un mot possède une espace ou une apostrophe et que sa forme originale se trouve dans le dictionnaire de traduction
+		if (" " in val[0] or "'" in val[0]) and val[0] in traduction.values() and val[1].lower() in traduction.keys():
 			listeMots = val[0].split()
 			lenListeMots = len(listeMots)
-			j = 1
-			while j <= lenListeMots:
-				dico[i] = [listeMots[0], val[1], val[2]]
-				listeMots.remove(listeMots[0])
-				i += 1
+			j = 0
+			while j < lenListeMots:
+				# Gestion des apostrophes
+				if "'" in listeMots[j]:
+					listeApos = listeMots[j].split("'")
+					dico[i] = [listeApos[0]+"'", val[1], val[2]]
+					i += 1
+					dico[i] = [listeApos[1], val[1], val[2]]
+					i += 1
+				# Gestion des espaces
+				if " " in listeMots[j]:
+					dico[i] = [listeMots[j], val[1], val[2]]
+					i += 1
 				j += 1
 		else:
 			dico[i] = dico[cle]
