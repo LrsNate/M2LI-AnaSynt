@@ -7,6 +7,7 @@ import fileinput as fi
 from functools import partial
 import re
 from optparse import OptionParser
+import sys
 
 #TODO : meilleurs commentaires
 usage=u"""%prog lignes [-p poids] [-l lexique] 
@@ -34,50 +35,20 @@ k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE"])
 #Fonction pour récupérer les tags
 taggit=m.memoize(lambda x: partial(m.classify,w)(m.getfeatures(x)))
 
-space=re.compile(r" ")
+#space=re.compile(r" ")
+
+#def gettokens(line):
 
 for line in fi.input(args):
-	concat=u""
 	line=line.decode("utf-8")
-	line=line.strip()
-	lines=space.split(line)
-	
-	if "" in lines:
-		lines.remove("")
-	
-	for e in lines:
-		a=u" "
-		if e[0]=="{":
-			try:
-				z=e.index("}")+1
-				a,b=e[:z],e[z:]
-				word=b
-			except ValueError:
-				word = e
-		else:
-			word=e
-			
-		word=word.strip()
-		
-		if word=="":
-			print "'",e,"'"
-		
-		tag=taggit(word)
-		if word not in k and word.lower() not in k:
-			#print line,taggit(line.decode("utf-8"))
-			if a[0] == "{":
-				a=a[:-1]
+	for x,y in re.findall(r"(\{[^\}]+\})?([^ ]+)",line):
+		tag=taggit(y)
+		if y not in k and y.lower() not in k:
+			if len(x) != 0:
+				x=x[-1]+"TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 			else:
-				a="{"
-			
-			concat +=  a + "TMP_TAG='" + ",".join(map(str,tag)) + "';}" +word + " "
-		else:
-			if a[0] == "{":
-				concat += a + word + " "
-			else:
-				concat += word + " "
-	
-	print concat.encode("utf-8")
+				x="{TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 		
- 			
-		
+		out=x+y+" "
+		sys.stdout.write(out.encode("utf-8"))
+
