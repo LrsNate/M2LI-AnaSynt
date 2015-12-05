@@ -129,7 +129,7 @@ def etiquettage(ligne):
 	heure = re.compile(ur"\b(((0?\d)|(1\d)|(2[0-3]))( *)(:|heure(s)?|h)( *)((0?\d)|([1-5]\d))?)\b", re.I)
 	
 	# Remplacer les espaces par un tilde pour ce qui se trouve entre {}
-	reperage = re.compile(ur"(\{[^\}]+)\s+([^\{]+\})")
+	reperage = re.compile(ur"(\{[^\}\s]+)\s+([^\{]+\})")
 
 	# Pour éviter de retrouver les nombres dans d'autres éléments repérés
 	underscores = re.compile(ur"(\{.[^\}]+)\{(.+)\}__NOMBRE(.[^\{]+\})")
@@ -724,6 +724,9 @@ def debruitage(dico):
 		u"jusko" : u"jusqu'au",
 		u"juskau" : u"jusqu'au",
 		u"jv" : u"j'y vais",
+		u"ékrir" : u"écrire",
+		u"cest" : u"c'est",
+		u"ui" : u"oui"
 	}
 	
 	# Remplissage du dictionnaire suivant le dictionnaire de correspondance
