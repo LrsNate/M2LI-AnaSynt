@@ -68,7 +68,7 @@ class Phrase():
     self.candidates=re.findall(r"((?:\b[A-Z]\w*)(?:\s|-)(?:[A-Z]\w*\s)*|(?:\b[A-Z]\w*\s))", self.string)
     for i in xrange(len(self.candidates)):
       self.candidates[i]=self.candidates[i][:-1]
-    print "yeees", self.candidates
+    #print "yeees", self.candidates
     
     
   def searchEN(self):
