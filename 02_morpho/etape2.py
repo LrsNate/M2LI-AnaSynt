@@ -32,18 +32,19 @@ w=m.importpickle(FICHIERPOIDS)
 
 #Liste de mots connus à ignorer
 k=m.importpickle(FICHIERLEXIQUE)
-k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE"])
+k.update(["_HEURE","_HASHTAG","_URL","_DATE","_NOMBRE","_EMAIL"])
 
 #Fonction pour récupérer les tags
 taggit=m.memoize(lambda x: partial(m.classify,w)(m.getfeatures(x)))
 
 #space=re.compile(r" ")
+split=re.compile(r"(\{[^\}]+\})?(\S+)(\s+)")
 
 #def gettokens(line):
 
 for line in fi.input(args):
 	line=line.decode("utf-8")
-	for x,y,z in re.findall(r"(\{[^\}]+\})?(\S+)(\s+)",line):
+	for x,y,z in split.findall(line):
 		tag=taggit(y)
 		if y not in k and y.lower() not in k:
 			if len(x) != 0:
