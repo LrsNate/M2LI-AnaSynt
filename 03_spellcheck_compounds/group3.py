@@ -21,6 +21,7 @@ for line in fileinput.input():
     # Step 1: spellcheck
     for w in words:
         if u'TMP_TAG' not in w.getannotations() or \
+           u'ORIG_ORTH' in w.getannotations() or \
            lexicon_automaton.recognize(list(w.getform())) or \
            w.getform()[0] == w.getform()[0].upper():
             spellchecked.append(w)
