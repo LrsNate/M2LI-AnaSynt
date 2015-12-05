@@ -4,6 +4,7 @@ Arc de triomphe de l'Étoile	https://fr.wikipedia.org/wiki/Arc_de_triomphe_de_l'
 Afghanistan	https://fr.wikipedia.org/wiki/Afghanistan
 Auvergne	https://fr.wikipedia.org/wiki/Auvergne
 Aisne	https://fr.wikipedia.org/wiki/Aisne_(département)
+Allemagne	https://fr.wikipedia.org/wiki/Allemagne	
 Allier	https://fr.wikipedia.org/wiki/Allier_(département)
 Alpes-de-Haute-Provence	https://fr.wikipedia.org/wiki/Alpes-de-Haute-Provence
 Alpes-Maritimes	https://fr.wikipedia.org/wiki/Alpes-Maritimes
@@ -1209,6 +1210,7 @@ Englesqueville-la-Percée	https://fr.wikipedia.org/wiki/Englesqueville-la-Percé
 Eraines	https://fr.wikipedia.org/wiki/Eraines
 Ernes	https://fr.wikipedia.org/wiki/Ernes
 Escoville	https://fr.wikipedia.org/wiki/Escoville
+Espagne	https://fr.wikipedia.org/wiki/Espagne
 Espins	https://fr.wikipedia.org/wiki/Espins
 Esquay-Notre-Dame	https://fr.wikipedia.org/wiki/Esquay-Notre-Dame
 Esquay-sur-Seulles	https://fr.wikipedia.org/wiki/Esquay-sur-Seulles
@@ -6962,3 +6964,50 @@ Parmain	https://fr.wikipedia.org/wiki/Parmain
 Communauté de communes de la Région de Condrieu	https://fr.wikipedia.org/wiki/Communauté_de_communes_de_la_Région_de_Condrieu
 Condrieu	https://fr.wikipedia.org/wiki/Condrieu_(AOC)
 Guerre contre le terrorisme	https://fr.wikipedia.org/wiki/Guerre_contre_le_terrorisme
+Albanie	https://fr.wikipedia.org/wiki/Albanie
+Andorre	https://fr.wikipedia.org/wiki/Andorre
+Arménie	https://fr.wikipedia.org/wiki/Arménie
+Azerbaïdjan	https://fr.wikipedia.org/wiki/Azerbaïdjan
+Biélorussie	https://fr.wikipedia.org/wiki/Biélorussie
+Bosnie-Herzégovine	https://fr.wikipedia.org/wiki/Bosnie-Herzégovine
+Bulgarie	https://fr.wikipedia.org/wiki/Bulgarie
+Chypre	https://fr.wikipedia.org/wiki/Chypre
+Croatie	https://fr.wikipedia.org/wiki/Croatie
+Danemark	https://fr.wikipedia.org/wiki/Danemark
+Estonie	https://fr.wikipedia.org/wiki/Estonie
+Finlande	https://fr.wikipedia.org/wiki/Finlande
+Géorgie	https://fr.wikipedia.org/wiki/Géorgie
+Grèce	https://fr.wikipedia.org/wiki/Grèce
+Hongrie	https://fr.wikipedia.org/wiki/Hongrie
+Irlande	https://fr.wikipedia.org/wiki/Irlande
+Islande	https://fr.wikipedia.org/wiki/Islande
+Italie	https://fr.wikipedia.org/wiki/Italie
+Kazakhstan	https://fr.wikipedia.org/wiki/kazakhstan
+Kosovo	https://fr.wikipedia.org/wiki/Kosovo
+Lettonie	https://fr.wikipedia.org/wiki/Lettonie
+Liechtenstein	https://fr.wikipedia.org/wiki/Liechtenstein
+Lituanie	https://fr.wikipedia.org/wiki/Lituanie
+Luxembourg	https://fr.wikipedia.org/wiki/Luxembourg
+Macédoine	https://fr.wikipedia.org/wiki/Macédoine
+Malte	https://fr.wikipedia.org/wiki/Malte
+Moldavie	https://fr.wikipedia.org/wiki/Moldavie
+Monaco	https://fr.wikipedia.org/wiki/Monaco
+Monténégro	https://fr.wikipedia.org/wiki/Monténégro
+Norvège	https://fr.wikipedia.org/wiki/Norvège
+Pays-Bas	https://fr.wikipedia.org/wiki/Pays-Bas
+Pologne	https://fr.wikipedia.org/wiki/Pologne
+Portugal	https://fr.wikipedia.org/wiki/Portugal
+République tchèque	https://fr.wikipedia.org/wiki/République_tchèque
+Roumanie	https://fr.wikipedia.org/wiki/Roumanie
+Royaume-Uni	https://fr.wikipedia.org/wiki/Royaume-Uni
+Russie	https://fr.wikipedia.org/wiki/Russie
+Saint-Marin	https://fr.wikipedia.org/wiki/Saint-Marin
+Serbie	https://fr.wikipedia.org/wiki/Serbie
+Slovaquie	https://fr.wikipedia.org/wiki/Slovaquie
+Slovénie	https://fr.wikipedia.org/wiki/Slvénie
+Suède	https://fr.wikipedia.org/wiki/Suède
+Suisse	https://fr.wikipedia.org/wiki/Suisse
+Turquie	https://fr.wikipedia.org/wiki/Turquie
+Ukraine	https://fr.wikipedia.org/wiki/Ukraine
+Vatican	https://fr.wikipedia.org/wiki/Vatican
+	
