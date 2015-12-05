@@ -100,6 +100,7 @@ class Phrase():
 	if word in self.entities.names:
 	  #print 'YEEEEH'
 	  properName=self.entities.names[word]
+	  #print word, properName
 	  self.fusion_des_tokens(word,'_PERS',self.entities.namesLink[word])
 	if word in self.entities.places:
 	  self.fusion_des_tokens(word,'_LOC',self.entities.places[word])
@@ -115,7 +116,6 @@ class Phrase():
       else:
 	    attributNouv=self.words[index].attribut[:-1]+'ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
 	    self.words[index].attribut=attributNouv
-	    #self.words[index].attribut[:-1]+='ORIG\=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
       self.words[index].token=etiquette
     else:
       lenth=len(split)
@@ -125,25 +125,22 @@ class Phrase():
       else:
 	    attributNouv=self.words[index].attribut[:-1]+'ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
 	    self.words[index].attribut=attributNouv
-	    #self.words[index].attribut[:-1]+='ORIG=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
       self.words[index].token=etiquette
       for i in xrange(index+1,index+lenth):
 	if self.words[i].attribut!='':
 	  attributNouv=self.words[index].attribut[:-1]+self.words[i].attribut[1:]
 	  self.words[index].attribut=attributNouv
-	  #self.words[index].attribut[:-1]+=self.words[i].attribut[1:]
       i=1
       while i<lenth:
 	i+=1	
 	del(self.words[index+1])
+      
       #actualisation self.string
-      #print 'before', self.string
       self.string=""
       self.tokens=[]
       for w in self.words:
 	self.tokens.append(w.token)
 	self.string+=w.token+" "
-      #print "after", self.string
   
 
   #def searchEN(self):
@@ -173,7 +170,6 @@ class Phrase():
       ne = match.group(0)
       ne_len=len(ne.split())
       string_lst=self.string.split()
-      #print string_lst
       pattern=re.search("(M.|Mme|Mlle)", self.string)
       index=string_lst.index(pattern.groups(0)[0])
       if self.words[index].attribut=="":
@@ -188,14 +184,11 @@ class Phrase():
       while i<ne_len:
 	i+=1	
 	del(self.words[index+1])
-      #actualisation self.string
-      #print 'before', self.string
       self.string=""
       self.tokens=[]
       for w in self.words:
 	self.tokens.append(w.token)
 	self.string+=w.token+" "
-      #print "after", self.string
       
   
   def outputString(self):
@@ -226,7 +219,6 @@ class Word():
 	self.attribut="{}"
       else:
 	self.token=match.group(2)
-      #print match.group(1)
 	self.attribut=match.group(1)
     else:
       self.token=string
@@ -258,7 +250,7 @@ class NameEntities():
 	  newLine=[]
 	  self.names[line[0]]=line[1][:-1]
 	  line=file.readline()
-	#print self.names
+	#print "Yes", "René" in self.names
 	file.close()
 	
 	file=open(dicLieux)
