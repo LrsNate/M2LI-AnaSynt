@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 import os
+import cPickle
+
 
 class Automaton:
     """ A generic finite-state machine """
@@ -69,7 +71,9 @@ def _make_compounds_automaton():
     _file.close()
     return a
 
-compounds_automaton = _make_compounds_automaton()
+_dir = os.path.dirname(__file__)
+compounds_automaton = cPickle.load(open(os.path.join(_dir, 'resources/compounds_automaton.p'), 'r'))
+lexicon_automaton = cPickle.load(open(os.path.join(_dir, 'resources/lexicon_automaton.p'), 'r'))
 
 if __name__ == '__main__':
     import unittest

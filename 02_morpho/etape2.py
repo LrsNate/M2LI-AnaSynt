@@ -63,7 +63,7 @@ for line in fi.input(args):
 			print "'",e,"'"
 		
 		tag=taggit(word)
-		if word not in k:
+		if word not in k and word.lower() not in k:
 			#print line,taggit(line.decode("utf-8"))
 			if a[0] == "{":
 				a=a[:-1]

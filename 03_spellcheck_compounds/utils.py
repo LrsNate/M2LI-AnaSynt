@@ -115,7 +115,6 @@ def closest_word(candidates, word):
     return res_word
 
 
-
 _amalgams = {
     'du': [u'de', u'le'],
     'des': [u'de', u'les'],
@@ -169,7 +168,7 @@ _keyboard_probabilities = {
 }
 
 _dir = os.path.dirname(__file__)
-_lefff = pickle.load(open(os.path.join(_dir, 'lefff_pickle.p'), 'r'))
+_lefff = pickle.load(open(os.path.join(_dir, 'resources/lefff_pickle.p'), 'r'))
 
 
 def get_candidates_from_lefff(word):
