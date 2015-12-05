@@ -4,24 +4,12 @@
 from utils import Token, get_candidates_from_lefff
 from utils import closest_word, expand_amalgam
 import os
-from automaton import compounds_automaton
+from automaton import compounds_automaton, lexicon_automaton
 import fileinput
 import pickle
 
 dir = os.path.dirname(__file__)
 wico = pickle.load(open(os.path.join(dir, 'resources/results_wico.p'), 'r'))
-
-aml = [
-    'du',
-    'des',
-    'au',
-    'aux',
-    'duquel',
-    'desquels',
-    'desquelles',
-    'auquel',
-    'auxquels',
-    'auxquelles']
 
 
 for line in fileinput.input():
@@ -30,7 +18,9 @@ for line in fileinput.input():
     spellchecked = []
     # Step 1: spellcheck
     for w in words:
-        if u'TMP_TAG' not in w.getannotations() or w.getform() in aml:
+        if u'TMP_TAG' not in w.getannotations() or \
+           lexicon_automaton.recognize(list(w.getform())) or \
+           w.getform()[0] == w.getform()[0].upper():
             spellchecked.append(w)
             continue
         if w.getform() in wico:
