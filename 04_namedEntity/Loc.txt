@@ -15,7 +15,7 @@ Aude	https://fr.wikipedia.org/wiki/Aude_(département)
 Aveyron	https://fr.wikipedia.org/wiki/Aveyron_(département)
 Argentine	https://fr.wikipedia.org/wiki/Argentine
 Afrique du Sud	https://fr.wikipedia.org/wiki/Afrique_du_Sud
-Arabie saoudite	https://fr.wikipedia.org/wiki/Arabie_saoudite
+Arabie Saoudite	https://fr.wikipedia.org/wiki/Arabie_saoudite
 Arménie	https://fr.wikipedia.org/wiki/Arménie
 Angola	https://fr.wikipedia.org/wiki/Angola
 Andorre	https://fr.wikipedia.org/wiki/Andorre

@@ -68,46 +68,52 @@ class Phrase():
     self.candidates=re.findall(r"((?:\b[A-Z]\w*)\s(?:[A-Z]\w*\s)*|(?:\b[A-Z]\w*\s))", self.string)
     for i in xrange(len(self.candidates)):
       self.candidates[i]=self.candidates[i][:-1]
-    #print "yeees", self.candidates
+    print "yeees", self.candidates
     
     
-  #def searchEN(self):
-    ##self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
-    #self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
-    #self.search_ruleBased_EN()
-    #self.detectCandidatesEN()
+  def searchEN(self):
+    #self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
+    self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
+    self.search_ruleBased_EN()
+    self.detectCandidatesEN()
     #print 'Cand', self.candidates
-    #for word in self.candidates:
+    for word in self.candidates:
 	#print 'word', word
-	#if word in self.entities.names:
+	if word in self.entities.names:
 	  #print 'YEEEEH'
-	  #properName=self.entities.names[word]
-	  #self.fusion_des_tokens(word,'_PERS',self.entities.namesLink[word])
-	#if word in self.entities.places:
-	  #self.fusion_des_tokens(word,'_LOC',self.entities.places[word])
-	#if word in self.entities.orgs:
-	  #self.fusion_des_tokens(word,'_ORG',self.entities.orgs[word]) 
+	  properName=self.entities.names[word]
+	  self.fusion_des_tokens(word,'_PERS',self.entities.namesLink[word])
+	if word in self.entities.places:
+	  self.fusion_des_tokens(word,'_LOC',self.entities.places[word])
+	if word in self.entities.orgs:
+	  self.fusion_des_tokens(word,'_ORG',self.entities.orgs[word]) 
   
   def fusion_des_tokens(self, tokenAfusionner,etiquette,lien):
     split=tokenAfusionner.split()
     if len(split)==1:
       index=self.tokens.index(tokenAfusionner)
       if self.words[index].attribut=="":
-	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
+	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
       else:
-	    self.words[index].attribut[:-1]+='ORIG=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
+	    attributNouv=self.words[index].attribut[:-1]+'ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
+	    self.words[index].attribut=attributNouv
+	    #self.words[index].attribut[:-1]+='ORIG\=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
       self.words[index].token=etiquette
     else:
       lenth=len(split)
       index=self.tokens.index(split[0])
       if self.words[index].attribut=="":
-	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
+	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
       else:
-	    self.words[index].attribut[:-1]+='ORIG=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
+	    attributNouv=self.words[index].attribut[:-1]+'ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
+	    self.words[index].attribut=attributNouv
+	    #self.words[index].attribut[:-1]+='ORIG=\''+tokenAfusionner+';LIEN=\''+lien+'\';}'
       self.words[index].token=etiquette
       for i in xrange(index+1,index+lenth):
 	if self.words[i].attribut!='':
-	  self.words[index].attribut[:-1]+=self.words[i].attribut[1:]
+	  attributNouv=self.words[index].attribut[:-1]+self.words[i].attribut[1:]
+	  self.words[index].attribut=attributNouv
+	  #self.words[index].attribut[:-1]+=self.words[i].attribut[1:]
       i=1
       while i<lenth:
 	i+=1	
@@ -122,27 +128,26 @@ class Phrase():
       #print "after", self.string
   
 
-  def searchEN(self):
-    self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
-    #self.entities.loadDB("Pers.txt","Pers_var.txt", "Loc.txt", "Orgs.txt")
-    self.search_ruleBased_EN()
-    self.detectCandidatesEN()
-    for word in self.words:
-      if len(word.token)>0 and word.token[0].isupper():
-	if word.token in self.entities.names:
-	  properName=self.entities.names[word.token]
-	  if word.attribut=="":
-	    word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\'}'
-	  else:
-	    word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\'}'
-	  word.token='_PERS'
-	if word.token in self.entities.places:
-	  if word.attribut=="":
-	    word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\';}'
-	  else:
-	    word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\'}'
-	  word.token='_LOC'
-  #def search
+  #def searchEN(self):
+    #self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
+    ##self.entities.loadDB("Pers.txt","Pers_var.txt", "Loc.txt", "Orgs.txt")
+    #self.search_ruleBased_EN()
+    #self.detectCandidatesEN()
+    #for word in self.words:
+      #if len(word.token)>0 and word.token[0].isupper():
+	#if word.token in self.entities.names:
+	  #properName=self.entities.names[word.token]
+	  #if word.attribut=="":
+	    #word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\'}'
+	  #else:
+	    #word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\'}'
+	  #word.token='_PERS'
+	#if word.token in self.entities.places:
+	  #if word.attribut=="":
+	    #word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\';}'
+	  #else:
+	    #word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\'}'
+	  #word.token='_LOC'
   
   def search_ruleBased_EN(self):
     if re.search(r"\b(M.|Mme|Mlle)\b", self.string):
