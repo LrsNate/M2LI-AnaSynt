@@ -97,7 +97,7 @@ class Phrase():
     #print 'Cand', self.candidates
     for word in self.candidates:
 	#print 'word', word
-	if word in self.entities.names:
+	if word in self.entities.names and word!="Les" and word!="Le":
 	  #print 'YEEEEH'
 	  properName=self.entities.names[word]
 	  #print word, properName
