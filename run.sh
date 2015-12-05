@@ -1,7 +1,6 @@
 #!/bin/sh
 
-OPT=`shift`
-if [ "${OPT}"="-d" ]
+if [ "$1" =  "-d" ];
 then
     01_etiq_token_debruit/etape1.py < in.txt > out_01.txt
     02_morpho/etape2.py -p 02_morpho/weights.pickle -l 02_morpho/known.pickle < out_01.txt > out_02.txt
