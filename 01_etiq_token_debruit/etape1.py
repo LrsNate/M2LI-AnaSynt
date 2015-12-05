@@ -738,7 +738,7 @@ def debruitage(dico):
 			
 	# Retokenisation pour les mots qui possèdent une espace ou une apostrophe
 	i = 1
-	for cle, val in dico.items():
+	for val in dico.values():
 		# Si un mot possède une espace ou une apostrophe et que sa forme originale se trouve dans le dictionnaire de traduction
 		if (" " in val[0] or "'" in val[0]) and val[1].lower() in traduction.keys() and val[0] in traduction.values():
 			listeMots = val[0].split()
