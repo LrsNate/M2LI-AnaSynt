@@ -43,11 +43,11 @@ taggit=m.memoize(lambda x: partial(m.classify,w)(m.getfeatures(x)))
 
 for line in fi.input(args):
 	line=line.decode("utf-8")
-	for x,y,z in re.findall(r"(\{[^\}]+\})?([^ ]+)(\s+)",line):
+	for x,y,z in re.findall(r"(\{[^\}]+\})?(\S+)(\s+)",line):
 		tag=taggit(y)
 		if y not in k and y.lower() not in k:
 			if len(x) != 0:
-				x=x[-1]+"TMP_TAG='" + ",".join(map(str,tag)) + "';}"
+				x=x[:-1]+"TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 			else:
 				x="{TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 		
