@@ -16,6 +16,15 @@ import codecs, re, sys
 def lireCorpus(corpus):
 	"""
 	Lecture du corpus et écriture dans le fichier de sortie
+	
+	ENTRÉE :
+	slt je suis une phrase de test qui est allee a Londres avc une faute d'orthographe je suis...impressionné
+	L'artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de 12 blocs de glace (80 tonnes au total) en provenance d'un fjord du Groenland. En savoir plus sur http://www.lemonde.fr/planete/twitter/2015/12/03/des-icebergs-en-plein-paris_4823367_3244.html#EclRcs06mPKTRqRU.99
+	{ } bonjour je suis une phrase avec une accolade dedans
+	
+	SORTIE :
+	{ORIG_ORTH='slt';}salut je suis une phrase de test qui est allee a Londres avc une faute d'orthographe je suis ... impressionné L' artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de {ORIG_ORTH='12'}_NOMBRE blocs de glace ( {ORIG_ORTH='80'}_NOMBRE tonnes au total ) en provenance d' un fjord du Groenland .
+	En savoir plus sur {ORIG_ORTH='http://www.lemonde.fr/planete/twitter/2015/12/03/des-icebergs-en-plein-paris_4823367_3244.html#EclRcs06mPKTRqRU.99'}_URL { } bonjour je suis une phrase avec une accolade dedans
 	"""
 	f = corpus.read()
 	sys.stdout = codecs.getwriter("utf-8")(sys.stdout)
@@ -37,11 +46,11 @@ def lireCorpus(corpus):
 		for val in dico.values():
 			if val[1] and val[2]:
 				# Si le mot possède une étiquette :
-				# {original}étiquette
+				# {ORIG_ORTH='original';}étiquette
 				sys.stdout.write("{ORIG_ORTH='" + val[1] + "';}" + val[2] + " ")
 			elif val[1]:
 				# Si le mot a été modifié :
-				# {original}modifié
+				# {ORIG=ORTH='original';}modifié
 				sys.stdout.write("{ORIG_ORTH='" + val[1] + "';}" + val[0] + " ")
 			else:
 				# Si le mot n'a pas été modifié et qu'il ne porte pas d'étiquette :
@@ -56,8 +65,14 @@ def lireCorpus(corpus):
 def ponctuation(ligne):
 	"""
 	Traitement de la ponctuation
+	
+	ENTRÉE :
+	L'artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de 12 blocs de glace (80 tonnes au total) en provenance d'un fjord du Groenland.
+	
+	SORTIE :
+	L' artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de 12 blocs de glace ( 80 tonnes au total ) en provenance d' un fjord du Groenland .
 	"""
-	# Ajout d'un saut à la ligne avant chaque ponctuation forte
+	# Ajout d'une espace avant chaque ponctuation forte et d'un saut à la ligne après
 	ponctForte = re.compile(u"([\.?!])\Z")
 	ligne = ponctForte.sub(ur" \1\n", ligne)
 	
@@ -97,6 +112,12 @@ def ponctuation(ligne):
 def etiquettage(ligne):
 	"""
 	Repérage et étiquettage des URL, emails, nombres, dates, heures, hastags, etc.
+	
+	ENTRÉE :
+	L' artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de 12 blocs de glace ( 80 tonnes au total ) en provenance d' un fjord du Groenland .
+	
+	SORTIE :
+	L' artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de {12}__NOMBRE blocs de glace ( {80}__NOMBRE tonnes au total ) en provenance d' un fjord du Groenland .
 	"""
 	# Expressions régulières pour le repérage des étiquettes
 	email = re.compile(ur"\b([\w\-_\.]+@[\w\-_\.]+\.[\w\-_\.]+)\b", re.I)
@@ -140,6 +161,46 @@ def tokenisation(ligne):
 	"""
 	Tokenisation des phrases en mots.
 	ATTENTION : Les phrases sont seulement séparées en mots par les espaces.
+	
+	ENTRÉE :
+	L' artiste danois Olafur Eliasson a installé jeudi place du Panthéon une horloge géante constituée de {12}__NOMBRE blocs de glace ( {80}__NOMBRE tonnes au total ) en provenance d' un fjord du Groenland .
+
+	SORTIE :
+	{
+		1 : ["L'", "", ""],
+		2 : ["artiste", "", ""],
+		3 : ["danois", "", ""],
+		4 : ["Olafur", "", ""],
+		5 : ["Eliasson", "", ""],
+		6 : ["a", "", ""],
+		7 : ["installé", "", ""],
+		8 : ["jeudi", "", ""],
+		9 : ["place", "", ""],
+		10 : ["du", "", ""],
+		11 : ["Panthéon", "", ""],
+		12 : ["une", "", ""],
+		13 : ["horloge", "", ""],
+		14 : ["géante", "", ""],
+		15 : ["constituée", "", ""],
+		16 : ["de", "", ""],
+		17 : ["12", "12", "_NOMBRE"],
+		18 : ["blocs", "", ""],
+		19 : ["de", "", ""],
+		20 : ["glace", "", ""],
+		21 : ["(", "", ""],
+		22 : ["80, "80", "_NOMBRE"],
+		23 : ["tonnes, "", ""],
+		24 : ["au, "", ""],
+		25 : ["total, "", ""],
+		26 : ["), "", ""],
+		27 : ["en, "", ""],
+		28 : ["provenance, "", ""],
+		29 : ["d'", "", ""],
+		30 : ["un", "", ""],
+		31 : ["fjord", "", ""],
+		32 : ["du", "", ""],
+		33 : ["Groenland", "", ""],
+	}
 	"""
 	# Initialisation du dictionnaire et de l'indice
 	dico = {}
@@ -167,6 +228,84 @@ def tokenisation(ligne):
 def debruitage(dico):	
 	"""
 	Débruitage et correction des mots en langage SMS et abréviations
+	
+	ENTRÉE :
+		{
+		1 : ["L'", "", ""],
+		2 : ["artiste", "", ""],
+		3 : ["danois", "", ""],
+		4 : ["Olafur", "", ""],
+		5 : ["Eliasson", "", ""],
+		6 : ["a", "", ""],
+		7 : ["installé", "", ""],
+		8 : ["jeudi", "", ""],
+		9 : ["place", "", ""],
+		10 : ["du", "", ""],
+		11 : ["Panthéon", "", ""],
+		12 : ["une", "", ""],
+		13 : ["horloge", "", ""],
+		14 : ["géante", "", ""],
+		15 : ["constituée", "", ""],
+		16 : ["de", "", ""],
+		17 : ["12", "12", "_NOMBRE"],
+		18 : ["blocs", "", ""],
+		19 : ["de", "", ""],
+		20 : ["glace", "", ""],
+		21 : ["(", "", ""],
+		22 : ["80, "80", "_NOMBRE"],
+		23 : ["tonnes, "", ""],
+		24 : ["au, "", ""],
+		25 : ["total, "", ""],
+		26 : ["), "", ""],
+		27 : ["en, "", ""],
+		28 : ["provenance, "", ""],
+		29 : ["d'", "", ""],
+		30 : ["un", "", ""],
+		31 : ["fjord", "", ""],
+		32 : ["du", "", ""],
+		33 : ["Groenland", "", ""],
+		34 : ["jv", "", ""],
+	}
+	
+	SORTIE :
+		{
+		1 : ["L'", "", ""],
+		2 : ["artiste", "", ""],
+		3 : ["danois", "", ""],
+		4 : ["Olafur", "", ""],
+		5 : ["Eliasson", "", ""],
+		6 : ["a", "", ""],
+		7 : ["installé", "", ""],
+		8 : ["jeudi", "", ""],
+		9 : ["place", "", ""],
+		10 : ["du", "", ""],
+		11 : ["Panthéon", "", ""],
+		12 : ["une", "", ""],
+		13 : ["horloge", "", ""],
+		14 : ["géante", "", ""],
+		15 : ["constituée", "", ""],
+		16 : ["de", "", ""],
+		17 : ["12", "12", "_NOMBRE"],
+		18 : ["blocs", "", ""],
+		19 : ["de", "", ""],
+		20 : ["glace", "", ""],
+		21 : ["(", "", ""],
+		22 : ["80, "80", "_NOMBRE"],
+		23 : ["tonnes, "", ""],
+		24 : ["au, "", ""],
+		25 : ["total, "", ""],
+		26 : ["), "", ""],
+		27 : ["en, "", ""],
+		28 : ["provenance, "", ""],
+		29 : ["d'", "", ""],
+		30 : ["un", "", ""],
+		31 : ["fjord", "", ""],
+		32 : ["du", "", ""],
+		33 : ["Groenland", "", ""],
+		34 : ["jv", "j'", ""],
+		35 : ["jv", "y", ""],
+		36 : ["jv", "vais, ""],
+	}
 	"""
 	# Dictionnaire de correspondance entre SMS et français	
 	traduction = {
@@ -598,25 +737,22 @@ def debruitage(dico):
 	i = 1
 	for cle, val in dico.items():
 		# Si un mot possède une espace ou une apostrophe et que sa forme originale se trouve dans le dictionnaire de traduction
-		if (" " in val[0] or "'" in val[0]) and val[0] in traduction.values() and val[1].lower() in traduction.keys():
+		if (" " in val[0] or "'" in val[0]) and val[1].lower() in traduction.keys() and val[0] in traduction.values():
 			listeMots = val[0].split()
 			lenListeMots = len(listeMots)
 			j = 0
-			while j < lenListeMots:
+			for mot in listeMots:
 				# Gestion des apostrophes
-				if "'" in listeMots[j]:
-					listeApos = listeMots[j].split("'")
-					dico[i] = [listeApos[0]+"'", val[1], val[2]]
+				if "'" in mot and mot != "aujourd'hui":
+					dico[i] = [mot.split("'")[0]+"'", val[1], val[2]]
 					i += 1
-					dico[i] = [listeApos[1], val[1], val[2]]
+					dico[i] = [mot.split("'")[1], val[1], val[2]]
 					i += 1
-				# Gestion des espaces
-				if " " in listeMots[j]:
-					dico[i] = [listeMots[j], val[1], val[2]]
+				else:
+					dico[i] = [mot, val[1], val[2]]
 					i += 1
-				j += 1
 		else:
-			dico[i] = dico[cle]
+			dico[i] = [val[0], val[1], val[2]]
 			i += 1
 
 	return dico
