@@ -65,7 +65,7 @@ class Phrase():
     #print "str", self.string
     candidatesEN=[]
     #match=re.findall(r"((?:[A-Z](?:\.|\w*)\s(?:(?:de|du|le|von|van)\s)?(?:(?:[A-Z]+(?:[a-z]+)?)\s)))|([A-Z]\w*\s)|", self.string)
-    self.candidates=re.findall(r"((?:\b[A-Z]\w*)\s(?:[A-Z]\w*\s)*|(?:\b[A-Z]\w*\s))", self.string)
+    self.candidates=re.findall(r"((?:\b[A-Z]\w*)(?:\s|-)(?:[A-Z]\w*\s)*|(?:\b[A-Z]\w*\s))", self.string)
     for i in xrange(len(self.candidates)):
       self.candidates[i]=self.candidates[i][:-1]
     print "yeees", self.candidates
