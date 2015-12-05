@@ -7,6 +7,7 @@ import os
 from automaton import compounds_automaton, lexicon_automaton
 import fileinput
 import pickle
+import re
 
 dir = os.path.dirname(__file__)
 wico = pickle.load(open(os.path.join(dir, 'resources/results_wico.p'), 'r'))
@@ -14,6 +15,7 @@ wico = pickle.load(open(os.path.join(dir, 'resources/results_wico.p'), 'r'))
 
 for line in fileinput.input():
     line = line.strip().decode('utf-8')
+    line = re.sub(r'(\d) (\d)', r'\1_\2', line)
     words = map(Token.from_str, line.split(' '))
     spellchecked = []
     # Step 1: spellcheck
