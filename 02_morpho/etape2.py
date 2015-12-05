@@ -13,7 +13,9 @@ import sys
 usage=u"""%prog lignes [-p poids] [-l lexique] 
 	Script pour le pipeline. Utilise un fichier de vecteur de poids et un fichier de lexique.
 	Étiquette les mots inconnus sur une ligne. Prend en entrée un fichier ou stdin.
-	"cat fichier" | %prog et "%prog fichier" sont équivalents."""
+	"cat fichier" | %prog et "%prog fichier" sont équivalents.
+	Par défaut le fichier de poids et le fichier de lexique sont weights.pickle et known.pickle 
+	dans le répertoire d'exécution, sinon ils doivent être spécifiés en option."""
 
 p = OptionParser(usage=usage)
 p.add_option("-p","--poids",action="store",dest="poids",default="weights.pickle",help="Chemin vers le fichier de poids")
@@ -41,14 +43,15 @@ taggit=m.memoize(lambda x: partial(m.classify,w)(m.getfeatures(x)))
 
 for line in fi.input(args):
 	line=line.decode("utf-8")
-	for x,y in re.findall(r"(\{[^\}]+\})?([^ ]+)",line):
+	for x,y,z in re.findall(r"(\{[^\}]+\})?(\S+)(\s+)",line):
 		tag=taggit(y)
 		if y not in k and y.lower() not in k:
 			if len(x) != 0:
-				x=x[-1]+"TMP_TAG='" + ",".join(map(str,tag)) + "';}"
+				x=x[:-1]+"TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 			else:
 				x="{TMP_TAG='" + ",".join(map(str,tag)) + "';}"
 		
-		out=x+y+" "
+		out=x+y+z
 		sys.stdout.write(out.encode("utf-8"))
+
 
