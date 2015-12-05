@@ -59,10 +59,10 @@ class Phrase():
       self.tokens.append(el.token)
       self.words.append(el)
       self.string+=el.token+" "
-    print self.string
+    #print self.string
   
   def detectCandidatesEN(self):#cherche les candidats potentiels pour les EN
-    print "str", self.string
+    #print "str", self.string
     candidatesEN=[]
     #match=re.findall(r"((?:[A-Z](?:\.|\w*)\s(?:(?:de|du|le|von|van)\s)?(?:(?:[A-Z]+(?:[a-z]+)?)\s)))|([A-Z]\w*\s)|", self.string)
     self.candidates=re.findall(r"((?:\b[A-Z]\w*)\s(?:[A-Z]\w*\s)*|(?:\b[A-Z]\w*\s))", self.string)
@@ -71,22 +71,22 @@ class Phrase():
     #print "yeees", self.candidates
     
     
-  def searchEN(self):
-    #self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
-    self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
-    self.search_ruleBased_EN()
-    self.detectCandidatesEN()
-    print 'Cand', self.candidates
-    for word in self.candidates:
-	print 'word', word
-	if word in self.entities.names:
-	  print 'YEEEEH'
-	  properName=self.entities.names[word]
-	  self.fusion_des_tokens(word,'_PERS',self.entities.namesLink[word])
-	if word in self.entities.places:
-	  self.fusion_des_tokens(word,'_LOC',self.entities.places[word])
-	if word in self.entities.orgs:
-	  self.fusion_des_tokens(word,'_ORG',self.entities.orgs[word]) 
+  #def searchEN(self):
+    ##self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
+    #self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
+    #self.search_ruleBased_EN()
+    #self.detectCandidatesEN()
+    #print 'Cand', self.candidates
+    #for word in self.candidates:
+	#print 'word', word
+	#if word in self.entities.names:
+	  #print 'YEEEEH'
+	  #properName=self.entities.names[word]
+	  #self.fusion_des_tokens(word,'_PERS',self.entities.namesLink[word])
+	#if word in self.entities.places:
+	  #self.fusion_des_tokens(word,'_LOC',self.entities.places[word])
+	#if word in self.entities.orgs:
+	  #self.fusion_des_tokens(word,'_ORG',self.entities.orgs[word]) 
   
   def fusion_des_tokens(self, tokenAfusionner,etiquette,lien):
     split=tokenAfusionner.split()
@@ -113,51 +113,50 @@ class Phrase():
 	i+=1	
 	del(self.words[index+1])
       #actualisation self.string
-      print 'before', self.string
+      #print 'before', self.string
       self.string=""
       self.tokens=[]
       for w in self.words:
 	self.tokens.append(w.token)
 	self.string+=w.token+" "
-      print "after", self.string
+      #print "after", self.string
   
-  '''
+
   def searchEN(self):
-    #self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
-    self.entities.loadDB("Pers.txt","Pers_var.txt", "Loc.txt", "Orgs.txt")
+    self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
+    #self.entities.loadDB("Pers.txt","Pers_var.txt", "Loc.txt", "Orgs.txt")
     self.search_ruleBased_EN()
     self.detectCandidatesEN()
     for word in self.words:
-      if word.token[0].isupper():
+      if len(word.token)>0 and word.token[0].isupper():
 	if word.token in self.entities.names:
 	  properName=self.entities.names[word.token]
 	  if word.attribut=="":
-	    word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\';}'
+	    word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\'}'
 	  else:
-	    word.attribut=word.attribut[:-1]+'ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\';}'
+	    word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.namesLink[properName]+'\'}'
 	  word.token='_PERS'
 	if word.token in self.entities.places:
 	  if word.attribut=="":
 	    word.attribut='{ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\';}'
 	  else:
-	    word.attribut=word.attribut[:-1]+'ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\';}'
+	    word.attribut=word.attribut[:-1]+';ORIG=\''+word.token+'\';LIEN=\''+self.entities.places[word.token]+'\'}'
 	  word.token='_LOC'
-    '''
   #def search
   
   def search_ruleBased_EN(self):
-    if re.search(r"(M.|Mme|Mlle|M)", self.string):
-      match=re.search(r"(M.|Mme|Mlle|M)\s?([A-Z]\w+)\s?((?:de|von|le)?\s?[A-Z]\w+)?",self.string)
+    if re.search(r"\b(M.|Mme|Mlle)\b", self.string):
+      match=re.search(r"(M.|Mme|Mlle)\s?(\b[A-Z]\w+)\s?((?:de|von|le)?\s?[A-Z]\w+)?",self.string)
       ne = match.group(0)
-      print 
       ne_len=len(ne.split())
       string_lst=self.string.split()
-      pattern=re.search("(M.|Mme|Mlle|M)", self.string)
+      #print string_lst
+      pattern=re.search("(M.|Mme|Mlle)", self.string)
       index=string_lst.index(pattern.groups(0)[0])
       if self.words[index].attribut=="":
-	    self.words[index].attribut='{ORIG=\''+ne+'\';}'
+	    self.words[index].attribut='{ORIG=\''+ne+'\'}'
       else:
-	    self.words[index].attribut[:-1]+='ORIG=\''+ne+'\';}'
+	    self.words[index].attribut[:-1]+=';ORIG=\''+ne+'\'}'
       self.words[index].token='_PERS'
       for i in xrange(index+1,index+ne_len):
 	if self.words[i].attribut!='':
@@ -167,13 +166,13 @@ class Phrase():
 	i+=1	
 	del(self.words[index+1])
       #actualisation self.string
-      print 'before', self.string
+      #print 'before', self.string
       self.string=""
       self.tokens=[]
       for w in self.words:
 	self.tokens.append(w.token)
 	self.string+=w.token+" "
-      print "after", self.string
+      #print "after", self.string
       
   
   def outputString(self):
@@ -186,6 +185,7 @@ class Phrase():
   def printP(self):
     for word in self.words:
       print word.token
+      
 
 
 class Word():
