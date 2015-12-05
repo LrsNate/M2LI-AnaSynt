@@ -3381,9 +3381,9 @@ Calvin	Jean Calvin
 Y. Bandajevsky	Youri Bandajevsky
 Youri Bandajevsky	Youri Bandajevsky
 Bandajevsky	Youri Bandajevsky
-K. Čapek	Karel Čapek
-Karel Čapek	Karel Čapek
-Čapek	Karel Čapek
+K. ?apek	Karel ?apek
+Karel ?apek	Karel ?apek
+?apek	Karel ?apek
 �tienne	�tienne
 C. d'Aragon	Catherine d'Aragon
 Catherine d'Aragon	Catherine d'Aragon
