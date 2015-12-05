@@ -45,7 +45,6 @@ class Phrase():
       el.fromString(w)
       self.tokens.append(el.token)
       self.words.append(el)
-      print w
       self.string+=el.token+" "
   
   def checkSplit(self, split2check):#pour eviter le split sur des espaces entre les "{}"
@@ -186,7 +185,6 @@ class Word():
       else:
 	token=match.group(2)
 	att=match.group(1)
-	print token, att
 	self.attribut=att
     else:
       self.token=string
