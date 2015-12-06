@@ -113,9 +113,17 @@ class Phrase():
 	    attributNouv=self.words[index].attribut[:-1]+';ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\'}'
 	    self.words[index].attribut=attributNouv
       self.words[index].token=etiquette
+      bool=re.search("TMP_TAG",self.words[index].attribut)
       for i in xrange(index+1,index+lenth):
 	if self.words[i].attribut!='':
-	  attributNouv=self.words[index].attribut[:-1]+self.words[i].attribut[1:]
+	  if bool and re.search("TMP_TAG",self.words[i].attribut):
+	    match=re.search(r'{(.*);TMP_TAG.*}',self.words[i].attribut)
+	    if match!=None:
+	      attributNouv=self.words[index].attribut[:-1]+";"+match.groups(1)[0]+'}'
+	    else:
+	      attributNouv=self.words[index].attribut
+	  else:
+	    attributNouv=self.words[index].attribut[:-1]+self.words[i].attribut[1:]
 	  self.words[index].attribut=attributNouv
       i=1
       while i<lenth:
