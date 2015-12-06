@@ -57,6 +57,9 @@ echo "{TAG='A'}bien {TAG='A'}sûr duquel {TMP_TAG='a'}entropie visuellemnt {TMP_
 ```
 
 ## OUTPUT GROUPE 4
+in: `en provenance d' un {ORIG_ORTH='fjord';TMP_TAG='NC,ADJ'}flore {AML='du'}de {AML='du'}le {TMP_TAG='NPP,ET'}Groenland .`
+
+out: `en provenance d' un {ORIG_ORTH='fjord';TMP_TAG='NC,ADJ'}flore {AML='du'}de {AML='du'}le {TMP_TAG='NPP,ET';ORIG='Groenland';LIEN='https://fr.wikipedia.org/wiki/Groenland'}_LOC . `
 
 ## OUTPUT GROUPE 5
 Alors, si j'ai bien tout compris (oui, je sais, avec des si pareils, on mettrait Paris en bouteille...). Je dois envoyer au parser un truc de ce format là :
