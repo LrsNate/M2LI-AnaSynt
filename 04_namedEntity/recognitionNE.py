@@ -3,7 +3,6 @@
 
 import sys
 import re
-import codecs
 
 class Texte():
   
@@ -74,14 +73,12 @@ class Phrase():
     candidatesEN=[]
     #self.candidates=re.findall(r"((?:\b[A-Z]\w*)(?:\s|-)(?:[A-Z]\w*\s)*|(?:\b[A-Z]\w*\s))", self.string)
     self.candidates=re.findall(r"((?:\b[A-Z](?:\w*|\.))(?:\s|-)(?:(?:von|de|du|le|van)\s)?(?:[A-Z]\w*\s)*|(?:(?:\b[A-Z]\w*\s)))", self.string)
-
     for i in xrange(len(self.candidates)):
       self.candidates[i]=self.candidates[i][:-1]
     #print self.candidates
     
     
   def searchEN(self):#verfifie si les candidats sont présents dans nos dictionnaires
-    #self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
     self.entities.loadDB("04_namedEntity/Pers.txt","04_namedEntity/Pers_var.txt", "04_namedEntity/Loc.txt", "04_namedEntity/Orgs.txt")
     self.search_ruleBased_EN()
     self.detectCandidatesEN()
@@ -116,7 +113,7 @@ class Phrase():
       bool=re.search("TMP_TAG",self.words[index].attribut)
       for i in xrange(index+1,index+lenth):
 	if self.words[i].attribut!='':
-	  if bool and re.search("TMP_TAG",self.words[i].attribut):
+	  if bool and re.search("TMP_TAG",self.words[i].attribut):#si le segment à ajouter contient TMP_TAG
 	    match=re.search(r'{(.*);TMP_TAG.*}',self.words[i].attribut)
 	    if match!=None:
 	      attributNouv=self.words[index].attribut[:-1]+";"+match.groups(1)[0]+'}'
@@ -206,7 +203,7 @@ class NameEntities():
         self.places={}
         self.orgs={}
   
-  def loadDB(self, dicPersLink, dicPersVariants, dicLieux, dicOrgs):
+  def loadDB(self, dicPersLink, dicPersVariants, dicLieux, dicOrgs):#lecture des fichiers de dictionnaire
 	
 	file=open(dicPersLink)
 	line=file.readline()
