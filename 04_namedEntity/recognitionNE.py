@@ -186,6 +186,7 @@ class Word():
 	token=match.group(2)
 	att=match.group(1)
 	self.attribut=att
+	self.token=token
     else:
       self.token=string
       
