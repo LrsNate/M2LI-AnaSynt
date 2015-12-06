@@ -99,18 +99,18 @@ class Phrase():
     if len(split)==1:
       index=self.tokens.index(tokenAfusionner)
       if self.words[index].attribut=="":		
-	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
+	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\'}'
       else:
-	    attributNouv=self.words[index].attribut[:-1]+'ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
+	    attributNouv=self.words[index].attribut[:-1]+';ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\'}'
 	    self.words[index].attribut=attributNouv
       self.words[index].token=etiquette
     else:
       lenth=len(split)
       index=self.tokens.index(split[0])
       if self.words[index].attribut=="":
-	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
+	    self.words[index].attribut='{ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\'}'
       else:
-	    attributNouv=self.words[index].attribut[:-1]+'ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\';}'
+	    attributNouv=self.words[index].attribut[:-1]+';ORIG=\''+tokenAfusionner+'\';LIEN=\''+lien+'\'}'
 	    self.words[index].attribut=attributNouv
       self.words[index].token=etiquette
       for i in xrange(index+1,index+lenth):
